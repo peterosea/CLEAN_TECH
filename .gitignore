@@ -2,3 +2,7 @@
 backup
 Theme/index.css
 .env
+node_modules
+svg/source
+Theme/template-parts/SvgStore.php
+zeplin

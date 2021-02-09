@@ -1,0 +1,85 @@
+@font-face {
+  font-family: NotoSansKR;
+  src: local(NotoSansKR-Regular),
+    url(/assets/fonts/NotoSansKR-Regular.woff2) format("woff2"),
+    url(/assets/fonts/NotoSansKR-Regular.woff) format("woff"),
+    url(/assets/fonts/NotoSansKR-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: NotoSansKR;
+  src: local(NotoSansKR-Medium),
+    url(/assets/fonts/NotoSansKR-Medium.woff2) format("woff2"),
+    url(/assets/fonts/NotoSansKR-Medium.woff) format("woff"),
+    url(/assets/fonts/NotoSansKR-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: NotoSansKR;
+  src: local(NotoSansKR-Bold),
+    url(/assets/fonts/NotoSansKR-Bold.woff2) format("woff2"),
+    url(/assets/fonts/NotoSansKR-Bold.woff) format("woff"),
+    url(/assets/fonts/NotoSansKR-Bold.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+}
+@mixin Noto-Sans-KR---24pt-3 {
+  font-family: NotoSansKR;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: -1.2px;
+  color: $teal;
+}
+@mixin Noto-Sans-KR---24pt {
+  font-family: NotoSansKR;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.08;
+  letter-spacing: -1.2px;
+  color: $dark;
+}
+@mixin Noto-Sans-KR---24pt-2 {
+  font-family: NotoSansKR;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: -1.2px;
+  color: $dark;
+}
+@mixin Noto-Sans-KR---20pt-2 {
+  font-family: NotoSansKR;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 2;
+  letter-spacing: -1px;
+  color: #333333;
+}
+@mixin Noto-Sans-KR---20pt {
+  font-family: NotoSansKR;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 2;
+  letter-spacing: -1px;
+  color: $teal;
+}
+@mixin Noto-Sans-KR---18pt {
+  font-family: NotoSansKR;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: -0.9px;
+  color: $battleship-grey;
+}
+
+@mixin Text-Style {
+  font-family: NotoSansKR;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 2;
+  letter-spacing: -1px;
+  text-align: left;
+}
