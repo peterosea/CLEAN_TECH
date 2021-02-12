@@ -1,9 +1,26 @@
 @font-face {
+  font-family: GmarketSans;
+  src: local(GmarketSans-Bold),
+    url(/wp-content/themes/base/assets/fonts/GmarketSans-Bold.woff2)
+      format("woff2"),
+    url(/wp-content/themes/base/assets/fonts/GmarketSans-Bold.woff)
+      format("woff"),
+    url(/wp-content/themes/base/assets/fonts/GmarketSans-Bold.ttf)
+      format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
   font-family: NotoSansKR;
   src: local(NotoSansKR-Regular),
-    url(/assets/fonts/NotoSansKR-Regular.woff2) format("woff2"),
-    url(/assets/fonts/NotoSansKR-Regular.woff) format("woff"),
-    url(/assets/fonts/NotoSansKR-Regular.ttf) format("truetype");
+    url(/wp-content/themes/base/assets/fonts/Noto_Sans_KR/NotoSansKR-Regular.woff2)
+      format("woff2"),
+    url(/wp-content/themes/base/assets/fonts/Noto_Sans_KR/NotoSansKR-Regular.woff)
+      format("woff"),
+    url(/wp-content/themes/base/assets/fonts/Noto_Sans_KR/NotoSansKR-Regular.ttf)
+      format("truetype");
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -11,9 +28,12 @@
 @font-face {
   font-family: NotoSansKR;
   src: local(NotoSansKR-Medium),
-    url(/assets/fonts/NotoSansKR-Medium.woff2) format("woff2"),
-    url(/assets/fonts/NotoSansKR-Medium.woff) format("woff"),
-    url(/assets/fonts/NotoSansKR-Medium.ttf) format("truetype");
+    url(/wp-content/themes/base/assets/fonts/Noto_Sans_KR/NotoSansKR-Medium.woff2)
+      format("woff2"),
+    url(/wp-content/themes/base/assets/fonts/Noto_Sans_KR/NotoSansKR-Medium.woff)
+      format("woff"),
+    url(/wp-content/themes/base/assets/fonts/Noto_Sans_KR/NotoSansKR-Medium.ttf)
+      format("truetype");
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -21,9 +41,12 @@
 @font-face {
   font-family: NotoSansKR;
   src: local(NotoSansKR-Bold),
-    url(/assets/fonts/NotoSansKR-Bold.woff2) format("woff2"),
-    url(/assets/fonts/NotoSansKR-Bold.woff) format("woff"),
-    url(/assets/fonts/NotoSansKR-Bold.ttf) format("truetype");
+    url(/wp-content/themes/base/assets/fonts/Noto_Sans_KR/NotoSansKR-Bold.woff2)
+      format("woff2"),
+    url(/wp-content/themes/base/assets/fonts/Noto_Sans_KR/NotoSansKR-Bold.woff)
+      format("woff"),
+    url(/wp-content/themes/base/assets/fonts/Noto_Sans_KR/NotoSansKR-Bold.ttf)
+      format("truetype");
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -81,5 +104,82 @@
   font-weight: 500;
   line-height: 2;
   letter-spacing: -1px;
+}
+
+@mixin Text-Style-2 {
+  font-family: NotoSansKR;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+}
+
+@mixin Text-Style-3 {
+  font-family: GmarketSans;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: -1.2px;
+  text-align: left;
+}
+
+@mixin Text-Style-4 {
+  font-family: GmarketSans;
+  font-size: 62px;
+  font-weight: bold;
+  line-height: 1.27;
+  letter-spacing: -3.1px;
+  text-align: left;
+}
+
+@mixin Text-Style-5 {
+  font-family: NotoSansKR;
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 0.71;
+  text-align: center;
+}
+
+@mixin Text-Style-7 {
+  font-family: NotoSansKR;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.63;
+  letter-spacing: -0.8px;
+  text-align: left;
+}
+
+@mixin Text-Style-6 {
+  font-family: NotoSansKR;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 1.14;
+  letter-spacing: -1.75px;
+  text-align: left;
+}
+
+@mixin Text-Style-8 {
+  font-family: NotoSansKR;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.63;
+  letter-spacing: -0.8px;
+  text-align: center;
+}
+
+@mixin Text-Style-9 {
+  font-family: NotoSansKR;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 1.14;
+  letter-spacing: -1.75px;
+  text-align: center;
+}
+
+@mixin Text-Style-10 {
+  font-family: NotoSansKR;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.43;
+  letter-spacing: -1.4px;
   text-align: left;
 }

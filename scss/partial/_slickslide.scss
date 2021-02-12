@@ -1,0 +1,144 @@
+@mixin slickCarouselVideo {
+  .slickCarouselVideo {
+    position: relative;
+    height: 100%;
+    &.sliderWrap {
+      position: relative;
+    }
+    .ss-slide {
+      border: none;
+      outline: none;
+    }
+    .slickSlideBg,
+    .slick-list,
+    .slick-track,
+    .ss-slide,
+    .videoWrap {
+      height: 100%;
+      padding: 0 !important;
+    }
+    .slickSlideBg .videoWrap {
+      position: relative;
+      overflow: hidden;
+      &.empty {
+        padding-top: 56.6%;
+        .controlBtn {
+          display: none;
+        }
+      }
+      &.play {
+        .bottomCover,
+        .controlBtn,
+        .poster {
+          display: none;
+        }
+      }
+      .bottomCover {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0.6;
+        background-color: $black;
+        bottom: 0;
+        z-index: 3;
+      }
+      .controlBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        width: 100%;
+        height: 100%;
+        // background-color: rgba($black-two, 0.3);
+        img {
+          cursor: pointer;
+        }
+      }
+      .poster {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+      }
+      video {
+        width: 100%;
+        @supports (object-fit: cover) {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .slickSlideSmall {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 740px;
+      @include respondTo("hg") {
+        max-width: 1240px;
+      }
+      .slick-track {
+        display: flex;
+      }
+      .slick-slide {
+        cursor: pointer;
+      }
+      .slick-current {
+        .thumbnail {
+          // border: 3px solid $turquoise-two;
+          img {
+            filter: grayscale(0);
+          }
+        }
+        .title {
+          color: $white;
+          opacity: 1;
+        }
+      }
+      .slick-slide:hover {
+        .thumbnail {
+          border: 3px solid $white;
+          img {
+            filter: grayscale(0);
+          }
+        }
+        .title {
+          opacity: 1;
+          color: $white;
+        }
+      }
+      .thumbnail {
+        width: 240px;
+        height: 150px;
+        overflow: hidden;
+        border: 3px solid transparent;
+        transition: border 0.3s ease-in-out;
+        will-change: border;
+        img {
+          width: 100%;
+          filter: grayscale(80%);
+          transition: filter 0.3s ease-in-out;
+          will-change: filter;
+        }
+      }
+      .title {
+        padding-top: 15px;
+        opacity: 0;
+        color: $white;
+        // @include Text-Style-50;
+        text-align: center;
+        transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
+      }
+    }
+  }
+}
