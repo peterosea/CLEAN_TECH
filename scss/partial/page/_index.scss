@@ -1,0 +1,23 @@
+main.pageTemplate {
+  .sectionTitle {
+    @include Text-Style-15;
+    margin-bottom: 70px;
+    p {
+      @include Text-Style-16;
+      color: $black;
+      text-align: center;
+      margin: 0 auto;
+      padding-top: 22px;
+      font-weight: normal;
+      color: $battleship-grey;
+    }
+    .subTitle {
+      color: $battleship-grey;
+      margin-top: 12px;
+    }
+  }
+  &.non-result {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+}

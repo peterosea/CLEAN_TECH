@@ -13,7 +13,6 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
 get_template_part('template-parts/head/fullpage');
 get_template_part('template-parts/head/slickslide');
 get_header();
-get_template_part('template-parts/header/page');
 ?>
 <main class="homepage">
   <div id="fullpage">
