@@ -100,6 +100,10 @@ nav.GNB {
     > .menu-item {
       position: relative;
 
+      &.current-menu-item a,
+      &.current-menu-ancestor a {
+        color: $teal;
+      }
       &:hover .sub-menu {
         // background-color: $dark;
         a {

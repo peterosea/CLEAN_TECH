@@ -122,7 +122,7 @@ HTML;
             foreach ($custom_query as $post) {
               $thumb = get_the_post_thumbnail_url($post, 'full');
               $dom .= <<<HTML
-              <div class="item">
+              <div class="item style1">
                 <div class="imgWrap">
                   <img src="$thumb" alt="">
                 </div>

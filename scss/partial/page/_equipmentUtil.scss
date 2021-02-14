@@ -1,33 +1,14 @@
-main.rentalCare {
-  .section {
-    padding: 130px 0 150px;
-  }
+body.post-type-archive-equipment_util header.pageHeader {
+  background-color: $white;
+}
+main.equipmentUtil {
   .section1 {
+    padding-top: 72px;
+    padding-bottom: 150px;
   }
+  @include Accordion;
   .section2 {
-    background-color: $pale-grey;
-    .title {
-      @include Text-Style-18;
-    }
-    p {
-      max-width: 400px;
-      @include Text-Style-17;
-      color: $battleship-grey-three;
-      margin-bottom: 0;
-    }
-    .contentCol {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-    .row:not(:last-child) {
-      margin-bottom: 70px;
-    }
-  }
-  .section3 {
-    @include Accordion;
-  }
-  .section4 {
+    padding: 130px 0 150px;
     background-color: $pale-grey;
     .sectionTitle {
       @include Text-Style-20;
