@@ -36,7 +36,7 @@ HTML;
         foreach ($cat as $key => $c) {
           $class = '';
           if ($key === 0) $class .= ' active';
-          $dom = '<div id="' . $c->slug . '" class="itemList ' . $c->slug . ' ' . $class . '">';
+          $dom = '<div id="' . $c->slug . '" class="itemList style2 ' . $c->slug . ' ' . $class . '">';
           $dom .= <<<HTML
           <div class="listContent">
             <div class="listTitle">$c->name</div>
@@ -59,7 +59,7 @@ HTML;
             foreach ($custom_query as $post) {
               $thumb = get_the_post_thumbnail_url($post, 'full');
               $dom .= <<<HTML
-              <div class="item style2">
+              <div class="item">
                 <div class="imgWrap">
                   <img src="$thumb" alt="">
                 </div>

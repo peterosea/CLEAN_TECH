@@ -83,7 +83,7 @@ HTML;
         ?>
       </ul>
       <div class="accordionContent">
-        <div id="all" class="itemList active">
+        <div id="all" class="itemList active style1">
           <?php
           $custom_query = get_posts(array(
             'post_type' => 'equipment',
@@ -105,7 +105,7 @@ HTML;
         </div>
         <?php
         foreach ($cat as $c) {
-          $dom = '<div id="' . $c->slug . '" class="itemList ' . $c->slug . '">';
+          $dom = '<div id="' . $c->slug . '" class="itemList style1 ' . $c->slug . '">';
           $custom_query = get_posts(array(
             'post_type' => 'equipment',
             'post_status' => 'publish',
@@ -122,7 +122,7 @@ HTML;
             foreach ($custom_query as $post) {
               $thumb = get_the_post_thumbnail_url($post, 'full');
               $dom .= <<<HTML
-              <div class="item style1">
+              <div class="item">
                 <div class="imgWrap">
                   <img src="$thumb" alt="">
                 </div>

@@ -37,8 +37,10 @@
       flex-wrap: wrap;
       display: none;
       justify-content: center;
-      @supports (gap: 120px) {
-        gap: 120px;
+      &.style2 {
+        @supports (gap: 120px) {
+          gap: 120px;
+        }
       }
       .listContent {
         width: 100%;
@@ -56,7 +58,7 @@
         display: flex;
       }
     }
-    .item.style1 {
+    .itemList.style1 .item {
       width: 300px;
       height: 300px;
       @include Text-Style-19;
@@ -81,7 +83,7 @@
         max-width: 170px;
       }
     }
-    .item.style2 {
+    .itemList.style2 .item {
       width: 320px;
       text-align: center;
       .imgWrap {
