@@ -1,0 +1,41 @@
+nav.fixedMenu {
+  position: fixed;
+  z-index: 999;
+  width: 80px;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  ul {
+    list-style: none;
+    margin: 0;
+    border: 1px solid $very-light-pink-seven;
+    padding: 10px;
+    background-color: $white;
+    box-shadow: 5px 5px 0px 1px rgba(0, 0, 0, 0.1);
+    li {
+      padding: 20px 0;
+      @include Text-Style-23;
+      word-break: keep-all;
+      a {
+        color: $black-two;
+        text-decoration: none;
+      }
+      &:not(:last-child) {
+        border-bottom: 1px solid $very-light-pink-seven;
+      }
+      &:first-child {
+        padding-top: 14px;
+      }
+      &:last-child {
+        padding-bottom: 14px;
+      }
+    }
+  }
+  .imgWrap {
+    padding: 0 16px;
+    margin-bottom: 9px;
+    img {
+      width: 30px;
+    }
+  }
+}

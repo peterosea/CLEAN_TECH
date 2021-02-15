@@ -31,3 +31,5 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
     </div>
   </div>
 </header>
+<?php
+get_template_part('template-parts/FixedMenu');

@@ -283,3 +283,12 @@
   letter-spacing: -0.7px;
   text-align: left;
 }
+
+@mixin Text-Style-23 {
+  font-family: NotoSansKR;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: -0.6px;
+  text-align: center;
+}
