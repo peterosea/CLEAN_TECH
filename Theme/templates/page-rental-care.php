@@ -177,39 +177,7 @@ HTML;
       </script>
     </div>
   </div>
-  <div class="section section4">
-    <div class="container">
-      <div class="sectionTitle">
-        “사용 환경에 따라 <span class="pointColor">장비의 활용 플랜</span>이 달라질 수 있습니다.
-        효율적이고 정확한 사용을 위해 전문적인 상담을 받아보세요.”
-      </div>
-      <div class="row">
-        <div class="col-6">
-          <div class="contentWrap">
-            <div class="content">
-              <div class="title">장비 관련 상담 문의</div>
-              <p>문의사항을 남겨주시면 접수 후 1시간 내에 답변 드리겠습니다.</p>
-            </div>
-            <div class="imgWrap">
-              <img src="<?php echo $zeplin ?>/icon-counsel-product.png" srcset="<?php echo $zeplin ?>/icon-counsel-product@2x.png 2x, <?php echo $zeplin ?>/icon-counsel-product@3x.png 3x">
-            </div>
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="contentWrap">
-            <div class="content">
-              <div class="title">바로 문의 <a href="tel:070-7404-8081">070-7404-8081</a></div>
-              <p>고객센터를 통해 궁금하신 사항들을 빠르고 친절하게 안내 드리겠습니다
-              </p>
-            </div>
-            <div class="imgWrap">
-              <img src="<?php echo $zeplin ?>/icon-tel.png" srcset="<?php echo $zeplin ?>/icon-tel@2x.png 2x, <?php echo $zeplin ?>/icon-tel@3x.png 3x">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <?php get_template_part('template-parts/footer/page'); ?>
 </main>
 <?php
 get_footer();

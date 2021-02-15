@@ -7,33 +7,4 @@ main.equipmentUtil {
     padding-bottom: 150px;
   }
   @include Accordion;
-  .section2 {
-    padding: 130px 0 150px;
-    background-color: $pale-grey;
-    .sectionTitle {
-      @include Text-Style-20;
-    }
-    .row {
-      padding: 90px 0;
-      border-top: 1px solid $dark;
-      border-bottom: 1px solid $dark;
-    }
-    .contentWrap {
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-      .content {
-        margin-right: 50px;
-      }
-      .title,
-      a {
-        @include Text-Style-21;
-        color: $dark;
-      }
-      p {
-        @include Text-Style-22;
-        color: $battleship-grey;
-      }
-    }
-  }
 }
