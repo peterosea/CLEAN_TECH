@@ -1,7 +1,7 @@
 header.default {
   position: relative;
   color: $white;
-  margin-top: 82px;
+  padding-top: 82px;
   .coverBg {
     position: absolute;
     width: 100%;
@@ -24,7 +24,7 @@ header.default {
       margin-bottom: 15px;
     }
     .description {
-      @include Text-Style-12;
+      @include Text-Style-24;
     }
   }
 }

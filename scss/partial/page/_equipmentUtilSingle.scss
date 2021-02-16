@@ -1,0 +1,11 @@
+main.equipmentUtilSingle {
+  > .container {
+    padding-top: 138px;
+    padding-bottom: 150px;
+    @include Noto-Sans-KR---24pt-2;
+    .wp-block-gallery {
+      font-size: 10px;
+      margin-bottom: 50px;
+    }
+  }
+}

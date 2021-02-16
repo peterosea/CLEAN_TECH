@@ -1,36 +1,37 @@
 <?php
 $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
+$contact = !empty(get_field('contact')) ? get_field('contact') : get_field('contact', 'option');
+$title = !empty(get_field('cTitle')) ? get_field('cTitle') : get_field('cTitle', 'option');
 ?>
 <div class="pageFooter">
   <div class="container">
     <div class="sectionTitle">
-      “사용 환경에 따라 <span class="pointColor">장비의 운영 플랜</span>이 달라집니다.
-      최적화된 장비 도입을 위해 전문 상담을 받아보세요.”
+      <?php echo $title ?>
     </div>
     <div class="row">
-      <div class="col-6">
-        <div class="contentWrap">
-          <div class="content">
-            <div class="title">장비 관련 상담 문의</div>
-            <p>문의사항을 남겨주시면 접수 후 1시간 내에 답변 드리겠습니다.</p>
-          </div>
-          <div class="imgWrap">
-            <img src="<?php echo $zeplin ?>/icon-counsel-product.png" srcset="<?php echo $zeplin ?>/icon-counsel-product@2x.png 2x, <?php echo $zeplin ?>/icon-counsel-product@3x.png 3x">
+      <?php
+      foreach ($contact as $key => $c) : ?>
+        <div class="col-6">
+          <div id="<?php if ($key === 'two') echo 'quickContact'; ?>" class="contentWrap">
+            <div class="content">
+              <div class="title">
+                <div class="title"><?php echo $c['title'] ?></div>
+              </div>
+              <p><?php echo $c['content'] ?></p>
+            </div>
+            <div class="imgWrap">
+              <?php if (!empty($c['image'])) : ?>
+                <img src="<?php echo $c['image'] ?>" alt="">
+              <?php else :
+                $imgUrl = $key === 'one' ? 'icon-counsel-product' : 'icon-tel';
+                echo <<<HTML
+                <img src="$zeplin/$imgUrl.png" srcset="$zeplin/$imgUrl@2x.png 2x, $zeplin/$imgUrl@3x.png 3x">
+HTML;
+              endif ?>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-6">
-        <div id="quickContact" class="contentWrap">
-          <div class="content">
-            <div class="title">바로 문의 <a href="tel:070-7404-8081">070-7404-8081</a></div>
-            <p>고객센터를 통해 궁금하신 사항들을 빠르고 친절하게 안내 드리겠습니다
-            </p>
-          </div>
-          <div class="imgWrap">
-            <img src="<?php echo $zeplin ?>/icon-tel.png" srcset="<?php echo $zeplin ?>/icon-tel@2x.png 2x, <?php echo $zeplin ?>/icon-tel@3x.png 3x">
-          </div>
-        </div>
-      </div>
+      <?php endforeach ?>
     </div>
   </div>
 </div>

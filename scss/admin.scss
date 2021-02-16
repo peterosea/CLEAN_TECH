@@ -1,0 +1,9 @@
+@import "utils/import";
+
+.pointColor {
+  color: $teal;
+}
+
+.pointUnderLine {
+  box-shadow: inset 0px -8px 0px 0px $pale-aqua-three;
+}

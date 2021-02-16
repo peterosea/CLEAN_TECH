@@ -1,6 +1,6 @@
 .wordpress
 backup
-Theme/index.css
+Theme/*.css
 .env
 node_modules
 svg/source
