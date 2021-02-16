@@ -11,7 +11,7 @@ $title = !empty(get_field('cTitle')) ? get_field('cTitle') : get_field('cTitle',
     <div class="row">
       <?php
       foreach ($contact as $key => $c) : ?>
-        <div class="col-6">
+        <div class="col-6 px-4">
           <div id="<?php if ($key === 'two') echo 'quickContact'; ?>" class="contentWrap">
             <div class="content">
               <div class="title">

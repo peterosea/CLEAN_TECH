@@ -7,3 +7,7 @@
 .pointUnderLine {
   box-shadow: inset 0px -8px 0px 0px $pale-aqua-three;
 }
+.components-resizable-box__container {
+  max-width: 100% !important;
+  height: auto !important;
+}

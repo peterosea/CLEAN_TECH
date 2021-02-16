@@ -301,3 +301,30 @@
   letter-spacing: -1.2px;
   text-align: center;
 }
+
+@mixin Text-Style-25 {
+  font-family: NotoSansKR;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: -1.2px;
+  text-align: center;
+  color: $white;
+}
+
+@mixin Text-Style-26 {
+  font-family: NotoSansKR;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.33;
+  letter-spacing: -0.9px;
+  text-align: center;
+  color: $battleship-grey;
+}
+
+@mixin Text-Style-27 {
+  font-family: NotoSansKR;
+  font-size: 18px;
+  line-height: 1.44;
+  letter-spacing: -0.9px;
+  text-align: left;
+}
