@@ -10,14 +10,16 @@
   border-radius: 8px;
   text-align: center;
   padding: 10px 10px 0;
-  max-width: 550px;
   width: 100%;
-  @supports not (gap: 10px) {
-    margin: 0 10px 10px 0;
-    max-width: 540px;
-  }
-  &.oneCol {
-    max-width: 270px;
+  @include respondTo("lg") {
+    max-width: 550px;
+    @supports not (gap: 10px) {
+      margin: 0 10px 10px 0;
+      max-width: 540px;
+    }
+    &.oneCol {
+      max-width: 270px;
+    }
   }
   .header {
     color: $white;
