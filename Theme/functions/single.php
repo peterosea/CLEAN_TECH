@@ -13,6 +13,9 @@ function get_new_single_template($single_template)
   if ('equipment_util' === $post->post_type) {
     $single_template =  get_stylesheet_directory() . '/template-single/equipment_util.php';
   }
+  if ('equipment' === $post->post_type) {
+    $single_template =  get_stylesheet_directory() . '/template-single/equipment.php';
+  }
   return $single_template;
 }
 add_filter('single_template', 'get_new_single_template');
