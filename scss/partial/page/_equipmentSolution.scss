@@ -1,0 +1,49 @@
+main.equipmentSolutionSingle {
+  .section {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+  .row {
+    justify-content: center;
+  }
+  .wrap {
+    margin-bottom: 110px;
+    .imgWrapWrap {
+      max-width: 320px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+    .imgWrap {
+      width: 100%;
+      padding-top: 100%;
+      position: relative;
+      border-radius: 9999px;
+      overflow: hidden;
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @supports (object-fit: cover) {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .contentWrap {
+      text-align: center;
+      .title {
+        @include Noto-Sans-KR---24pt;
+        color: $dark;
+        margin-bottom: 10px;
+      }
+      .excerpt {
+        @include Noto-Sans-KR---18pt;
+        color: $battleship-grey;
+        word-break: keep-all;
+        max-width: 320px;
+      }
+    }
+  }
+}

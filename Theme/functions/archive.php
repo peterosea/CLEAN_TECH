@@ -14,6 +14,9 @@ function get_new_archive_template($archive_template)
   if ($post->post_type === 'equipment_util') {
     $archive_template = get_stylesheet_directory() . '/template-archive/equipment_util.php';
   }
+  if ($post->post_type === 'equipment-solution') {
+    $archive_template = get_stylesheet_directory() . '/template-archive/equipment_solution.php';
+  }
   return $archive_template;
 }
 add_filter('archive_template', 'get_new_archive_template');

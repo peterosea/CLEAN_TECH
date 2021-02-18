@@ -32,7 +32,7 @@ function my_menu_breadcrumb($theme_location = 'GNB', $separator = ' &gt; ')
         }
       }
     }
-    if (!empty(get_taxonomies()) && $post->post_type !== 'page') {
+    if (!empty(get_taxonomies()) && $post->post_type !== 'page' && is_single()) {
       // CPT name
       if ($postType = get_post_type_object(get_post_type($post))) {
         $breadcrumbs[] = "<span title=\"{$postType->labels->singular_name}\">" . $postType->labels->singular_name . "</span>";
