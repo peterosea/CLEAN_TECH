@@ -101,7 +101,7 @@ main.equipmentSolutionSingle {
         justify-content: center;
         img {
           width: auto;
-          max-height: 108px;
+          max-height: 80px;
         }
       }
       .contentWrap {
@@ -113,6 +113,10 @@ main.equipmentSolutionSingle {
         .content {
           color: $battleship-grey;
           @include Text-Style-27;
+          strong {
+            color: $black-two;
+            @include Text-Style-17;
+          }
         }
       }
     }
