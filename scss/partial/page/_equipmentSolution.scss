@@ -46,4 +46,26 @@ main.equipmentSolutionSingle {
       }
     }
   }
+
+  .listWrap {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .listItem {
+      padding: 0 30px;
+    }
+    .imgWrap {
+      margin-bottom: 30px;
+      img {
+        max-width: 100px;
+      }
+    }
+    .title {
+      color: $black-two;
+      @include Text-Style-21;
+    }
+    .content {
+      color: $battleship-grey;
+      @include Text-Style-27;
+    }
+  }
 }
