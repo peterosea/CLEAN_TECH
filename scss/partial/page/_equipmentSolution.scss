@@ -50,13 +50,14 @@ main.equipmentSolutionSingle {
   .listWrap {
     padding-top: 100px;
     padding-bottom: 100px;
+    justify-content: space-around;
     .listItem {
       padding: 0 30px;
     }
     .imgWrap {
       margin-bottom: 30px;
       img {
-        max-width: 100px;
+        height: 100px;
       }
     }
     .title {

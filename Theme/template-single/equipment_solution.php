@@ -81,7 +81,7 @@ HTML;
         $title = $list['title'];
         $content = $list['content'];
         echo <<<HTML
-        <div class="col">
+        <div class="col-12 col-sm-6 col-lg-4 mb-5">
           <div class="listItem">
             <div class="imgWrap">
               <img src="$thumbnail" alt="">
