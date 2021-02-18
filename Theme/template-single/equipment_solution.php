@@ -100,6 +100,21 @@ HTML;
       }
       echo '</div>';
     }
+
+
+    if (!empty($pt = get_field('program_table'))) {
+      echo '<h2 class="programTableH2">프로그램 안내</h2>';
+      echo '<div class="programTable row">';
+      foreach ($pt as $key => $p) {
+        $name = $p['name'];
+        $value = $p['value'];
+        echo <<<HTML
+        <div class="col-1 name">$name</div>
+        <div class="col-5 value">$value</div>
+HTML;
+      }
+      echo '</div>';
+    }
     ?>
   </div>
   <?php get_template_part('template-parts/footer/page'); ?>

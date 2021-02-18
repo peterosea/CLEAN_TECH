@@ -68,4 +68,26 @@ main.equipmentSolutionSingle {
       @include Text-Style-27;
     }
   }
+  .programTableH2 {
+    color: $black-two;
+    @include Text-Style-21;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $black-two;
+  }
+  .programTable {
+    &.row > div {
+      padding-top: 26px;
+      padding-bottom: 26px;
+      border-bottom: 1px solid $light-periwinkle-two;
+    }
+    .name {
+      @include Text-Style-30;
+      line-height: 1.2;
+    }
+    .value {
+      color: $battleship-grey;
+      @include Text-Style-31;
+      line-height: 1.2;
+    }
+  }
 }
