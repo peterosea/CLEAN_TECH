@@ -41,4 +41,26 @@
     centerMode: true,
     centerPadding: "0px",
   });
+
+  // 솔루션
+  $(".vpreviewSlide").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: false,
+    draggable: false,
+    asNavFor: ".vcontrolSlide",
+  });
+  $(".vcontrolSlide").slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: true,
+    infinite: true,
+    asNavFor: ".vpreviewSlide",
+    draggable: false,
+    focusOnSelect: true,
+    centerMode: true,
+    centerPadding: "0px",
+  });
 })(jQuery);

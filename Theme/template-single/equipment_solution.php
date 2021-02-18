@@ -12,6 +12,8 @@ $theme_url = get_stylesheet_directory();
 $functions_url = get_stylesheet_directory() . '/functions';
 $img_url = get_home_url() . '/wp-content/uploads';
 $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
+get_template_part('template-parts/head/slickslide');
+get_template_part('template-parts/head/equipment');
 get_header();
 get_template_part('template-parts/header/page-archive');
 global $post;
@@ -51,6 +53,55 @@ HTML;
       }
       echo '</div>';
     }
+
+
+    if ($vv = get_field('vlist')) : ?>
+      <div class="videoRootWrap">
+        <div class="vpreviewSlide">
+          <?php
+          foreach ($vv as $ut) {
+            if ($ut['acf_fc_layout'] === 'youtube') {
+              $link = $ut['link'];
+              echo <<<HTML
+                <div class="slide">
+                  <div class="videoWrap">
+                    $link
+                  </div>
+                </div>
+HTML;
+            } else {
+              $attachment = $ut['attachment'];
+              echo <<<HTML
+                <div class="slide">
+                  <div class="videoWrap">
+                    <video>
+                      <source src="$attachment">
+                    </video>
+                  </div>
+                </div>
+HTML;
+            }
+          }
+          ?>
+        </div>
+        <div class="vcontrolSlide">
+          <?php
+          foreach ($vv as $ut) {
+            $cover = $ut['cover'];
+            $name = $ut['name'];
+            echo <<<HTML
+            <div class="slide">
+              <div class="imgWrap">
+                <img src="$cover" alt="">
+              </div>
+            </div>
+HTML;
+          }
+          ?>
+        </div>
+      </div>
+    <?php endif;
+
     the_content();
 
     if (!empty($processGroup = get_field('processGroup'))) {
