@@ -455,3 +455,20 @@
   letter-spacing: -1.8px;
   text-align: center;
 }
+
+@mixin Text-Style-43 {
+  font-family: Poppins;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 0.75;
+  letter-spacing: -2.4px;
+  text-align: left;
+}
+
+@mixin Text-Style-44 {
+  font-family: NotoSansKR;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: -0.9px;
+  text-align: left;
+}
