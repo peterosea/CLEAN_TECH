@@ -74,6 +74,7 @@ get_template_part('template-parts/header/page-archive');
         <?php
         $cat = get_terms(array('taxonomy' => 'equipment_cat', 'hide_empty' => false));
         foreach ($cat as $c) {
+          if (!in_array($c->slug, array('dry-humidification', 'dry-food', 'gloss', 'wet', 'carpet'))) continue;
           $class = '';
           if ($c->count === 0) $class .= 'disable';
           echo <<<HTML
@@ -105,6 +106,7 @@ HTML;
         </div>
         <?php
         foreach ($cat as $c) {
+          if (!in_array($c->slug, array('dry-humidification', 'dry-food', 'gloss', 'wet', 'carpet'))) continue;
           $dom = '<div id="' . $c->slug . '" class="itemList style1 ' . $c->slug . '">';
           $custom_query = get_posts(array(
             'post_type' => 'equipment',
@@ -132,7 +134,7 @@ HTML;
             }
           } else {
             $dom .= <<<HTML
-            포스트가 없습니다.
+            <div class="empty">포스트가 없습니다.</div>
 HTML;
           }
           $dom .= '</div>';

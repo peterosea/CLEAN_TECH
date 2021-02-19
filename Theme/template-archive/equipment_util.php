@@ -72,7 +72,7 @@ HTML;
             }
           } else {
             $dom .= <<<HTML
-            포스트가 없습니다.
+            <div class="empty">포스트가 없습니다.</div>
 HTML;
           }
           $dom .= '</div>';

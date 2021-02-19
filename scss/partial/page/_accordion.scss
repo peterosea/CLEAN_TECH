@@ -33,6 +33,15 @@
   }
   .accordionContent {
     padding: 50px 0;
+    .active .itemList {
+      display: flex;
+      width: 100%;
+    }
+    .listRoot {
+      .listContent div.listTitle {
+        @include Text-Style-42;
+      }
+    }
     .itemList {
       flex-wrap: wrap;
       display: none;
@@ -41,6 +50,14 @@
         @supports (gap: 120px) {
           gap: 120px;
         }
+      }
+      &.style1 {
+        border: solid 1px $very-light-pink-eight;
+        background-color: $white-two;
+        justify-content: flex-start;
+      }
+      + .listContent {
+        margin-top: 70px;
       }
       .listContent {
         width: 100%;
@@ -52,7 +69,11 @@
         .description {
           color: $battleship-grey;
           @include Text-Style-16;
+          margin-bottom: 10px;
         }
+      }
+      .empty {
+        padding: 40px;
       }
       &.active {
         display: flex;
@@ -63,7 +84,8 @@
       height: 277px;
       @include Text-Style-19;
       padding: 20px;
-      border: 1px solid transparent;
+      border: solid 1px $very-light-pink-eight;
+      background-color: $white;
       color: $black-two;
       transition: border 0.3s, color 0.3s;
       display: flex;

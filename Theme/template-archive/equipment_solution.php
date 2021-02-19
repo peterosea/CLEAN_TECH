@@ -27,17 +27,18 @@ get_template_part('template-parts/header/page-archive');
         )) as $post) {
           $thumbnail = get_the_post_thumbnail_url($post, 'full');
           $title = get_the_title($post);
+          $link = get_the_permalink($post);
           $excerpt = get_the_excerpt($post);
           echo <<<HTML
           <div class="col-12 col-sm-6 col-lg-4">
             <div class="wrap">
               <div class="imgWrapWrap">
-                <div class="imgWrap">
+                <a href="$link" class="d-block imgWrap">
                   <img src="$thumbnail" alt="">
-                </div>
+                </a>
               </div>
               <div class="contentWrap">
-                <div class="title">$title</div>
+                <a href="$link" class="d-block title">$title</a>
                 <div class="excerpt">$excerpt</div>
               </div>
             </div>
