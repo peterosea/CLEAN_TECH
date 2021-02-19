@@ -1,0 +1,51 @@
+.page.page-id-366 {
+  .pageHeader .content {
+    background-color: $white;
+    .title {
+      p {
+        text-align: left;
+        max-width: none;
+        color: $dark;
+        @include Text-Style-38;
+      }
+    }
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    .title + p {
+      max-width: none;
+      @include Text-Style-37;
+      color: $black-two;
+    }
+  }
+}
+main.greeting {
+  .container {
+    padding-bottom: 130px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 100px;
+  }
+  p {
+    @include Text-Style-39;
+    color: $battleship-grey;
+    strong {
+      color: $dark;
+      @include Text-Style-21;
+      margin-bottom: 10px;
+    }
+  }
+  .company {
+    .comp {
+      @include Text-Style-40;
+      color: $black-two;
+      margin-right: 28px;
+    }
+    .name {
+      @include Text-Style-41;
+      color: $black-two;
+    }
+  }
+}

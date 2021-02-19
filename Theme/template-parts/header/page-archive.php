@@ -7,12 +7,10 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
 ?>
 <header class="default">
   <div class="coverBg">
-    <?php if (!empty(get_field('header_img', 'option'))) : ?>
+    <?php if (empty(get_field_objects()['header_img'])) : ?>
       <img src="<?php echo get_field('header_img', 'option') ?>" alt="">
-    <?php elseif (!empty(get_field('header_img'))) : ?>
-      <img src="<?php echo get_field('header_img') ?>" alt="">
     <?php else : ?>
-      <img draggable="false" src="<?php echo $zeplin ?>/img-top-usage.jpg" srcset="<?php echo $zeplin ?>/img-top-usage@2x.jpg 2x, <?php echo $zeplin ?>/img-top-usage@3x.jpg 3x">
+      <img src="<?php echo get_field('header_img') ?>" alt="">
     <?php endif ?>
   </div>
   <div class="container">
@@ -29,10 +27,11 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
       ?>
     </div>
     <div class="description">
-      <?php if (!empty(get_field('description', 'option'))) :
+      <?php if (empty(get_field_objects()['description'])) :
         echo get_field('description', 'option');
-      else : ?>
-      <?php endif ?>
+      else :
+        echo get_field('description');
+      endif ?>
     </div>
   </div>
 </header>

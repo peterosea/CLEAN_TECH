@@ -29,8 +29,8 @@ header.default {
   }
 }
 header.pageHeader {
-  background-color: $pale-grey;
   .breadCrumbs {
+    background-color: $pale-grey;
     border-bottom: 1px solid $light-periwinkle-two;
     color: $battleship-grey;
     line-height: 1;
@@ -59,6 +59,7 @@ header.pageHeader {
     }
   }
   .content {
+    background-color: $pale-grey;
     @include Text-Style-13;
     padding-top: 48px;
     padding-bottom: 57px;
