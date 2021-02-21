@@ -35,6 +35,11 @@ main.equipmentSingle {
       }
     }
   }
+  .re > .title {
+    color: $dark;
+    @include Text-Style-21;
+    margin-bottom: 20px;
+  }
   .section1 {
     padding-top: 72px;
     padding-bottom: 113px;

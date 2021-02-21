@@ -96,7 +96,13 @@ HTML;
         $re = get_field('related-equipment');
         $colClass = count($re) % 2 === '0' ? 'col-6' : 'col';
         if (!empty($re)) {
-          foreach ($re as $r) {
+          echo <<<HTML
+          <div class="col-12 re p-0">
+            <div class="title">관련장비</div>
+          </div>
+HTML;
+          foreach ($re as $key => $r) {
+            if ($key > 2) break;
             echo <<<HTML
             <div class="$colClass px-0">
               <div class="rWrap">

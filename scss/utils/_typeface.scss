@@ -472,3 +472,29 @@
   letter-spacing: -0.9px;
   text-align: left;
 }
+
+@mixin Text-Style-45 {
+  font-family: Poppins;
+  font-size: 18px;
+  text-align: left;
+}
+
+@mixin Text-Style-46 {
+  font-family: NotoSansKR;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: -1.08px;
+  text-align: left;
+}
+
+@mixin Text-Style-48 {
+  font-family: NotoSansKR;
+  font-size: 18px;
+  text-align: left;
+}
+
+@mixin Text-Style-47 {
+  font-family: Poppins;
+  font-size: 18px;
+  text-align: left;
+}
