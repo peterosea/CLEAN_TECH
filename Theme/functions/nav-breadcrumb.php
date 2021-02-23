@@ -34,11 +34,12 @@ function my_menu_breadcrumb($theme_location = 'GNB', $separator = ' &gt; ')
     }
     if (!empty(get_taxonomies()) && $post->post_type !== 'page' && is_single()) {
       // CPT name
-      if ($postType = get_post_type_object(get_post_type($post))) {
+      if (!empty($postType = get_post_type_object(get_post_type($post))) && get_the_terms($post, get_taxonomies())) {
         $breadcrumbs[] = "<span title=\"{$postType->labels->singular_name}\">" . $postType->labels->singular_name . "</span>";
-        $taxo = get_the_terms($post, get_taxonomies());
-        foreach ($taxo as $tax) {
-          $breadcrumbs[] = "<span title=\"{$tax->name}\">" . $tax->name . "</span>";
+        foreach (get_the_terms($post, get_taxonomies()) as $tax) {
+          if (!empty($tax->name)) {
+            $breadcrumbs[] = "<span title=\"{$tax->name}\">" . $tax->name . "</span>";
+          }
         }
       }
     }

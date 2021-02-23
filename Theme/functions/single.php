@@ -15,6 +15,12 @@ function get_new_single_template($single_template)
   }
   if ('equipment' === $post->post_type) {
     $single_template =  get_stylesheet_directory() . '/template-single/equipment.php';
+    foreach (get_the_terms($post, get_taxonomies()) as $t) {
+      var_dump($t->slug);
+      if ($t->slug === 'battery-charger') {
+        $single_template =  get_stylesheet_directory() . '/template-single/equipment_battery.php';
+      }
+    }
   }
   if ('equipment-solution' === $post->post_type) {
     $single_template =  get_stylesheet_directory() . '/template-single/equipment_solution.php';

@@ -1,5 +1,23 @@
 .processWrap {
   padding-top: 70px;
+  &.battery {
+    padding-top: 24px;
+    .process {
+      margin-bottom: 38px;
+      .header {
+        align-items: flex-start;
+        color: $black-two;
+        @include Text-Style-39;
+        font-weight: normal;
+        span {
+          padding-top: 5px;
+        }
+        .step {
+          @include Text-Style-49;
+        }
+      }
+    }
+  }
   .process {
     margin-bottom: 70px;
     .header {

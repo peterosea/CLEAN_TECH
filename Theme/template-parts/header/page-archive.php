@@ -47,9 +47,20 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
     </div>
   </div>
   <?php
-  $sTitle = get_field('s_title');
-  $sContent = get_field('s_content');
-  if (!empty($sTitle)) :
+  if (!empty(get_field('s_title'))) :
+    $sTitle = get_field('s_title');
+    $sContent = get_field('s_content');
+    echo <<<HTML
+    <div class="content">
+      <div class="container">
+        <div class="title">$sTitle</div>
+        $sContent
+      </div>
+    </div>
+HTML;
+  elseif (!empty(get_field('s_title', 'option')) && get_post_type() === 'equipment') :
+    $sTitle = get_field('s_title', 'option');
+    $sContent = get_field('s_content', 'option');
     echo <<<HTML
     <div class="content">
       <div class="container">

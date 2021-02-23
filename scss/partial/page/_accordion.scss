@@ -129,7 +129,12 @@
       .title {
         @include Noto-Sans-KR---24pt;
         color: $dark;
+        display: inline-block;
         margin-bottom: 9px;
+        text-decoration: none;
+        &:hover {
+          color: $teal;
+        }
       }
       p {
         @include Noto-Sans-KR---18pt;

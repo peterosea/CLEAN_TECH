@@ -60,12 +60,13 @@ HTML;
           if (!empty($custom_query)) {
             foreach ($custom_query as $post) {
               $thumb = get_the_post_thumbnail_url($post, 'full');
+              $pmlink = get_the_permalink($post);
               $dom .= <<<HTML
               <div class="item">
                 <div class="imgWrap">
                   <img src="$thumb" alt="">
                 </div>
-                <div class="title">$post->post_title</div>
+                <a href="$pmlink" class="title">$post->post_title</a>
                 <p>$post->post_excerpt</p>
               </div>
 HTML;
@@ -81,20 +82,6 @@ HTML;
         ?>
       </div>
       <script>
-        // const control = document.querySelectorAll('.accordionMenu li');
-        // const target = document.querySelectorAll('.accordionContent .itemList');
-        // control.forEach(c => {
-        //   c.addEventListener('click', () => {
-        //     control.forEach(cc => cc.classList.remove('active'));
-        //     target.forEach(t => {
-        //       t.classList.remove('active');
-        //       if (t.id === c.id) {
-        //         t.classList.add('active');
-        //       }
-        //     });
-        //     c.classList.add('active');
-        //   })
-        // })
         "use strict";
 
         var control = document.querySelectorAll('.accordionMenu li');
