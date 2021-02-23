@@ -44,13 +44,7 @@ HTML;
               array(
                 'taxonomy' => 'equipment_cat',
                 'field' => 'slug',
-                'terms' => 'battery-charger'
-              ),
-              array(
-                'taxonomy' => 'equipment_cat',
-                'field' => 'slug',
-                'terms' => 'charger',
-                'operator' => 'NOT IN',
+                'terms' => 'battery'
               )
             ),
           )) as $post) {
@@ -122,7 +116,6 @@ HTML;
     <div class="container">
       <div class="row m-0">
         <?php
-
         $list = array(
           '충전기',
           '모델명',

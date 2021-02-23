@@ -106,14 +106,15 @@ HTML;
               if (!empty($custom_query)) {
                 foreach ($custom_query as $post) {
                   $thumb = get_the_post_thumbnail_url($post, 'full');
+                  $link = get_the_permalink($post);
                   $dom .= <<<HTML
-                  <div class="item">
+                  <a href="$link" class="item">
                     <div class="imgWrap">
                       <img src="$thumb" alt="">
                     </div>
                     <div class="title">$post->post_title</div>
                     <p>$post->post_excerpt</p>
-                  </div>
+                  </a>
   HTML;
                 }
               } else {

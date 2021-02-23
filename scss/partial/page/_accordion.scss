@@ -93,6 +93,7 @@
       justify-content: space-between;
       overflow: hidden;
       cursor: pointer;
+      text-decoration: none;
       @supports not (gap: 120px) {
         box-sizing: content-box;
         padding: 60px;
