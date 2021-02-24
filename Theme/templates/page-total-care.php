@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: 렌탈 케어
+ * Template Name: 토탈 케어
  * Template Post Type: page
  */
 
@@ -13,61 +13,66 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
 get_header();
 get_template_part('template-parts/header/page-archive');
 ?>
-<main class="pageTemplate rentalCare">
+<main class="pageTemplate totalCare">
   <div class="section section1">
-    <div class="sectionTitle">
-      “고객의 고민에서부터 <br />
-      <span class="pointColor">크린텍의 렌탈케어</span>는 시작됐습니다.”
-    </div>
     <div class="container">
-      <img src="<?php echo $zeplin ?>/sasodko1.png" alt="">
+      <div class="sectionTitle important">
+        <?php echo get_field('title') ?>
+      </div>
+      <img src="<?php echo get_field('img') ?>" alt="">
     </div>
   </div>
   <div class="section section2">
-    <div class="sectionTitle">
-      “<span class="pointColor">크린텍 렌탈케어</span>는 다양한 현장 상황에 맞춰<br />
-      꼭 필요한 장비들로 구성됩니다.”
-      <p>습식 보행 및 탑승, 건식 보행 및 탑승, 카펫, 광택 등</p>
-    </div>
     <div class="container">
-      <div class="row">
-        <div class="col-7">
-          <img src="<?php echo $zeplin ?>/img-case-a.png" srcset="<?php echo $zeplin ?>/img-case-a@2x.png 2x, <?php echo $zeplin ?>/img-case-a@3x.png 3x">
-        </div>
-        <div class="col-5 contentCol">
-          <div class="title pointColor">사례 A</div>
-          <p>
-            청소장비를 렌탈할 수 있는 곳들을 여러 곳 알아보았는데,
-            100대 넘는 장비를 안정감 있게 관리할 수 있는 인력과
-            재무 건실성을 갖춘 곳은 크린텍이 유일해 보였습니다.
-            <br />
-            <br />
-          </p>
-        </div>
+      <div class="sectionTitle important">
+        <?php echo get_field('title2') ?>
       </div>
-      <div class="row">
-        <div class="col-5 contentCol">
-          <div class="title pointColor">사례 B</div>
-          <p>
-            전국에 물류센터가 점점 늘고 있는데 어떻게 동일한
-            위생상태를 유지할 수 있을지 고민이었습니다.
-            크린텍 렌탈케어를 통해 전국에 있는 물류센터 현장에 꼭 맞는
-            장비들을 도입할 수 있었고, 이후에도 모든 유지관리를
-            크린텍이 진행해 신경 쓸 일이 하나도 없었습니다.
-          </p>
-        </div>
-        <div class="col-7">
-          <img src="<?php echo $zeplin ?>/img-case-b.png" srcset="<?php echo $zeplin ?>/img-case-b@2x.png 2x, <?php echo $zeplin ?>/img-case-b@3x.png 3x">
-        </div>
-      </div>
+      <ul class="list">
+        <?php
+        foreach (get_field('list') as $li) {
+          $ico = $li['img'];
+          $label = $li['label'];
+          echo <<<HTML
+            <li>
+              <img src="$ico" alt="" />
+              <div class="label">$label</div>
+            </li>
+HTML;
+        }
+        ?>
+      </ul>
     </div>
   </div>
   <div class="section section3">
     <div class="container">
-      <div class="sectionTitle">
-        “<span class="pointColor">크린텍 렌탈케어</span>는 다양한 현장 상황에 맞춰<br />
-        꼭 필요한 장비들로 구성됩니다.”
-        <p>습식 보행 및 탑승, 건식 보행 및 탑승, 카펫, 광택 등</p>
+      <div class="sectionTitle important">
+        <?php echo get_field('title3') ?>
+        <p>
+          <?php echo get_field('desc') ?>
+        </p>
+      </div>
+      <div class="bWrap">
+        <div class="balloon">
+          <?php echo get_field('message') ?>
+        </div>
+      </div>
+      <div class="row m-0">
+        <div class="col p-0">
+          <img src="<?php echo get_field('s3img1') ?>" alt="" />
+        </div>
+        <div class="col p-0">
+          <img src="<?php echo get_field('s3img2') ?>" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section section4">
+    <div class="container">
+      <div class="sectionTitle important">
+        <?php echo get_field('title4') ?>
+        <p>
+          <?php echo get_field('desc2') ?>
+        </p>
       </div>
       <div class="menuWrap">
         <ul class="accordionMenu">
