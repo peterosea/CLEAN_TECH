@@ -6,3 +6,4 @@ node_modules
 svg/source
 Theme/template-parts/SvgStore.php
 zeplin
+build

@@ -506,3 +506,11 @@
   line-height: 1.44;
   text-align: center;
 }
+
+@mixin Text-Style-50 {
+  font-family: NotoSansKR;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: -0.9px;
+  text-align: left;
+}
