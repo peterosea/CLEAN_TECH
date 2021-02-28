@@ -63,16 +63,19 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
     </div>
 HTML;
   elseif (!is_archive() && !empty(get_field('s_title', 'option')) && get_post_type() === 'equipment') :
-    $sTitle = get_field('s_title', 'option');
-    $sContent = get_field('s_content', 'option');
-    echo <<<HTML
-    <div class="content">
-      <div class="container">
-        <div class="title">$sTitle</div>
-        $sContent
+    global $post;
+    if (has_term('battery', 'equipment_cat', $post) || has_term('charger', 'equipment_cat', $post)) :
+      $sTitle = get_field('s_title', 'option');
+      $sContent = get_field('s_content', 'option');
+      echo <<<HTML
+      <div class="content">
+        <div class="container">
+          <div class="title">$sTitle</div>
+          $sContent
+        </div>
       </div>
-    </div>
 HTML;
+    endif;
   endif; ?>
 </header>
 <?php
