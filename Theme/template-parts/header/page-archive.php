@@ -9,6 +9,8 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
   <div class="coverBg">
     <?php if (is_archive() && !empty(get_field(get_post_type(), 'option'))) : ?>
       <img src="<?php echo get_field(get_post_type(), 'option')['header_img'] ?>" alt="">
+    <?php elseif (is_single() && !empty(get_field(get_post_type(), 'option'))) : ?>
+      <img src="<?php echo get_field(get_post_type(), 'option')['header_img'] ?>" alt="">
     <?php else : ?>
       <img src="<?php echo get_field('header_img') ?>" alt="">
     <?php endif ?>
@@ -28,6 +30,8 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
     </div>
     <div class="description">
       <?php if (is_archive() && !empty(get_field(get_post_type(), 'option'))) :
+        echo get_field(get_post_type(), 'option')['description'];
+      elseif (is_single() && !empty(get_field(get_post_type(), 'option'))) :
         echo get_field(get_post_type(), 'option')['description'];
       else :
         echo get_field('description');

@@ -133,35 +133,37 @@ HTML;
           $nav = get_the_posts_pagination($pagination_args);
           $nav = str_replace('<h2 class="screen-reader-text">screen-reader-text</h2>', '', $nav);
 
-          $moreClass = $paged === 0 ? 'disable' : '';
-          echo <<<HTML
-          <a href="/$postType" class="start $moreClass">
-            <div class="arrow"></div>
-          </a>
-HTML;
-          if ($paged === 1 && !empty($nav)) {
+          if (!empty($nav)) :
+            $moreClass = $paged === 0 ? 'disable' : '';
             echo <<<HTML
-            <div class="prev">
-              <div class="arrow disable"></div>
-            </div>
+            <a href="/$postType" class="start $moreClass">
+              <div class="arrow"></div>
+            </a>
 HTML;
-          }
-          echo $nav;
-          $endPage = $wp_query->max_num_pages;
-          if ($paged === $endPage) {
+            if ($paged === 1 && !empty($nav)) {
+              echo <<<HTML
+              <div class="prev">
+                <div class="arrow disable"></div>
+              </div>
+HTML;
+            }
+            echo $nav;
+            $endPage = $wp_query->max_num_pages;
+            if ($paged === $endPage) {
+              echo <<<HTML
+              <div class="next">
+                <div class="arrow disable"></div>
+              </div>
+HTML;
+            }
+            $moreClass = $paged === $endPage ? 'disable' : '';
             echo <<<HTML
-            <div class="next">
-              <div class="arrow disable"></div>
-            </div>
+            <a href="/$postType/page/$endPage" class="end $moreClass">
+              <div class="arrow"></div>
+            </a>
 HTML;
-          }
-          $moreClass = $paged === $endPage ? 'disable' : '';
-          echo <<<HTML
-          <a href="/$postType/page/$endPage" class="end $moreClass">
-            <div class="arrow"></div>
-          </a>
-HTML;
-          echo "</div>";
+            echo "</div>";
+          endif;
         else :
           /**
            * Empty Post

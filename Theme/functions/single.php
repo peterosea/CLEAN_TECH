@@ -24,6 +24,9 @@ function get_new_single_template($single_template)
   if ('equipment-solution' === $post->post_type) {
     $single_template =  get_stylesheet_directory() . '/template-single/equipment_solution.php';
   }
+  if ('news' === $post->post_type) {
+    $single_template =  get_stylesheet_directory() . '/template-single/news.php';
+  }
   return $single_template;
 }
 add_filter('single_template', 'get_new_single_template');

@@ -123,7 +123,6 @@
   font-weight: bold;
   line-height: 1;
   letter-spacing: -1.2px;
-  text-align: left;
 }
 
 @mixin Text-Style-4 {
@@ -132,7 +131,6 @@
   font-weight: bold;
   line-height: 1.27;
   letter-spacing: -3.1px;
-  text-align: left;
 }
 
 @mixin Text-Style-5 {
@@ -149,7 +147,6 @@
   font-weight: 500;
   line-height: 1.63;
   letter-spacing: -0.8px;
-  text-align: left;
 }
 
 @mixin Text-Style-6 {
@@ -158,7 +155,6 @@
   font-weight: bold;
   line-height: 1.14;
   letter-spacing: -1.75px;
-  text-align: left;
 }
 
 @mixin Text-Style-8 {
@@ -185,7 +181,6 @@
   font-weight: bold;
   line-height: 1.43;
   letter-spacing: -1.4px;
-  text-align: left;
 }
 
 @mixin Text-Style-11 {
@@ -244,7 +239,6 @@
   font-size: 18px;
   font-weight: bold;
   letter-spacing: -0.9px;
-  text-align: left;
 }
 
 @mixin Text-Style-18 {
@@ -252,7 +246,6 @@
   font-size: 36px;
   font-weight: bold;
   letter-spacing: -1.8px;
-  text-align: left;
 }
 
 @mixin Text-Style-19 {
@@ -277,7 +270,6 @@
   font-size: 24px;
   font-weight: bold;
   letter-spacing: -1.2px;
-  text-align: left;
 }
 
 @mixin Text-Style-22 {
@@ -285,7 +277,6 @@
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: -0.7px;
-  text-align: left;
 }
 
 @mixin Text-Style-23 {
@@ -330,7 +321,6 @@
   font-size: 18px;
   line-height: 1.44;
   letter-spacing: -0.9px;
-  text-align: left;
 }
 
 @mixin Text-Style-28 {
@@ -338,7 +328,6 @@
   font-size: 72px;
   font-weight: bold;
   line-height: 1;
-  text-align: left;
 }
 
 @mixin Text-Style-29 {
@@ -346,7 +335,6 @@
   font-size: 20px;
   line-height: 1.5;
   letter-spacing: -1px;
-  text-align: left;
 }
 
 @mixin Text-Style-30 {
@@ -355,7 +343,6 @@
   font-weight: bold;
   line-height: 3.33;
   letter-spacing: -1.08px;
-  text-align: left;
 }
 
 @mixin Text-Style-31 {
@@ -363,7 +350,6 @@
   font-size: 18px;
   line-height: 3.33;
   letter-spacing: -1.08px;
-  text-align: left;
 }
 
 @mixin Text-Style-32 {
@@ -371,7 +357,6 @@
   font-size: 30px;
   font-weight: bold;
   line-height: 2.47;
-  text-align: left;
 }
 
 @mixin Text-Style-33 {
@@ -380,7 +365,6 @@
   font-weight: bold;
   line-height: 1.2;
   letter-spacing: -1.08px;
-  text-align: left;
 }
 
 @mixin Text-Style-34 {
@@ -388,7 +372,6 @@
   font-size: 18px;
   line-height: 1.2;
   letter-spacing: -1.08px;
-  text-align: left;
   font-weight: 300;
 }
 
@@ -397,7 +380,6 @@
   font-size: 14px;
   line-height: 1.57;
   letter-spacing: -0.7px;
-  text-align: left;
 }
 
 @mixin Text-Style-36 {
@@ -406,7 +388,6 @@
   font-weight: 500;
   line-height: 2.5;
   letter-spacing: -0.8px;
-  text-align: left;
 }
 
 @mixin Text-Style-38 {
@@ -414,14 +395,12 @@
   font-size: 52px;
   font-weight: bold;
   letter-spacing: -2.6px;
-  text-align: left;
 }
 @mixin Text-Style-37 {
   font-family: NotoSansKR;
   font-size: 36px;
   line-height: 1.39;
   letter-spacing: -1.8px;
-  text-align: left;
 }
 
 @mixin Text-Style-39 {
@@ -429,7 +408,6 @@
   font-size: 24px;
   line-height: 1.5;
   letter-spacing: -1.2px;
-  text-align: left;
 }
 
 @mixin Text-Style-40 {
@@ -437,7 +415,6 @@
   font-size: 30px;
   line-height: 1.1;
   letter-spacing: -1.5px;
-  text-align: left;
 }
 
 @mixin Text-Style-41 {
@@ -446,7 +423,6 @@
   font-weight: 800;
   line-height: 0.92;
   letter-spacing: 3.6px;
-  text-align: left;
 }
 @mixin Text-Style-42 {
   font-family: NotoSansKR;
@@ -462,7 +438,6 @@
   font-weight: bold;
   line-height: 0.75;
   letter-spacing: -2.4px;
-  text-align: left;
 }
 
 @mixin Text-Style-44 {
@@ -470,13 +445,11 @@
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: -0.9px;
-  text-align: left;
 }
 
 @mixin Text-Style-45 {
   font-family: Poppins;
   font-size: 18px;
-  text-align: left;
 }
 
 @mixin Text-Style-46 {
@@ -484,19 +457,16 @@
   font-size: 18px;
   font-weight: bold;
   letter-spacing: -1.08px;
-  text-align: left;
 }
 
 @mixin Text-Style-48 {
   font-family: NotoSansKR;
   font-size: 18px;
-  text-align: left;
 }
 
 @mixin Text-Style-47 {
   font-family: Poppins;
   font-size: 18px;
-  text-align: left;
 }
 
 @mixin Text-Style-49 {
@@ -512,24 +482,44 @@
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: -0.9px;
-  text-align: left;
 }
 
 @mixin Text-Style-51 {
   font-family: NotoSansKR;
   font-size: 18px;
   letter-spacing: -0.9px;
-  text-align: left;
 }
 
 @mixin Text-Style-52 {
   font-family: Poppins;
   font-size: 16px;
-  text-align: left;
 }
 
 @mixin Text-Style-53 {
   font-family: Poppins;
   font-size: 16px;
   text-align: center;
+}
+
+@mixin Text-Style-54 {
+  font-family: Poppins;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+@mixin Text-Style-55 {
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.33;
+  letter-spacing: -1.2px;
+  text-align: right;
+}
+
+@mixin Text-Style-56 {
+  font-family: NotoSansKR;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: -0.9px;
 }

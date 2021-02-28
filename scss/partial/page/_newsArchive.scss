@@ -43,6 +43,10 @@ main.pageTemplate.news {
       color: $dark;
       @include Text-Style-21;
       margin-bottom: 12px;
+      text-decoration: none;
+      &:hover {
+        color: $teal;
+      }
     }
     .excerpt {
       color: $battleship-grey-three;
