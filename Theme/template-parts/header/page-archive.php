@@ -47,7 +47,7 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
     </div>
   </div>
   <?php
-  if (!empty(get_field('s_title'))) :
+  if (!empty(get_field('s_title')) && !is_archive()) :
     $sTitle = get_field('s_title');
     $sContent = get_field('s_content');
     echo <<<HTML

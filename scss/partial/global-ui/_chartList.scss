@@ -1,0 +1,66 @@
+@mixin chartList {
+  .chartListWrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 70px;
+  }
+  .chartList {
+    background-color: $seafoam-blue;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px 10px 0;
+    width: 100%;
+    @include respondTo("lg") {
+      max-width: 550px;
+      @supports not (gap: 10px) {
+        margin: 0 10px 10px 0;
+        max-width: 540px;
+      }
+      &.oneCol {
+        max-width: 270px;
+      }
+    }
+    .header {
+      color: $white;
+      margin-bottom: 30px;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      @include Text-Style-25;
+      img {
+        height: 40px;
+        margin-right: 10px;
+      }
+    }
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 545.5px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        border-radius: 8px;
+        background-color: $white;
+        color: $battleship-grey;
+        padding: 26px 0 27px;
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: calc(50% - 5px);
+        @include Text-Style-26;
+        &:nth-child(2n -1) {
+          margin-right: 10px;
+        }
+      }
+    }
+    &.oneCol .list li {
+      max-width: 100%;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+  }
+}

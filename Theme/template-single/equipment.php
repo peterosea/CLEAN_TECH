@@ -88,6 +88,13 @@ HTML;
               ?>
             </tbody>
           </table>
+          <?php if (!empty(get_field('table'))) {
+            $d =  get_the_title();
+            echo <<<HTML
+              <span class="d">* $d 기준</span>
+HTML;
+          }
+          ?>
         </div>
       </div>
 

@@ -43,6 +43,13 @@ main.equipmentSingle {
   .section1 {
     padding-top: 72px;
     padding-bottom: 113px;
+    span.d {
+      font-size: 18px;
+      line-height: 3.33;
+      letter-spacing: -1.08px;
+      text-align: left;
+      color: $battleship-grey;
+    }
     .itemRow {
       margin-bottom: 70px;
     }

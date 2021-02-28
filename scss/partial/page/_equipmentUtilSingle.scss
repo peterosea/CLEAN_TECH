@@ -15,4 +15,8 @@ main.equipmentUtilSingle {
       }
     }
   }
+  @include chartList;
+  @include effectList;
+  @include iconList;
+  @include videoList;
 }
