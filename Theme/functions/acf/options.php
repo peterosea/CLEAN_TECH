@@ -33,4 +33,9 @@ if (function_exists('acf_add_options_sub_page')) {
     'menu_title'   => 'news',
     'parent_slug'  => 'edit.php?post_type=news',
   ));
+  acf_add_options_sub_page(array(
+    'page_title'   => 'history',
+    'menu_title'   => 'history',
+    'parent_slug'  => 'edit.php?post_type=history',
+  ));
 }
