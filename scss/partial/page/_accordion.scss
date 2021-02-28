@@ -48,7 +48,7 @@
       justify-content: center;
       &.style2 {
         @supports (gap: 120px) {
-          gap: 120px;
+          gap: 60px;
         }
       }
       &.style1 {

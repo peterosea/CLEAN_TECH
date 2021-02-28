@@ -514,3 +514,22 @@
   letter-spacing: -0.9px;
   text-align: left;
 }
+
+@mixin Text-Style-51 {
+  font-family: NotoSansKR;
+  font-size: 18px;
+  letter-spacing: -0.9px;
+  text-align: left;
+}
+
+@mixin Text-Style-52 {
+  font-family: Poppins;
+  font-size: 16px;
+  text-align: left;
+}
+
+@mixin Text-Style-53 {
+  font-family: Poppins;
+  font-size: 16px;
+  text-align: center;
+}

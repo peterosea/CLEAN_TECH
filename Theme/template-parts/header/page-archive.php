@@ -7,8 +7,8 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
 ?>
 <header class="default">
   <div class="coverBg">
-    <?php if (empty(get_field_objects()['header_img'])) : ?>
-      <img src="<?php echo get_field('header_img', 'option') ?>" alt="">
+    <?php if (is_archive() && !empty(get_field(get_post_type(), 'option'))) : ?>
+      <img src="<?php echo get_field(get_post_type(), 'option')['header_img'] ?>" alt="">
     <?php else : ?>
       <img src="<?php echo get_field('header_img') ?>" alt="">
     <?php endif ?>
@@ -27,8 +27,8 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
       ?>
     </div>
     <div class="description">
-      <?php if (empty(get_field_objects()['description'])) :
-        echo get_field('description', 'option');
+      <?php if (is_archive() && !empty(get_field(get_post_type(), 'option'))) :
+        echo get_field(get_post_type(), 'option')['description'];
       else :
         echo get_field('description');
       endif ?>
@@ -58,7 +58,7 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
       </div>
     </div>
 HTML;
-  elseif (!empty(get_field('s_title', 'option')) && get_post_type() === 'equipment') :
+  elseif (!is_archive() && !empty(get_field('s_title', 'option')) && get_post_type() === 'equipment') :
     $sTitle = get_field('s_title', 'option');
     $sContent = get_field('s_content', 'option');
     echo <<<HTML

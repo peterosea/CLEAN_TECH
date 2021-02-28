@@ -29,7 +29,11 @@ HTML;
       foreach ($chartGroup as $chart) {
         $title = $chart['chart']['title'];
         $icon = $chart['chart']['icon'];
-        $className = count($chart['chart']['list']) <= 3 ? 'oneCol' : '';
+        if (!empty($chart['chart']['list'])) {
+          $className = count($chart['chart']['list']) <= 3 ? 'oneCol' : '';
+        } else {
+          $className = 'oneCol';
+        }
         $dom = <<<HTML
         <div class="chartList $className">
           <div class="header">
@@ -38,13 +42,15 @@ HTML;
           </div>
           <ul class="list">
 HTML;
-        foreach ($chart['chart']['list'] as $list) {
-          $name = $list['name'];
-          $dom .= <<<HTML
-            <li>
-            $name
-            </li>
+        if (!empty($chart['chart']['list'])) {
+          foreach ($chart['chart']['list'] as $list) {
+            $name = $list['name'];
+            $dom .= <<<HTML
+              <li>
+              $name
+              </li>
 HTML;
+          }
         }
         $dom .= '</ul></div>';
         echo $dom;
