@@ -546,3 +546,12 @@
   line-height: 2;
   letter-spacing: -1.2px;
 }
+
+@mixin Text-Style-60 {
+  font-family: NotoSansKR;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 2;
+  letter-spacing: -0.9px;
+  text-align: center;
+}

@@ -2,6 +2,20 @@ main.pageTemplate.battery {
   .section {
     padding-top: 100px;
     padding-bottom: 100px;
+
+    .sectionTitle.important p {
+      @include Text-Style-15;
+      text-align: center;
+      & + p {
+        @include Text-Style-39;
+        color: $black-two;
+        font-weight: 400;
+      }
+    }
+    .sectionTitleAndP p {
+      @include Noto-Sans-KR---24pt-2;
+      margin-bottom: 30px;
+    }
   }
   .containerTitle {
     color: $dark;

@@ -21,6 +21,12 @@ global $post;
 <main class="pageTemplate battery">
   <div class="section">
     <div class="container">
+      <div class="sectionTitle important">
+        <?php echo get_field('section_title', 'options') ?>
+      </div>
+      <div class="sectionTitleAndP">
+        <?php echo get_field('section_title_and_content', 'options') ?>
+      </div>
       <div class="row m-0">
         <?php
         $list = array('배터리', '모델명', '용량(Ah) ', '전압(V) ', '크기(W*L*H)');
