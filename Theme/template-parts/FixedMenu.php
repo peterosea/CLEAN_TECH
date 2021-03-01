@@ -11,7 +11,7 @@
           <div class="imgWrap">
             <img src="$imgUrl" alt="$mi->post_title">
           </div>
-          <div>$mi->post_title</div>
+          <div>$mi->title</div>
         </a>
       </li>
 HTML;

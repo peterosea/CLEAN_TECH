@@ -13,7 +13,8 @@ if (!empty($contact) && !empty($title)) :
         <?php
         foreach ($contact as $key => $c) : ?>
           <div class="col-6 px-4">
-            <div id="<?php if ($key === 'two') echo 'quickContact'; ?>" class="contentWrap">
+            <<?php if ($key === 'one') echo 'a href="/rental-total-purchase-consultation/" ';
+              else echo 'div' ?> id="<?php if ($key === 'two') echo 'quickContact'; ?>" class="contentWrap">
               <div class="content">
                 <div class="title">
                   <div class="title"><?php echo $c['title'] ?></div>
@@ -30,7 +31,8 @@ if (!empty($contact) && !empty($title)) :
 HTML;
                 endif ?>
               </div>
-            </div>
+            </<?php if ($key === 'one') echo 'a';
+              else echo 'div' ?>>
           </div>
         <?php endforeach ?>
       </div>

@@ -14,10 +14,14 @@ div.pageFooter {
       border-bottom: 1px solid $dark;
     }
     .contentWrap {
+      text-decoration: none;
       display: flex;
       width: 100%;
       justify-content: space-around;
       cursor: pointer;
+      &:hover {
+        color: $teal;
+      }
       .content {
         margin-right: 50px;
       }
