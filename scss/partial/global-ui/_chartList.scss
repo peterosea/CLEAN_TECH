@@ -1,10 +1,13 @@
 @mixin chartList {
   .chartListWrap {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 10px;
     margin-bottom: 70px;
+  }
+
+  .oneCol .chartList .list li {
+    max-width: 100%;
+    margin: 0;
+    margin-right: 0 !important;
+    margin-bottom: 10px;
   }
   .chartList {
     background-color: $seafoam-blue;
@@ -12,16 +15,7 @@
     text-align: center;
     padding: 10px 10px 0;
     width: 100%;
-    @include respondTo("lg") {
-      max-width: 550px;
-      @supports not (gap: 10px) {
-        margin: 0 10px 10px 0;
-        max-width: 540px;
-      }
-      &.oneCol {
-        max-width: 270px;
-      }
-    }
+    margin-bottom: 10px;
     .header {
       color: $white;
       margin-bottom: 30px;
@@ -56,11 +50,6 @@
           margin-right: 10px;
         }
       }
-    }
-    &.oneCol .list li {
-      max-width: 100%;
-      margin: 0;
-      margin-bottom: 10px;
     }
   }
 }

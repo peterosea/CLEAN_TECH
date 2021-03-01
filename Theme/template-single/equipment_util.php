@@ -25,22 +25,24 @@ global $post;
       </div> 
 HTML;
     if (!empty($chartGroup = get_field('chart_group'))) {
-      echo '<div class="chartListWrap">';
+      echo '<div class="chartListWrap row">';
       foreach ($chartGroup as $chart) {
         $title = $chart['chart']['title'];
         $icon = $chart['chart']['icon'];
         if (!empty($chart['chart']['list'])) {
-          $className = count($chart['chart']['list']) <= 3 ? 'oneCol' : '';
+          $className = count($chart['chart']['list']) <= 3 ? 'oneCol' : 'col-lg-6';
         } else {
           $className = 'oneCol';
         }
+        $className .= ' ' . $chart['chart']['width-type'];
         $dom = <<<HTML
-        <div class="chartList $className">
-          <div class="header">
-            <img src="$icon" alt="">
-            <span>$title</span>
-          </div>
-          <ul class="list">
+        <div class="col-12 col-lg-3 $className">
+          <div class="chartList">
+            <div class="header">
+              <img src="$icon" alt="">
+              <span>$title</span>
+            </div>
+            <ul class="list">
 HTML;
         if (!empty($chart['chart']['list'])) {
           foreach ($chart['chart']['list'] as $list) {
@@ -52,7 +54,7 @@ HTML;
 HTML;
           }
         }
-        $dom .= '</ul></div>';
+        $dom .= '</ul></div></div>';
         echo $dom;
       }
       echo '</div>';
