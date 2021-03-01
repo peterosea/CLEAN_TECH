@@ -111,9 +111,13 @@ main.equipmentSingle {
       padding: 20px 30px;
       display: flex;
       justify-content: space-between;
+      height: 100%;
       .title {
         color: $teal;
         @include Text-Style-32;
+        line-height: 1.2;
+        margin-bottom: 8px;
+        word-break: keep-all;
       }
       ul.r {
         list-style: none;
