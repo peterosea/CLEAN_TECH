@@ -88,10 +88,9 @@ HTML;
               ?>
             </tbody>
           </table>
-          <?php if (!empty(get_field('table'))) {
-            $d =  get_the_title();
+          <?php if (!empty($rm = get_field('reference-model'))) {
             echo <<<HTML
-              <span class="d">* $d 기준</span>
+              <span class="d">* $rm 기준</span>
 HTML;
           }
           ?>
