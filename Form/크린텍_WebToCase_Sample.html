@@ -1,0 +1,47 @@
+<!--  ----------------------------------------------------------------------  -->
+<!--  참고: 다음 <META>요소를 <HEAD> 페이지에 추가하십시오.  필요한 경우 매개 변수를 수정하여 HTML 페이지의 문자   -->
+<!--  집합을 지정하십시오.                                                             -->
+<!--  ----------------------------------------------------------------------  -->
+
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  참고: 다음 <FORM>요소를 페이지에 추가하십시오.                                           -->
+<!--  ----------------------------------------------------------------------  -->
+
+<form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+
+<input type=hidden name="orgid" value="00D90000000kgNF">
+<input type=hidden name="retURL" value="http://">
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  참고: 이러한 필드는 선택적 디버깅 요소입니다. 디버그 모드에서 테스트하려면 이러한 줄의 주석 처리를 제거하십시오.        -->
+<!--  <input type="hidden" name="debug" value=1>                              -->
+<!--  <input type="hidden" name="debugEmail"                                  -->
+<!--  value="jeoh@cleantechco.co.kr">                                         -->
+<!--  ----------------------------------------------------------------------  -->
+
+<label for="company">상호</label><input  id="company" maxlength="80" name="company" size="20" type="text" /><br>
+
+<label for="name">이름</label><input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
+
+<label for="phone">휴대폰</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+
+<label for="email">이메일</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+
+개인정보 활용동의:<input  id="00N9000000Do9g4" name="00N9000000Do9g4" type="checkbox" value="1" /><br>
+
+현장명:<input  id="00N9000000Do9fV" maxlength="255" name="00N9000000Do9fV" size="20" type="text" /><br>
+
+접수 처리 유형:<select  id="00N9000000EK7XL" name="00N9000000EK7XL" title="접수 처리 유형"><option value="">--없음--</option><option value="AS처리">AS처리</option>
+<option value="창고출고">창고출고</option>
+<option value="반품처리">반품처리</option>
+<option value="지원실 자체접수">지원실 자체접수</option>
+<option value="AM 활동">AM 활동</option>
+</select><br>
+
+<label for="description">요청사항</label><textarea name="description"></textarea><br>
+
+<input type="submit" name="submit">
+
+</form>
