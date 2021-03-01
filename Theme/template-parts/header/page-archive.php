@@ -11,11 +11,15 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
       <img src="<?php echo get_field(get_post_type(), 'option')['header_img'] ?>" alt="">
     <?php elseif (is_single() && !empty(get_field(get_post_type(), 'option'))) : ?>
       <img src="<?php echo get_field(get_post_type(), 'option')['header_img'] ?>" alt="">
-    <?php else : ?>
-      <img src="<?php echo get_field('header_img') ?>" alt="">
+      <?php else :
+      if (get_field_object('header_img')['key'] === 'field_603d1fa91879d') : ?>
+        <video autoplay muted loop src="<?php echo get_field('header_img') ?>" alt=""></video>
+      <?php else : ?>
+        <img src="<?php echo get_field('header_img') ?>" alt="">
+      <?php endif ?>
     <?php endif ?>
   </div>
-  <div class="container">
+  <div class="container <?php if (get_field_object('header_img')['key'] === 'field_603d1fa91879d') echo 'video' ?>">
     <div class="title">
       <?php
       if (!empty(post_type_archive_title('', false))) {
