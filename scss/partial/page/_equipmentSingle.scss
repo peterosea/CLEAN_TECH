@@ -98,15 +98,19 @@ main.equipmentSingle {
         }
       }
     }
+    .rWrapRoot .rWrapItem:first-child .rWrap {
+      border-left: 1px solid $pale-grey;
+    }
+    .rWrapRoot + .rWrapRoot .rWrap {
+      border-top: 0;
+    }
     .rWrap {
-      border: 1px solid $pale-grey;
+      border-top: 1px solid $pale-grey;
+      border-bottom: 1px solid $pale-grey;
+      border-right: 1px solid $pale-grey;
       padding: 20px 30px;
       display: flex;
       justify-content: space-between;
-
-      &:first-child {
-        border-right: 0;
-      }
       .title {
         color: $teal;
         @include Text-Style-32;

@@ -97,21 +97,76 @@ HTML;
           ?>
         </div>
       </div>
-
-      <div class="row m-0">
-        <?php
-        $re = get_field('related-equipment');
-        $colClass = count($re) % 2 === '0' ? 'col-6' : 'col';
-        if (!empty($re)) {
+      <?php
+      $re = get_field('related-equipment');
+      $colClass = count($re) % 2 === '0' ? 'col-6' : 'col';
+      if (!empty($re)) {
+        echo <<<HTML
+          <div class="row m-0">
+            <div class="col-12 re p-0">
+              <div class="title">관련장비</div>
+            </div>
+          </div>
+          <div class="row rWrapRoot m-0">
+HTML;
+        foreach ($re as $key => $r) {
+          if (count($re) === 4) {
+            if ($key > 1) break;
+          } else {
+            if ($key > 2) break;
+          }
           echo <<<HTML
-          <div class="col-12 re p-0">
-            <div class="title">관련장비</div>
+            <div class="$colClass rWrapItem px-0">
+              <div class="rWrap">
+                <div class="left">
+                  <div class="title">
+                    $r->post_title
+                  </div>
+                  <ul class="r">
+HTML;
+          foreach (get_field('table', $r->ID) as $tt) {
+            $name = $tt['name'];
+            $value = $tt['value'];
+            echo <<<HTML
+                <li>
+                  <div class="name">$name</div>
+                  <div class="value">$value</div>
+                </li>
+HTML;
+          }
+          $thumbnail = get_the_post_thumbnail_url($r);
+          $url = get_the_permalink($r);
+          echo <<<HTML
+                  </ul>
+                </div>
+                <div class="right">
+                  <a href="$url" class="btn">
+                    <img src="$zeplin/btn-link-btn.png" srcset="$zeplin/btn-link-btn@2x.png 2x, $zeplin/btn-link-btn@3x.png 3x">
+                  </a>
+                  <div>
+                    <img class="thumbnail" src="$thumbnail" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+HTML;
+        }
+        echo <<<HTML
           </div>
 HTML;
+        if (count($re) > 3) :
+          echo <<<HTML
+        <div class="row rWrapRoot m-0">
+HTML;
           foreach ($re as $key => $r) {
-            if ($key > 2) break;
+            if ($key > 5) break;
+            if (count($re) === 4) {
+              if ($key < 1) continue;
+            } else {
+              if ($key < 2) continue;
+            }
             echo <<<HTML
-            <div class="$colClass px-0">
+            <div class="$colClass rWrapItem px-0">
               <div class="rWrap">
                 <div class="left">
                   <div class="title">
@@ -146,9 +201,13 @@ HTML;
             </div>
 HTML;
           }
-        }
-        ?>
-      </div>
+
+          echo <<<HTML
+        </div>
+HTML;
+        endif;
+      }
+      ?>
     </div>
   </div>
   <div class="section section2">
