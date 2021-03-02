@@ -147,11 +147,11 @@ HTML;
             <?php
             $re = get_field('related-equipment', $id->ID);
             $colClass = count($re) % 2 === '0' ? 'col-6' : 'col';
-            $list = array('청소능력', '청소폭', '하방압력', '정수탱크', '장비 보기');
+            $list = array('청소 능력', '청소 폭', '최고 하방 압력', '오수 탱크', '장비 보기');
             if (!empty($re)) {
               echo <<<HTML
               <div class="col-12">
-                <div class="rowTitle">
+                <div class="rowTitle" id="schedule">
                   비교장비
                 </div>
               </div>
