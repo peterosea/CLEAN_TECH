@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useForm, Controller } from 'react-hook-form/dist/index.ie11';
 import { GridThemeProvider, Row, Col } from 'styled-bootstrap-grid';
 import { FaStar } from 'react-icons/fa';
@@ -8,7 +8,9 @@ import {
   Radio,
   FormControl,
   TextareaAutosize,
+  TextField,
 } from '@material-ui/core';
+import Autocomplete from '@material-ui/lab/Autocomplete';
 // components
 import Grid from './grid';
 import {
@@ -24,6 +26,8 @@ import {
 } from './AppStyle';
 import Postcode from './PostCode';
 import PrivacyPolicy from './PrivacyPolicy';
+import LocationFilter from './locationFilter';
+import equipmentOptions from './equipment-options';
 
 function App() {
   const { handleSubmit, register, errors, control } = useForm();
@@ -35,6 +39,7 @@ function App() {
   });
   const [success, setSuccess] = useState(false);
   const [fail, setFail] = useState(false);
+  const product = useRef();
 
   function toggleModal() {
     setValues({ ...values, addressModalOpen: !values.addressModalOpen });
@@ -53,10 +58,13 @@ function App() {
     const result = Object.assign({}, _values);
     setValues({ ...values, data: result });
     const Form = new FormData();
+    result['00N9000000Do9fa'] = LocationFilter(result.location);
     result['orgid'] = '00D90000000kgNF';
     result['00N9000000Do9g4'] = 1;
     result['submit'] = '제출';
-    result['retURL'] = 'http://cleantech2021.cafe24.com/as-application/';
+    result['00N9000000Do9fp'] = product.current.querySelector(
+      'input[name="00N9000000Do9fp"]',
+    ).value;
     if (process.env.NODE_ENV !== 'production') {
       result['debug'] = 1;
       result['debugEmail'] = 'test@hyeon.pro';
@@ -290,6 +298,38 @@ function App() {
                 </Label>
                 <ErrorMessage>
                   {errors['email'] && errors['email'].message}
+                </ErrorMessage>
+              </Col>
+            </Row>
+            <Row>
+              <Col col={12}>
+                <Label>
+                  <div className="nameWrap">
+                    <div className="name">
+                      <span className="required">
+                        <FaStar />
+                      </span>
+                      <span>장비명</span>
+                    </div>
+                  </div>
+                  <Autocomplete
+                    options={equipmentOptions}
+                    className="border"
+                    getOptionLabel={(option) => option.title}
+                    renderInput={(params) => (
+                      <TextField
+                        {...params}
+                        variant="outlined"
+                        required
+                        ref={product}
+                        name="00N9000000Do9fp"
+                      />
+                    )}
+                  />
+                </Label>
+                <ErrorMessage>
+                  {errors['00N9000000Do9fp'] &&
+                    errors['00N9000000Do9fp'].message}
                 </ErrorMessage>
               </Col>
             </Row>
