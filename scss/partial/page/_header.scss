@@ -48,6 +48,11 @@ header.pageHeader {
       align-items: center;
       justify-content: center;
       fill: $battleship-grey;
+
+      height: 60px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
       svg {
         width: 20px;
         height: 20px;
@@ -55,15 +60,59 @@ header.pageHeader {
     }
     .container {
       display: flex;
-    }
-    .container > * {
-      border-right: 1px solid $light-periwinkle-two;
-      height: 60px;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      &:first-child {
-        border-left: 1px solid $light-periwinkle-two;
+      > * {
+        border-right: 1px solid $light-periwinkle-two;
+        &:first-child {
+          border-left: 1px solid $light-periwinkle-two;
+        }
+      }
+      .menuList {
+        margin: 0;
+        position: relative;
+        &.show {
+          background-color: $seafoam-blue;
+          min-width: 200px;
+          .dropdown-toggle {
+            color: $white;
+          }
+        }
+        .dropdown-toggle {
+          height: 60px;
+          padding: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
+        }
+        .list {
+          display: block;
+          padding: 20px;
+          background-color: $seafoam-blue;
+          margin: 0;
+          color: $white;
+          text-decoration: none;
+          line-height: 1.2;
+          border-top: 1px solid rgba($white, 0.2);
+          &:hover {
+            background-color: $teal;
+            font-weight: bold;
+            border-top: 1px solid $teal;
+            & + .list {
+              border-top: 1px solid $teal;
+            }
+          }
+        }
+        div[x-placement="top-start"].dropdown-menu {
+          top: calc(-100% - 20px) !important;
+        }
+        .dropdown-menu {
+          width: 100%;
+          margin: 0;
+          border-radius: 0;
+          padding: 0;
+          min-width: 0;
+          border: none;
+        }
       }
     }
   }

@@ -17,17 +17,52 @@ function my_menu_breadcrumb($theme_location = 'GNB', $separator = ' &gt; ')
     $breadcrumbs = array();
 
     foreach ($menu_items as $menu_item) {
-      if ($menu_item->current) {
-        $breadcrumbs[] = "<span title=\"{$menu_item->title}\">{$menu_item->title}</span>";
-      } else if ($menu_item->current_item_ancestor) {
-        $breadcrumbs[] = "<a href=\"{$menu_item->url}\" title=\"{$menu_item->title}\">{$menu_item->title}</a>";
+      if ($menu_item->current || $menu_item->current_item_ancestor) {
+        $breadcrumbs[] = <<<HTML
+        <div class="menuList">
+          <div id="$menu_item->title" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            $menu_item->title
+          </div>
+          <div class="dropdown-menu" aria-labelledby="$menu_item->title">
+HTML;
+        $mip = $menu_item->menu_item_parent;
+        foreach ($menu_items as $mi) {
+          if ($mi->menu_item_parent === $mip) {
+            $breadcrumbs[] .= <<<HTML
+            <a href="$mi->url" class="list">$mi->title</a>
+HTML;
+          }
+        }
+        $breadcrumbs[] .= '</div></div>';
       }
     }
     if (empty($breadcrumbs) && !empty($post)) {
       foreach ($menu_items as $menu_item) {
         if ($menu_item->object === $post->post_type) {
           $title = get_the_title($menu_item->menu_item_parent);
-          $breadcrumbs[] = "<span title=\"{$title}\">" . $title . "</span>";
+          $breadcrumbs[] = <<<HTML
+          <div class="menuList">
+            <div id="$title" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              $title
+            </div>
+            <div class="dropdown-menu" aria-labelledby="$title">
+HTML;
+          $mip = $menu_item->menu_item_parent;
+          foreach ($menu_items as $mii) {
+            if ($mii->ID === $mip) {
+              $mip = $mii->menu_item_parent;
+              break;
+            }
+          }
+          foreach ($menu_items as $mi) {
+            if ($mi->menu_item_parent === $mip) {
+              $breadcrumbs[] .= <<<HTML
+              <a href="$mi->url" class="list">$mi->title</a>
+HTML;
+            }
+          }
+          $breadcrumbs[] .= '</div></div>';
+
           break;
         }
       }
@@ -35,12 +70,28 @@ function my_menu_breadcrumb($theme_location = 'GNB', $separator = ' &gt; ')
     if (!empty(get_taxonomies()) && $post->post_type !== 'page' && is_single()) {
       // CPT name
       if (!empty($postType = get_post_type_object(get_post_type($post))) && get_the_terms($post, get_taxonomies())) {
-        $breadcrumbs[] = "<span title=\"{$postType->labels->singular_name}\">" . $postType->labels->singular_name . "</span>";
-        foreach (get_the_terms($post, get_taxonomies()) as $tax) {
-          if (!empty($tax->name)) {
-            $breadcrumbs[] = "<span title=\"{$tax->name}\">" . $tax->name . "</span>";
+        $title = $postType->labels->singular_name;
+        $breadcrumbs[] = <<<HTML
+            <div class="menuList">
+              <div id="$title" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                $title
+              </div>
+              <div class="dropdown-menu" aria-labelledby="$title">
+HTML;
+        $mip = $menu_item->menu_item_parent;
+        foreach ($menu_items as $mi) {
+          if ($mi->menu_item_parent === $mip) {
+            $breadcrumbs[] .= <<<HTML
+              <div class="list">$mi->title</div>
+HTML;
           }
         }
+        $breadcrumbs[] .= '</div></div>';
+        // foreach (get_the_terms($post, get_taxonomies()) as $tax) {
+        //   if (!empty($tax->name)) {
+        //     $breadcrumbs[] = "<span title=\"{$tax->name}\">" . $tax->name . "</span>";
+        //   }
+        // }
       }
     }
     echo implode($separator, $breadcrumbs);
