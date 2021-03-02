@@ -2,9 +2,12 @@ body.post-type-archive-equipment_util header.pageHeader {
   background-color: $white;
 }
 main.equipmentUtil {
-  .section1 {
-    padding-top: 72px;
+  .section {
+    padding-top: 75px;
     padding-bottom: 150px;
+  }
+  .section {
+    scroll-margin: 75px;
   }
   @include Accordion;
 }
