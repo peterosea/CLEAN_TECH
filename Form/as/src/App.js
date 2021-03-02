@@ -314,7 +314,7 @@ function App() {
                   </div>
                   <Autocomplete
                     options={equipmentOptions}
-                    className="border"
+                    className="border1"
                     getOptionLabel={(option) => option.title}
                     renderInput={(params) => (
                       <TextField

@@ -33,7 +33,14 @@ export const RPN = styled(Container)`
     border-radius: 4px;
     outline-color: #009b94;
   }
-  .border * {
+  .border1 {
+    .MuiOutlinedInput-root {
+      background-color: #fff;
+    }
+    .MuiOutlinedInput-notchedOutline {
+      border-color: #d9dee5;
+      border-radius: 4px;
+    }
     .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
       outline-color: #009b94;
       border-color: #009b94;
