@@ -41,7 +41,7 @@ HTML;
               });
               target_$p->ID.addEventListener('ended', function() {
                 videoWrap_$p->ID.classList.remove('play');
-              })
+              });
             </script>
           </div>
 HTML;

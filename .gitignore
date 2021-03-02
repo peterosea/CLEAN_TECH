@@ -1,6 +1,7 @@
 .wordpress
 backup
 Theme/*.css
+!Theme/peter.css
 .env
 node_modules
 svg/source

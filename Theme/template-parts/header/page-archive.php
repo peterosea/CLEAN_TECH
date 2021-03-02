@@ -4,11 +4,17 @@ $theme_url = get_stylesheet_directory();
 $functions_url = get_stylesheet_directory() . '/functions';
 $img_url = get_home_url() . '/wp-content/uploads';
 $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
+
+// 검색결과
+global $wp_query;
+$found_posts = $wp_query->found_posts;
 ?>
 <header class="default">
   <div class="coverBg">
     <?php if (is_archive() && !empty(get_field(get_post_type(), 'option'))) : ?>
       <img src="<?php echo get_field(get_post_type(), 'option')['header_img'] ?>" alt="">
+    <?php elseif (is_search()) : ?>
+      <img src="<?php echo $zeplin; ?>/img-top-search.jpg" alt="">
     <?php elseif (is_single() && !empty(get_field(get_post_type(), 'option'))) : ?>
       <img src="<?php echo get_field(get_post_type(), 'option')['header_img'] ?>" alt="">
       <?php else :
@@ -24,6 +30,8 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
       <?php
       if (!empty(post_type_archive_title('', false))) {
         echo post_type_archive_title('', false);
+      } elseif (is_search()) {
+        echo '검색';
       } elseif (get_post_type() === 'page') {
         echo single_post_title();
       } else {
@@ -35,6 +43,10 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
     <div class="description">
       <?php if (is_archive() && !empty(get_field(get_post_type(), 'option'))) :
         echo get_field(get_post_type(), 'option')['description'];
+      elseif (is_search()) :
+      ?>
+        <span class="search_keyword">"<?php echo get_search_query(); ?>"</span> 검색결과입니다.
+      <?php
       elseif (is_single() && !empty(get_field(get_post_type(), 'option'))) :
         echo get_field(get_post_type(), 'option')['description'];
       else :
@@ -43,6 +55,9 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
     </div>
   </div>
 </header>
+<?php
+if(!is_search()) {
+?>
 <header class="pageHeader">
   <div class="breadCrumbs">
     <div class="container">
@@ -82,5 +97,8 @@ HTML;
     endif;
   endif; ?>
 </header>
+<?php
+}
+?>
 <?php
 get_template_part('template-parts/FixedMenu');
