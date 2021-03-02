@@ -1,0 +1,30 @@
+main.rentalCare {
+  .section {
+    padding: 130px 0 150px;
+  }
+  .section1 {
+  }
+  .section2 {
+    background-color: $pale-grey;
+    .title {
+      @include Text-Style-18;
+    }
+    p {
+      max-width: 400px;
+      @include Text-Style-17;
+      color: $battleship-grey-three;
+      margin-bottom: 0;
+    }
+    .contentCol {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .row:not(:last-child) {
+      margin-bottom: 70px;
+    }
+  }
+  .section3 {
+    @include Accordion;
+  }
+}

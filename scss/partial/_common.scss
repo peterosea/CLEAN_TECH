@@ -1,0 +1,13 @@
+footer#colophon.site-footer,
+a.skip-link.screen-reader-text,
+#page header.site-header {
+  display: none;
+}
+
+.pointColor {
+  color: $teal !important;
+}
+
+img {
+  max-width: 100%;
+}

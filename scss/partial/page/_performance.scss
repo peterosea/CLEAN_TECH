@@ -1,0 +1,73 @@
+.page-template-page-performance header.pageHeader .breadCrumbs {
+  background-color: $white;
+}
+
+main.pageTemplate.performance {
+  .section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    h1 {
+      color: $dark;
+      @include Text-Style-38;
+      margin-bottom: 50px;
+    }
+  }
+  .section1 {
+    margin-bottom: 150px;
+  }
+  .csWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 60px;
+    }
+    .csCard {
+      padding: 5px;
+      height: 100%;
+      .imgWrap {
+        border: 1px solid $light-periwinkle-two;
+        margin-bottom: 20px;
+      }
+      .name {
+        @include Text-Style-60;
+        color: $dark;
+      }
+    }
+  }
+  .section2 {
+    .rowWrap {
+      margin-bottom: 90px;
+      .rowTitle {
+        color: $dark;
+        @include Text-Style-21;
+        margin-bottom: 30px;
+      }
+      .listRootWrap {
+        border-top: 1px solid $dark;
+        border-bottom: 1px solid $light-periwinkle-two;
+      }
+      .listWrap {
+        margin-left: -20px;
+        margin-right: -20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        .list {
+          padding: 20px;
+          margin: 0px;
+        }
+        img {
+          max-width: 200px;
+        }
+      }
+    }
+  }
+}

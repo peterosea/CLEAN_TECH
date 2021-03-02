@@ -1,0 +1,54 @@
+.post-type-archive-history header.pageHeader .breadCrumbs {
+  background-color: $white;
+}
+
+main.pageTemplate.history {
+  .section {
+    padding-top: 100px;
+    padding-bottom: 130px;
+  }
+  .historyRootWrap {
+    position: relative;
+    &:before {
+      content: "";
+      @include Text-Style-58;
+      display: block;
+      position: absolute;
+      left: 300px;
+      width: 1px;
+      height: 100%;
+      background-color: $teal;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0.5em 0;
+    }
+    .historyWrap {
+      display: flex;
+      margin-bottom: 90px;
+      .yearWrap {
+        width: 300px;
+        padding-right: 40px;
+        @include Text-Style-58;
+        line-height: 1;
+        position: relative;
+        &:after {
+          content: "";
+          display: block;
+          width: 12px;
+          height: 12px;
+          border-radius: 999px;
+          background-color: $teal;
+          position: absolute;
+          right: 0;
+          top: 0.5em;
+          transform: translate(50%, -50%);
+        }
+      }
+      .content {
+        padding-left: 40px;
+        @include Text-Style-59;
+        color: $battleship-grey;
+      }
+    }
+  }
+}

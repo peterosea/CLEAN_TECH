@@ -1,0 +1,146 @@
+@mixin Accordion {
+  .menuWrap {
+    display: flex;
+    justify-content: center;
+  }
+  .accordionMenu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    li {
+      @include Text-Style-19;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top: 1px solid $very-light-pink-seven;
+      border-bottom: 1px solid $very-light-pink-seven;
+      border-right: 1px solid $very-light-pink-seven;
+      min-width: 150px;
+      padding: 6px 20px 0px;
+      cursor: pointer;
+      width: 100%;
+      &:first-child {
+        border-left: 1px solid $very-light-pink-seven;
+      }
+      &.active {
+        background-color: $teal;
+        border-color: $teal;
+        color: $white;
+      }
+    }
+  }
+  .accordionContent {
+    padding: 50px 0;
+    .active .itemList {
+      display: flex;
+      width: 100%;
+    }
+    .listRoot {
+      .listContent div.listTitle {
+        @include Text-Style-42;
+      }
+    }
+    .itemList {
+      flex-wrap: wrap;
+      display: none;
+      justify-content: center;
+      &.style2 {
+        @supports (gap: 120px) {
+          gap: 60px;
+        }
+      }
+      &.style1 {
+        border: solid 1px $very-light-pink-eight;
+        background-color: $white-two;
+        justify-content: flex-start;
+      }
+      + .listContent {
+        margin-top: 70px;
+      }
+      .listContent {
+        width: 100%;
+        .listTitle {
+          @include Text-Style-15;
+          color: $dark;
+          margin-bottom: 12px;
+        }
+        .description {
+          color: $battleship-grey;
+          @include Text-Style-16;
+          margin-bottom: 10px;
+        }
+      }
+      .empty {
+        padding: 40px;
+      }
+      &.active {
+        display: flex;
+      }
+    }
+    .itemList.style1 .item {
+      width: 277px;
+      height: 277px;
+      @include Text-Style-19;
+      padding: 20px;
+      border: solid 1px $very-light-pink-eight;
+      background-color: $white;
+      color: $black-two;
+      transition: border 0.3s, color 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      cursor: pointer;
+      text-decoration: none;
+      @supports not (gap: 120px) {
+        box-sizing: content-box;
+        padding: 60px;
+      }
+      &:hover {
+        border: 1px solid $teal;
+        color: $teal;
+      }
+      img {
+        max-width: 170px;
+      }
+    }
+    .itemList.style2 .item {
+      width: 320px;
+      text-align: center;
+      .imgWrap {
+        border-radius: 9999px;
+        overflow: hidden;
+        position: relative;
+        padding-top: 100%;
+        width: 100%;
+        margin-bottom: 30px;
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          height: 100%;
+          transform: translate(-50%, -50%);
+          @supports (object-fit: cover) {
+            object-fit: cover;
+          }
+        }
+      }
+      .title {
+        @include Noto-Sans-KR---24pt;
+        color: $dark;
+        display: inline-block;
+        margin-bottom: 9px;
+        text-decoration: none;
+        &:hover {
+          color: $teal;
+        }
+      }
+      p {
+        @include Noto-Sans-KR---18pt;
+        color: $battleship-grey;
+      }
+    }
+  }
+}

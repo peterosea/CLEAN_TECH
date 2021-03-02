@@ -1,0 +1,281 @@
+main.equipmentSingle {
+  .thumbnailBox {
+    .slide {
+      outline: none;
+    }
+    .imgWrap {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      @supports (object-fit: cover) {
+        padding-top: 100%;
+        position: relative;
+        img {
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .previewSlide {
+      margin-bottom: 30px;
+    }
+
+    .moreThumbnailSlide {
+      .imgWrap {
+        border: 1px solid $very-light-pink-eight;
+        cursor: pointer;
+      }
+      .slick-current .imgWrap {
+        border: 1px solid $teal;
+      }
+    }
+  }
+  .re > .title {
+    color: $dark;
+    @include Text-Style-21;
+    margin-bottom: 20px;
+  }
+  .section1 {
+    padding-top: 72px;
+    padding-bottom: 113px;
+    span.d {
+      font-size: 18px;
+      line-height: 3.33;
+      letter-spacing: -1.08px;
+      text-align: left;
+      color: $battleship-grey;
+    }
+    .itemRow {
+      margin-bottom: 70px;
+    }
+    .contentCol {
+      .cat {
+        color: $light-grey-blue;
+        @include Text-Style-21;
+      }
+      .title {
+        @include Text-Style-28;
+        color: $teal;
+      }
+      .h2_description {
+        color: $dark;
+        @include Text-Style-18;
+        margin-bottom: 20px;
+      }
+      .description {
+        color: $battleship-grey;
+        @include Text-Style-29;
+        margin-bottom: 20px;
+      }
+      .table {
+        td,
+        th {
+          padding: 0;
+        }
+        th {
+          @include Text-Style-30;
+        }
+        td {
+          @include Text-Style-31;
+          color: $battleship-grey;
+        }
+        tr:first-child {
+          th,
+          td {
+            border-top: 1px solid $black-two;
+          }
+        }
+        tr:last-child {
+          th,
+          td {
+            border-bottom: 1px solid $light-periwinkle-two;
+          }
+        }
+      }
+    }
+    .rWrapRoot .rWrapItem:first-child .rWrap {
+      border-left: 1px solid $pale-grey;
+    }
+    .rWrapRoot + .rWrapRoot .rWrap {
+      border-top: 0;
+    }
+    .rWrap {
+      border-top: 1px solid $pale-grey;
+      border-bottom: 1px solid $pale-grey;
+      border-right: 1px solid $pale-grey;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+      .title {
+        color: $teal;
+        @include Text-Style-32;
+        line-height: 1.2;
+        margin-bottom: 8px;
+        word-break: keep-all;
+      }
+      ul.r {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        .name {
+          @include Text-Style-33;
+          color: $dark;
+        }
+        .value {
+          @include Text-Style-34;
+          color: $battleship-grey;
+        }
+        li:not(:last-child) {
+          margin-bottom: 12px;
+        }
+      }
+      .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        .thumbnail {
+          max-width: 180px;
+        }
+      }
+    }
+  }
+  .section2 {
+    background-color: $pale-grey;
+    .container {
+      padding-top: 130px;
+      padding-bottom: 130px;
+    }
+    .solution {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      .imgWrap {
+        width: 320px;
+        height: 320px;
+        position: relative;
+        border-radius: 99999px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        img {
+          position: absolute;
+          height: 100%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          @supports (object-fit: cover) {
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+      .content {
+        .title {
+          @include Noto-Sans-KR---24pt;
+          margin-bottom: 9px;
+        }
+        .excerpt {
+          @include Noto-Sans-KR---18pt;
+        }
+      }
+    }
+  }
+  .section3 {
+    .container {
+      padding-top: 130px;
+      padding-bottom: 130px;
+    }
+    .slide {
+      outline: none;
+    }
+    .utilPreviewSlide {
+      .slide {
+        margin: 7.5px;
+      }
+      .videoWrap {
+        padding-top: 56.6%;
+        position: relative;
+        video,
+        iframe {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+    .controlSlide {
+      .slide {
+        margin: 7.5px;
+        cursor: pointer;
+      }
+      .slick-current .imgWrap img {
+        border: 8px solid $teal;
+      }
+      .imgWrap {
+        display: flex;
+        align-items: center;
+        background-color: $teal;
+        margin-bottom: 20px;
+        @supports (object-fit: cover) {
+          padding-top: 56.6%;
+          position: relative;
+          img {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+      .title {
+        color: $black-two;
+        @include Text-Style-21;
+      }
+    }
+  }
+  .section4 {
+    .container {
+      padding-top: 130px;
+      padding-bottom: 130px;
+    }
+    .imgWrap {
+      margin-bottom: 39px;
+      display: block;
+    }
+    .location {
+      color: $black-two;
+      @include Text-Style-21;
+      margin-bottom: 9px;
+    }
+    .title {
+      color: $black-two;
+      @include Text-Style-27;
+      text-decoration: none;
+      margin-bottom: 9px;
+    }
+    .excerpt {
+      @include Text-Style-35;
+      color: $battleship-grey;
+    }
+    .logoWrap {
+      margin-top: 20px;
+      display: inline-block;
+      svg {
+        width: 50px;
+        fill: $light-periwinkle-two;
+      }
+    }
+  }
+}

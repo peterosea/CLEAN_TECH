@@ -1,0 +1,75 @@
+main.equipmentSolutionSingle {
+  .section {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+  .row {
+    justify-content: center;
+  }
+  .wrap {
+    margin-bottom: 110px;
+    .imgWrapWrap {
+      max-width: 320px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+    .imgWrap {
+      width: 100%;
+      padding-top: 100%;
+      position: relative;
+      border-radius: 9999px;
+      overflow: hidden;
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @supports (object-fit: cover) {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .contentWrap {
+      text-align: center;
+      .title {
+        @include Noto-Sans-KR---24pt;
+        color: $dark;
+        margin-bottom: 10px;
+      }
+      .excerpt {
+        @include Noto-Sans-KR---18pt;
+        color: $battleship-grey;
+        word-break: keep-all;
+        max-width: 320px;
+      }
+    }
+  }
+
+  .programTableH2 {
+    color: $black-two;
+    @include Text-Style-21;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $black-two;
+  }
+  .programTable {
+    &.row > div {
+      padding-top: 26px;
+      padding-bottom: 26px;
+      border-bottom: 1px solid $light-periwinkle-two;
+    }
+    .name {
+      @include Text-Style-30;
+      line-height: 1.2;
+    }
+    .value {
+      color: $battleship-grey;
+      @include Text-Style-31;
+      line-height: 1.2;
+    }
+  }
+  @include effectList;
+  @include iconList;
+  @include videoList;
+}

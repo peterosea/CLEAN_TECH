@@ -1,0 +1,213 @@
+main.homepage {
+  background-image: linear-gradient(
+    to bottom,
+    $pale-blue-two,
+    $very-light-pink-six
+  );
+  @include FullpageMenu;
+
+  .container {
+    @include respondTo("hg") {
+      max-width: 1300px;
+    }
+  }
+  .sectionTitle {
+    text-align: center;
+    @include Text-Style-5;
+    margin-bottom: 48px;
+  }
+  .section1 {
+    position: relative;
+    @include SlideNav;
+    .slide1 {
+      background: url(#{$zeplin}/main-graphic.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right bottom;
+    }
+    .container {
+      height: 100%;
+      padding-top: 130px;
+      padding-bottom: 130px;
+    }
+    .label {
+      display: inline-block;
+      background-color: $teal;
+      color: $black-two;
+      @include Text-Style-3;
+      margin-bottom: 31px;
+      padding-top: 2px;
+      padding-right: 2px;
+      line-height: 0.9;
+    }
+    .pointColor {
+      color: $teal;
+    }
+    .title {
+      color: $black-two;
+      @include Text-Style-4;
+    }
+  }
+  .section2 {
+    background: url(#{$zeplin}/14.svg),
+      linear-gradient(to bottom, $pale-aqua, $very-light-pink-three);
+    background-size: 800px 800px, cover;
+    background-repeat: no-repeat;
+    background-position: 110% -80px, center;
+    .container {
+      height: 100%;
+      padding-top: 150px;
+      padding-bottom: 150px;
+    }
+    .card {
+      padding: 50px 40px;
+      height: 100%;
+      overflow: hidden;
+      border: none;
+      border-radius: 0;
+      position: relative;
+
+      &.active {
+        padding: 50px;
+        box-shadow: 20px 30px 20px 0px rgba(0, 0, 0, 0.3);
+        .footer {
+          margin-left: -54px;
+          margin-right: -54px;
+          margin-bottom: -54px;
+          img {
+            width: 100%;
+            height: auto;
+          }
+          .imgWrap {
+            all: unset;
+          }
+        }
+        .head .btn {
+          display: block;
+        }
+      }
+      .head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        .title {
+          color: $teal;
+          @include Text-Style-6;
+        }
+        .btn {
+          display: none;
+        }
+      }
+      .body {
+        margin-bottom: 30px;
+        ul {
+          display: flex;
+          align-items: center;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          img {
+            height: 28px;
+          }
+          li:not(:last-child) {
+            margin-right: 13px;
+          }
+        }
+      }
+      .footer {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        .imgWrap {
+          background-color: $ice-blue;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 9999px;
+          height: 140px;
+          width: 140px;
+        }
+        img {
+          width: 65px;
+          height: 65px;
+        }
+      }
+    }
+  }
+  .section3 {
+    @include slickCarouselVideo;
+  }
+  .section4 {
+    background: url(#{$zeplin}/14.svg),
+      linear-gradient(to bottom, $pale-blue-two, $very-light-pink-six);
+    background-size: 800px 800px, cover;
+    background-repeat: no-repeat;
+    background-position: 110% -80px, center;
+    .contentRow {
+      margin-bottom: 90px;
+    }
+    .contactRow {
+      margin-bottom: 100px;
+    }
+    .wrap {
+      max-width: 260px;
+      margin: 0 auto;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      .imgWrap {
+        overflow: hidden;
+        border-radius: 9999px;
+        margin-bottom: 30px;
+        img {
+          width: 100%;
+        }
+      }
+      .title {
+        margin-bottom: 15px;
+        color: $teal;
+        @include Text-Style-9;
+      }
+      p {
+        margin-left: 0;
+        color: $black-two;
+        @include Text-Style-8;
+      }
+    }
+    .contactWrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $white;
+      padding: 48px 40px;
+      height: 100%;
+      .innerWrap {
+        display: flex;
+        align-items: center;
+      }
+      .imgWrap {
+        margin-right: 36px;
+      }
+      .title {
+        @include Text-Style-10;
+        color: $black-two;
+        margin-bottom: 15px;
+      }
+      p {
+        margin-bottom: 0;
+        @include Text-Style-7;
+        color: $battleship-grey;
+      }
+    }
+  }
+}
+
+.fp-viewing-thirdPage {
+  .listStyle {
+    &:hover,
+    &.active {
+      --color: $white;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+div.pageFooter {
+  padding: 130px 0 150px;
+  background-color: $pale-grey;
+  .container {
+    div.sectionTitle * {
+      @include Text-Style-20;
+      color: $dark;
+      padding: 0;
+      word-break: keep-all;
+    }
+    .row {
+      padding: 90px 0;
+      border-top: 1px solid $dark;
+      border-bottom: 1px solid $dark;
+    }
+    .contentWrap {
+      text-decoration: none;
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      cursor: pointer;
+      &:hover {
+        color: $teal;
+      }
+      .content {
+        margin-right: 50px;
+      }
+      .title *,
+      a {
+        @include Text-Style-21;
+        color: $dark;
+        margin: 0;
+      }
+      p {
+        @include Text-Style-22;
+        color: $battleship-grey;
+      }
+    }
+  }
+}

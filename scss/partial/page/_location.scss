@@ -1,0 +1,52 @@
+.page-template-page-location header.pageHeader .breadCrumbs {
+  background-color: $white;
+}
+
+main.pageTemplate.location {
+  padding-bottom: 70px;
+  .section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    h1 {
+      color: $dark;
+      @include Text-Style-38;
+    }
+    h2 {
+      color: $dark;
+      @include Text-Style-21;
+    }
+    .head {
+      margin-bottom: 80px;
+    }
+  }
+  .section1 {
+    ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      @include Text-Style-57;
+      color: $battleship-grey;
+      li:not(:last-child) {
+        margin-right: 16px;
+      }
+      .unit {
+        font-weight: bold;
+      }
+    }
+    .root_daum_roughmap {
+      width: 100%;
+      .wrap_controllers {
+        display: none;
+      }
+    }
+  }
+  .section2 {
+    .head {
+      .content {
+        color: $battleship-grey;
+        @include Text-Style-27;
+      }
+    }
+  }
+}

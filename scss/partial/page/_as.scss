@@ -1,0 +1,68 @@
+.page-template-page-as header.pageHeader .breadCrumbs {
+  background-color: $white;
+}
+
+main.pageTemplate.as {
+  .section1 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    .row > div:nth-child(2) {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      @include respondTo("lg") {
+        padding-top: 0;
+        padding-bottom: 0;
+        border-left: 1px solid rgba($battleship-grey, 0.4);
+        border-right: 1px solid rgba($battleship-grey, 0.4);
+      }
+    }
+    .colWrap {
+      display: flex;
+      justify-content: space-between;
+      img {
+        max-height: 60px;
+      }
+      .title {
+        @include Text-Style-21;
+        color: $dark;
+        margin-bottom: 22px;
+      }
+      .content {
+        text-align: left;
+        @include Noto-Sans-KR---18pt;
+      }
+      .right {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+    }
+  }
+  .sectionWrap {
+    background-color: $pale-grey;
+    padding-top: 70px;
+    padding-bottom: 130px;
+  }
+  .section2 {
+    padding-bottom: 25px;
+    .sectionTitle.important {
+      margin-bottom: 20px;
+    }
+    .sectionTitle.important p {
+      @include Text-Style-18;
+      text-align: left;
+      & + p {
+        @include Text-Style-39;
+        color: $black-two;
+        font-weight: 400;
+      }
+    }
+    .dimSpan {
+      @include Text-Style-50;
+      color: $battleship-grey;
+    }
+  }
+  .section2 {
+    padding-top: 25px;
+  }
+}

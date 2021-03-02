@@ -1,0 +1,43 @@
+.processWrap {
+  padding-top: 70px;
+  &.battery {
+    padding-top: 24px;
+    .process {
+      margin-bottom: 38px;
+      .header {
+        align-items: flex-start;
+        color: $black-two;
+        @include Text-Style-39;
+        font-weight: normal;
+        span {
+          padding-top: 5px;
+        }
+        .step {
+          @include Text-Style-49;
+        }
+      }
+    }
+  }
+  .process {
+    margin-bottom: 70px;
+    .header {
+      @include Text-Style-21;
+      display: flex;
+      align-items: center;
+      margin-bottom: 17px;
+      .step {
+        padding: 5px 12px 3px;
+        display: inline-block;
+        margin-right: 15px;
+        border: 3px solid $teal;
+        border-radius: 4px;
+        color: $teal;
+        line-height: 1;
+      }
+    }
+    .cotent {
+      @include Text-Style-27;
+      color: $battleship-grey;
+    }
+  }
+}

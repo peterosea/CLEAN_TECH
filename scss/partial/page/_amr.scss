@@ -1,0 +1,198 @@
+main.amr {
+  .section {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+  .section1 {
+    .sectionTitle p {
+      color: $dark;
+      @include Text-Style-15;
+    }
+    .title2 {
+      color: $dark;
+      @include Text-Style-42;
+      margin-bottom: 18px;
+    }
+    .content {
+      color: $battleship-grey;
+      @include Text-Style-16;
+    }
+  }
+  .section2 {
+    .sectionTitle p {
+      color: $dark;
+      @include Text-Style-15;
+    }
+    background-color: $pale-grey;
+    .column {
+      .inner {
+        background-color: $white;
+        padding: 40px;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+      }
+      .title {
+        @include Text-Style-18;
+        color: $teal;
+      }
+      .content {
+        @include Text-Style-27;
+        color: $battleship-grey;
+        margin-bottom: 50px;
+      }
+      .imgWrap {
+        img {
+          max-height: 320px;
+        }
+      }
+    }
+  }
+  .section3 {
+    .columnRow {
+      margin-bottom: 270px;
+    }
+    .inner {
+      position: relative;
+    }
+    .real {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      top: 0;
+      width: 100%;
+      padding: 30px;
+      .title {
+        color: $white;
+        @include Text-Style-38;
+      }
+      .videoWrap {
+        padding-top: 56.6%;
+        position: relative;
+      }
+      iframe,
+      video {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+      }
+    }
+    .contentCol {
+      .title {
+        @include Text-Style-38;
+        color: $dark;
+        margin-bottom: 20px;
+      }
+    }
+    .imgCol {
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+    .ulList {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+      .name {
+        @include Text-Style-17;
+        color: $dark-two;
+      }
+      .value {
+        @include Text-Style-45;
+        color: $battleship-grey;
+      }
+      li {
+        min-width: 50%;
+        margin-bottom: 20px;
+      }
+    }
+    .itemRow {
+      margin-bottom: 160px;
+    }
+    .comparison {
+      margin: 0;
+      .re {
+        display: flex;
+      }
+      .th {
+        @include Text-Style-46;
+        > div {
+          color: $black-two !important;
+        }
+      }
+      .re div[class*="col"],
+      .th {
+        padding: 0;
+        > div {
+          border-bottom: 1px solid $light-periwinkle-two;
+          padding: 12px 6px;
+          height: 5em;
+          &.thumb {
+            height: 250px;
+          }
+          @include Text-Style-48;
+          color: $battleship-grey;
+        }
+      }
+      .thumb {
+        .title {
+          @include Text-Style-47;
+          color: $black-two;
+        }
+        img {
+          width: 150px;
+          height: auto;
+          max-height: 150px;
+          margin-bottom: 25px;
+        }
+      }
+      .rowTitle {
+        color: $dark;
+        @include Text-Style-21;
+        border-bottom: 1px solid $dark;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+      }
+      .btn {
+        padding: 0;
+      }
+    }
+  }
+  .section4 {
+    .imgWrap {
+      margin-bottom: 39px;
+      display: block;
+    }
+    .location {
+      color: $black-two;
+      @include Text-Style-21;
+      margin-bottom: 9px;
+    }
+    .title {
+      color: $black-two;
+      @include Text-Style-27;
+      text-decoration: none;
+      margin-bottom: 9px;
+    }
+    .excerpt {
+      @include Text-Style-35;
+      color: $battleship-grey;
+    }
+    .logoWrap {
+      margin-top: 20px;
+      display: inline-block;
+      svg {
+        width: 50px;
+        fill: $light-periwinkle-two;
+      }
+    }
+  }
+}

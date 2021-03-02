@@ -1,0 +1,50 @@
+main.pageTemplate.totalCare {
+  .section {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+  .section2 {
+    ul.list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin-bottom: 0;
+      margin: 0;
+      li {
+        padding: 20px 50px;
+        img {
+          max-height: 100px;
+          margin-bottom: 20px;
+        }
+        .label {
+          color: $battleship-grey-four;
+          @include Text-Style-42;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .section3 {
+    background-color: $pale-grey;
+    .bWrap {
+      display: flex;
+      justify-content: center;
+    }
+    .balloon {
+      padding: 40px 100px;
+      background-color: $white;
+      border-radius: 20px;
+      box-shadow: 0 7px 10px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 40px;
+      @include Text-Style-42;
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .section4 {
+    @include Accordion;
+  }
+}

@@ -1,0 +1,36 @@
+.page-template-page-contact header.pageHeader .breadCrumbs {
+  background-color: $white;
+}
+
+main.pageTemplate.contact {
+  .pageFooter {
+    background-color: $white;
+  }
+  .sectionWrap {
+    background-color: $pale-grey;
+    padding-top: 70px;
+    padding-bottom: 130px;
+  }
+  .section1 {
+    padding-bottom: 25px;
+    .sectionTitle.important {
+      margin-bottom: 20px;
+    }
+    .sectionTitle.important p {
+      @include Text-Style-18;
+      text-align: left;
+      & + p {
+        @include Text-Style-39;
+        color: $black-two;
+        font-weight: 400;
+      }
+    }
+    .dimSpan {
+      @include Text-Style-50;
+      color: $battleship-grey;
+    }
+  }
+  .section2 {
+    padding-top: 25px;
+  }
+}
