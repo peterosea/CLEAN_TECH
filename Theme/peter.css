@@ -43,6 +43,11 @@ header.default .container .title {
   margin-bottom: 30px;
 }
 
+header.pageHeader .breadCrumbs .container > a {
+  color: #77777a;
+  text-decoration: none;
+}
+
 .search_wrap {
   position: fixed;
   top: 0;
@@ -447,6 +452,11 @@ main.homepage .section4 .contentRow > .col-4:last-child {
   border-right: none;
 }
 
+main.homepage .section4 .wrap {
+  display: block;
+  text-decoration: none;
+}
+
 main.homepage footer.FNB {
   background-color: #f2f2f2;
 }
@@ -455,6 +465,31 @@ main.equipmentSingle .section1 .contentCol .table th, main.equipmentSingle .sect
   padding: 20px 0;
   vertical-align: middle;
   line-height: 1.4em;
+}
+
+main.equipmentSingle .section2 .solution:hover {
+  text-decoration: none;
+}
+
+main.equipmentSingle .section2 .solution:hover .title {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #009b94;
+}
+
+main.equipmentSingle .section4 .imgWrap {
+  width: 100%;
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 0 solid #fff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+main.equipmentSingle .section4 .imgWrap:hover {
+  border: 6px solid #fff;
 }
 
 main.equipmentUtil .accordionMenu li {

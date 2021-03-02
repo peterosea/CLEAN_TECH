@@ -3,7 +3,7 @@
     <h1 class="sectionTitle">위생 솔루션 트렌드</h1>
     <div class="row contentRow">
       <div class="col-4">
-        <div class="wrap">
+        <a href="/rental-care/" class="wrap">
           <div class="imgWrap">
             <img src="<?php echo $zeplin ?>/main-4-th-1-st-img.jpg" srcset="<?php echo $zeplin ?>/main-4-th-1-st-img@2x.jpg 2x, <?php echo $zeplin ?>/main-4-th-1-st-img@3x.jpg 3x">
           </div>
@@ -14,10 +14,10 @@
             국내 최대 규모의 검증된<br />
             청소장비 렌탈 프로그램
           </p>
-        </div>
+        </a>
       </div>
       <div class="col-4">
-        <div class="wrap">
+        <a href="/total-care/" class="wrap">
           <div class="imgWrap">
             <img src="<?php echo $zeplin ?>/main-4-th-2-st-img.jpg" srcset="<?php echo $zeplin ?>/main-4-th-2-st-img@2x.jpg 2x, <?php echo $zeplin ?>/main-4-th-2-st-img@3x.jpg 3x">
           </div>
@@ -28,10 +28,10 @@
             청소장비 운영의 혁신<br />
             5년간 유지비용 무료
           </p>
-        </div>
+        </a>
       </div>
       <div class="col-4">
-        <div class="wrap">
+        <a href="/equipment" class="wrap">
           <div class="imgWrap">
             <img src="<?php echo $zeplin ?>/main-4-th-3-th-img.jpg" srcset="<?php echo $zeplin ?>/main-4-th-3-th-img@2x.jpg 2x, <?php echo $zeplin ?>/main-4-th-3-th-img@3x.jpg 3x">
           </div>
@@ -42,7 +42,7 @@
             자율주행, 전기 청소차부터<br />
             배터리, 소모품까지
           </p>
-        </div>
+        </a>
       </div>
     </div>
     <div class="row contactRow">
@@ -58,7 +58,7 @@
             </div>
           </div>
           <div class="btnWrap">
-            <a href="#" class="btn">
+            <a href="/rental-total-purchase-consultation/" class="btn">
               <img src="<?php echo $zeplin ?>/2611.svg" alt="">
             </a>
           </div>
@@ -76,7 +76,7 @@
             </div>
           </div>
           <div class="btnWrap">
-            <a href="#" class="btn">
+            <a href="/as-application/" class="btn">
               <img src="<?php echo $zeplin ?>/2611.svg" alt="">
             </a>
           </div>

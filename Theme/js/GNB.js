@@ -1,9 +1,11 @@
 (($) => {
   var myElement = document.querySelector("nav.GNB");
   var options = {};
-  var headroom = new Headroom(myElement, options);
 
-  headroom.init();
+  try {
+    var headroom = new Headroom(myElement, options);
+    headroom.init();
+  } catch {}
 
   // mobile
   var shrinkHeader = 10;

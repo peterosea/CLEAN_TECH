@@ -221,9 +221,10 @@ HTML;
             $thumbnail = get_the_post_thumbnail_url($s, 'full');
             $title = get_the_title($s);
             $ec = get_the_excerpt($s);
+            $es = get_the_permalink($s);
             echo <<<HTML
             <div class="col">
-              <div class="solution">
+              <a href="$es" class="solution">
                 <div class="imgWrap">
                   <img src="$thumbnail" alt="">
                 </div>
@@ -231,7 +232,7 @@ HTML;
                   <div class="title">$title</div>
                   <div class="excerpt">$ec</div>
                 </div>
-              </div>
+              </a>
             </div>
 HTML;
           }
@@ -309,7 +310,7 @@ HTML;
             $t = $u['title'];
             $logo = '';
             if ($u['acf_fc_layout'] === 'blog') $logo = <<<HTML
-            <a href="$link" class="logoWrap">
+            <a href="$link" target="_blank" class="logoWrap">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 145.69 66.53">
                 <path class="cls-1" d="M45.89,49.55V19.72c0-6.88-5.44-7.78-5.44-7.78V0S56.24,1,57.16,20.1V49.55Z"/>
                 <path class="cls-1" d="M64.6,33.55A16.4,16.4,0,0,1,66,26.75a18.42,18.42,0,0,1,4.23-5.85,19.65,19.65,0,0,1,6.18-3.85,19.89,19.89,0,0,1,7.25-1.34,20.49,20.49,0,0,1,7.37,1.34,19.16,19.16,0,0,1,6.17,3.85,17.6,17.6,0,0,1,4.14,5.78,17.3,17.3,0,0,1,0,13.73,17.5,17.5,0,0,1-4.14,5.78A19,19,0,0,1,91.07,50a20.49,20.49,0,0,1-7.37,1.34A19.89,19.89,0,0,1,76.45,50a19.47,19.47,0,0,1-6.18-3.85A18.42,18.42,0,0,1,66,40.34,16.36,16.36,0,0,1,64.6,33.55Zm11.46-.07A7.6,7.6,0,0,0,78.3,39a7.29,7.29,0,0,0,5.39,2.28,7.78,7.78,0,0,0,7.76-7.8,7.8,7.8,0,0,0-7.76-7.81A7.27,7.27,0,0,0,78.3,28,7.58,7.58,0,0,0,76.06,33.48Z"/>
@@ -320,11 +321,11 @@ HTML;
 HTML;
             echo <<<HTML
             <div class="col">
-              <a href="$link" class="imgWrap">
-                <img src="$img" alt="">
+              <a href="$link" target="_blank" class="imgWrap" style="background-image: url('$img')">
+                <!-- <img src="$img" alt=""> -->
               </a>
               <div class="location">$lo</div>
-              <a href="$link" class="title">$t</a>
+              <a href="$link" target="_blank" class="title">$t</a>
               <div class="excerpt">$ep</div>
               $logo
             </div>
