@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form/dist/index.ie11';
 import { GridThemeProvider, Row, Col } from 'styled-bootstrap-grid';
 import { FaStar } from 'react-icons/fa';
-import axios from 'axios';
 import {
   RadioGroup,
   FormControlLabel,
@@ -28,10 +27,7 @@ import PrivacyPolicy from './PrivacyPolicy';
 import LocationFilter from './locationFilter';
 
 function App() {
-  const { handleSubmit, register, errors, control } = useForm({
-    company: '',
-    first_name: '',
-  });
+  const { handleSubmit, register, errors, control } = useForm();
   const [values, setValues] = useState({
     data: undefined,
     addressModalOpen: false,
@@ -57,26 +53,50 @@ function App() {
   const onSubmit = (_values) => {
     const result = Object.assign({}, _values);
     setValues({ ...values, data: result });
-    const Form = new FormData();
     result['00N9000000DnxuJ'] = LocationFilter(result.location);
+    result['oid'] = '00D90000000kgNF';
+    result['00N9000000DnxuT'] = 1;
+    result['submit'] = '제출';
+    result['retURL'] =
+      'http://cleantech2021.cafe24.com/rental-total-purchase-consultation/';
+
+    if (process.env.NODE_ENV !== 'production') {
+      result['debug'] = 1;
+      result['debugEmail'] = 'test@hyeon.pro';
+    }
     delete result.location;
-    Object.keys(result).map((key) => Form.set(key, result[key]));
-    (async () => {
-      try {
-        const res = await axios({
-          method: 'post',
-          url: 'https://webto.salesforce.com/servlet/servlet.WebToLead',
-          data: Form,
-          headers: {
-            'Content-Type': 'multipart/form-data',
-          },
-        });
-        console.log(res);
-        setSuccess(true);
-      } catch (e) {
-        setFail(e.message);
+
+    try {
+      if (document.querySelector('#dynamicForm')) {
+        document.querySelector('#dynamicForm').remove();
       }
-    })();
+      const cForm = document.createElement('form');
+      cForm.setAttribute('charset', 'UTF-8');
+      cForm.setAttribute('method', 'Post'); //Post 방식
+      cForm.setAttribute('style', 'display: none !important'); //Post 방식
+      cForm.setAttribute('id', 'dynamicForm');
+      cForm.setAttribute(
+        'action',
+        'https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8',
+      );
+      Object.keys(result).map((key) => {
+        const input = document.createElement('input');
+        input.setAttribute('value', result[key]);
+        if (key === 'submit') {
+          input.setAttribute('type', key);
+        } else {
+          input.setAttribute('name', key);
+        }
+        cForm.appendChild(input);
+        return '';
+      });
+      document.body.appendChild(cForm);
+      cForm.submit();
+
+      setSuccess(true);
+    } catch (e) {
+      setFail(e.message);
+    }
   };
 
   return (
@@ -391,18 +411,8 @@ function App() {
             name="lead_source"
             value="장비구입문의(홈페이지)"
           />
-          <input hidden ref={register()} name="oid" value="00D90000000kgNF" />
-          <input hidden ref={register()} name="00N9000000DnxuT" value="1" />
-          <input hidden ref={register()} name="submit" value="제출" />
           {process.env.NODE_ENV !== 'production' && (
             <>
-              <input hidden ref={register()} name="debug" value="1" />
-              <input
-                hidden
-                ref={register()}
-                name="debugEmail"
-                value="jeoh@cleantechco.co.kr"
-              />
               <div>
                 <h2>Return Data</h2>
                 {values.data && (

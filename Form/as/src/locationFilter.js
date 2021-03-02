@@ -3,23 +3,24 @@ function LocationFilter(value) {
   let city = '';
 
   // 행정구역
-  if (value.indexOf('서울특별시') !== -1) a = '서울';
-  if (value.indexOf('부산광역시') !== -1) a = '부산';
-  if (value.indexOf('대구광역시') !== -1) a = '대구';
-  if (value.indexOf('인천광역시') !== -1) a = '인천';
-  if (value.indexOf('광주광역시') !== -1) a = '광주';
-  if (value.indexOf('대전광역시') !== -1) a = '대전';
-  if (value.indexOf('울산광역시') !== -1) a = '울산';
-  if (value.indexOf('세종특별자치시') !== -1) a = '세종';
-  if (value.indexOf('경기도') !== -1) a = '경기';
-  if (value.indexOf('강원도') !== -1) a = '강원';
-  if (value.indexOf('충청북도') !== -1) a = '충북';
-  if (value.indexOf('충청남도') !== -1) a = '충남';
-  if (value.indexOf('전라북도') !== -1) a = '전북';
-  if (value.indexOf('전라남도') !== -1) a = '전남';
-  if (value.indexOf('경상북도') !== -1) a = '경북';
-  if (value.indexOf('경상남도') !== -1) a = '경남';
+  if (value.indexOf('서울') !== -1) a = '서울';
+  if (value.indexOf('부산') !== -1) a = '부산';
+  if (value.indexOf('대구') !== -1) a = '대구';
+  if (value.indexOf('인천') !== -1) a = '인천';
+  if (value.indexOf('광주') !== -1) a = '광주';
+  if (value.indexOf('대전') !== -1) a = '대전';
+  if (value.indexOf('울산') !== -1) a = '울산';
+  if (value.indexOf('세종') !== -1) a = '세종';
+  if (value.indexOf('경기') !== -1) a = '경기';
+  if (value.indexOf('강원') !== -1) a = '강원';
+  if (value.indexOf('충북') !== -1) a = '충북';
+  if (value.indexOf('충남') !== -1) a = '충남';
+  if (value.indexOf('전북') !== -1) a = '전북';
+  if (value.indexOf('전남') !== -1) a = '전남';
+  if (value.indexOf('경북') !== -1) a = '경북';
+  if (value.indexOf('경남') !== -1) a = '경남';
   if (value.indexOf('제주특별자치도') !== -1) a = '제주';
+
   if (value.indexOf('강릉시') !== -1) city = '강릉시';
   if (value.indexOf('고성군') !== -1) city = '고성군';
   if (value.indexOf('동해시') !== -1) city = '동해시';
