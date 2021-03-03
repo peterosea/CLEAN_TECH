@@ -30,7 +30,7 @@ get_template_part('template-parts/header/page-archive');
               if ($c2->count === 0) $class .= ' disable';
               if ($key2 === $key) $class .= ' active';
               echo <<<HTML
-              <a href="#$c2->slug" id="$c2->slug" class="listitem $class">$c2->name</a>
+              <a href="#$c2->slug" class="listitem $class">$c2->name</a>
 HTML;
             }
             ?>
