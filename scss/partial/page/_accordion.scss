@@ -5,6 +5,7 @@
   }
   .accordionMenu {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -17,19 +18,15 @@
       color: $black-two;
       align-items: center;
       justify-content: center;
-      border-top: 1px solid $very-light-pink-seven;
-      border-bottom: 1px solid $very-light-pink-seven;
-      border-right: 1px solid $very-light-pink-seven;
+      border: 1px solid $very-light-pink-seven;
+      margin: -0.5px;
       min-width: 150px;
       padding: 6px 20px 0px;
       cursor: pointer;
       width: 100%;
-      &:first-child {
-        border-left: 1px solid $very-light-pink-seven;
-      }
+      max-width: 180px;
       &.active {
         background-color: $teal;
-        border-color: $teal;
         color: $white;
       }
     }
