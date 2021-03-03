@@ -1,3 +1,7 @@
+html.fp-enabled.fp-enabled.fp-enabled {
+  overflow: hidden !important;
+  height: 100% !important;
+}
 main.homepage {
   background-image: linear-gradient(
     to bottom,
@@ -25,11 +29,6 @@ main.homepage {
       background-repeat: no-repeat;
       background-position: right bottom;
     }
-    .container {
-      height: 100%;
-      padding-top: 130px;
-      padding-bottom: 130px;
-    }
     .label {
       display: inline-block;
       background-color: $teal;
@@ -56,8 +55,6 @@ main.homepage {
     background-position: 110% -80px, center;
     .container {
       height: 100%;
-      padding-top: 150px;
-      padding-bottom: 150px;
     }
     .card {
       padding: 50px 40px;
@@ -145,11 +142,15 @@ main.homepage {
     background-size: 800px 800px, cover;
     background-repeat: no-repeat;
     background-position: 110% -80px, center;
+    .sectionTitle {
+      margin-bottom: 30px;
+      padding-top: 40px;
+    }
     .contentRow {
-      margin-bottom: 90px;
+      margin-bottom: 60px;
     }
     .contactRow {
-      margin-bottom: 100px;
+      margin-bottom: 30px;
     }
     .wrap {
       max-width: 260px;

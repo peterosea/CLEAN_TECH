@@ -1,7 +1,7 @@
 <?php
 
 /**
- * comment
+ * 장비 활용
  *
  * @author       Hansanghyeon
  * @copyright    Hansanghyeon <999@hyeon.pro>
@@ -16,29 +16,31 @@ get_header();
 get_template_part('template-parts/header/page-archive');
 ?>
 <main class="pageTemplate equipmentUtil">
-  <div class="section section1">
-    <div class="container">
-      <div class="menuWrap">
-        <ul class="accordionMenu">
-          <?php
-          $cat = get_terms(array('taxonomy' => 'equipment_util_cat', 'hide_empty' => false));
-          foreach ($cat as $key => $c) {
-            $class = '';
-            if ($c->count === 0) $class .= ' disable';
-            if ($key === 0) $class .= ' active';
-            echo <<<HTML
-            <li id="$c->slug" class="$class">$c->name</li>
+
+  <?php
+  $cat = get_terms(array('taxonomy' => 'equipment_util_cat', 'hide_empty' => false));
+  foreach ($cat as $key => $c) : ?>
+    <div class="section section<?php echo $key + 1 ?>" id="<?php echo $c->slug ?>">
+      <div class="container">
+        <div class="menuWrap">
+          <div class="accordionMenu">
+            <?php
+            foreach ($cat as $key2 => $c2) {
+              $class = '';
+              if ($c2->parent !== 0) continue;
+              if ($c2->count === 0) $class .= ' disable';
+              if ($key2 === $key) $class .= ' active';
+              echo <<<HTML
+              <a href="#$c2->slug" id="$c2->slug" class="listitem $class">$c2->name</a>
 HTML;
-          }
-          ?>
-        </ul>
-      </div>
-      <div class="accordionContent">
-        <?php
-        foreach ($cat as $key => $c) {
+            }
+            ?>
+          </div>
+        </div>
+        <div class="accordionContent">
+          <?php
           $class = '';
-          if ($key === 0) $class .= ' active';
-          $dom = '<div id="' . $c->slug . '" class="itemList style2 ' . $c->slug . ' ' . $class . '">';
+          $dom = '<div id="' . $c->slug . '" class="itemList style2 ' . $c->slug . ' active">';
           $dom .= <<<HTML
           <div class="listContent">
             <div class="listTitle">$c->name</div>
@@ -78,32 +80,11 @@ HTML;
           }
           $dom .= '</div>';
           echo $dom;
-        }
-        ?>
+          ?>
+        </div>
       </div>
-      <script>
-        "use strict";
-
-        var control = document.querySelectorAll('.accordionMenu li');
-        var target = document.querySelectorAll('.accordionContent .itemList');
-        control.forEach(function(c) {
-          c.addEventListener('click', function() {
-            control.forEach(function(cc) {
-              return cc.classList.remove('active');
-            });
-            target.forEach(function(t) {
-              t.classList.remove('active');
-
-              if (t.id === c.id) {
-                t.classList.add('active');
-              }
-            });
-            c.classList.add('active');
-          });
-        });
-      </script>
     </div>
-  </div>
+  <?php endforeach ?>
   <?php get_template_part('template-parts/footer/page'); ?>
 </main>
 <?php

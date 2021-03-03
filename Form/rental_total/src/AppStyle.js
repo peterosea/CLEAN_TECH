@@ -31,6 +31,12 @@ export const RPN = styled(Container)`
     text-align: left;
     color: #333;
     border-radius: 4px;
+    outline-color: #009b94;
+  }
+  .border fieldset {
+    border: 1px solid #d9dee5;
+    border-radius: 4px;
+    outline-color: #009b94;
   }
 `;
 
@@ -42,6 +48,13 @@ const Input = styled.input`
   padding: 20px;
   border-radius: 4px;
   width: 100%;
+  &:hover {
+    border-color: #333;
+  }
+  &:focus {
+    border-color: #009b94;
+    outline: 1px auto #009b94;
+  }
   &::placeholder {
     color: #cac1c8;
   }

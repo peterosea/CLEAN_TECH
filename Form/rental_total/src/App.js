@@ -57,8 +57,6 @@ function App() {
     result['oid'] = '00D90000000kgNF';
     result['00N9000000DnxuT'] = 1;
     result['submit'] = '제출';
-    result['retURL'] =
-      'http://cleantech2021.cafe24.com/rental-total-purchase-consultation/';
 
     if (process.env.NODE_ENV !== 'production') {
       result['debug'] = 1;

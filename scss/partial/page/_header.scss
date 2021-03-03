@@ -48,6 +48,11 @@ header.pageHeader {
       align-items: center;
       justify-content: center;
       fill: $battleship-grey;
+
+      height: 60px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
       svg {
         width: 20px;
         height: 20px;
@@ -55,15 +60,73 @@ header.pageHeader {
     }
     .container {
       display: flex;
-    }
-    .container > * {
-      border-right: 1px solid $light-periwinkle-two;
-      height: 60px;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      &:first-child {
+      > * {
         border-left: 1px solid $light-periwinkle-two;
+        &:last-child {
+          border-right: 1px solid $light-periwinkle-two;
+        }
+      }
+      .menuList {
+        margin: 0;
+        position: relative;
+        &.show {
+          background-color: $seafoam-blue;
+          min-width: 200px;
+          border: none;
+          .dropdown-toggle {
+            color: $white;
+            &:after {
+              background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='13' viewBox='0 0 18 13'%3E%3Cdefs%3E%3Cstyle%3E .cls-1%7Bfill:none;stroke:%23ffffff%7D %3C/style%3E%3C/defs%3E%3Cg id='icon-location-expand' transform='translate(-516.5 -517)'%3E%3Cpath id='선_306' d='M0 0L18 0' class='cls-1' transform='translate(516.5 517.5)'/%3E%3Cpath id='선_307' d='M0 0L18 0' class='cls-1' transform='translate(516.5 523.5)'/%3E%3Cpath id='선_308' d='M0 0L18 0' class='cls-1' transform='translate(516.5 529.5)'/%3E%3C/g%3E%3C/svg%3E%0A");
+            }
+          }
+          & + .menuList {
+            border-left: none;
+          }
+        }
+        .dropdown-toggle {
+          height: 60px;
+          padding: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
+          &::after {
+            margin-left: 20px;
+            border: none;
+            width: 18px;
+            height: 13px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='13' viewBox='0 0 18 13'%3E%3Cdefs%3E%3Cstyle%3E .cls-1%7Bfill:none;stroke:%23aeb4be%7D %3C/style%3E%3C/defs%3E%3Cg transform='translate(-516.5 -517)'%3E%3Cpath d='M0 0L18 0' class='cls-1' transform='translate(516.5 517.5)'/%3E%3Cpath d='M0 0L18 0' class='cls-1' transform='translate(516.5 523.5)'/%3E%3Cpath d='M0 0L18 0' class='cls-1' transform='translate(516.5 529.5)'/%3E%3C/g%3E%3C/svg%3E%0A");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        }
+        .list {
+          display: block;
+          padding: 20px;
+          background-color: $seafoam-blue;
+          margin: 0;
+          color: $white;
+          text-decoration: none;
+          line-height: 1.2;
+          border-top: 1px solid rgba($white, 0.2);
+          &:hover {
+            background-color: $teal;
+            font-weight: bold;
+            border-top: 1px solid $teal;
+            & + .list {
+              border-top: 1px solid $teal;
+            }
+          }
+        }
+        .dropdown-menu {
+          width: 100%;
+          margin: 0;
+          border-radius: 0;
+          padding: 0;
+          min-width: 0;
+          border: none;
+        }
       }
     }
   }
