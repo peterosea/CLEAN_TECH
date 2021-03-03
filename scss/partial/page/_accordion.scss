@@ -64,6 +64,7 @@
       }
       .listContent {
         width: 100%;
+        scroll-margin: 75px;
         .listTitle {
           @include Text-Style-15;
           color: $dark;

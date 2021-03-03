@@ -20,7 +20,7 @@ get_template_part('template-parts/header/page-archive');
   <?php
   $cat = get_terms(array('taxonomy' => 'equipment_util_cat', 'hide_empty' => false));
   foreach ($cat as $key => $c) : ?>
-    <div class="section section<?php echo $key + 1 ?>" id="accordion<?php echo $key ?>">
+    <div class="section section<?php echo $key + 1 ?>" id="<?php echo $c->slug ?>">
       <div class="container">
         <div class="menuWrap">
           <div class="accordionMenu">
@@ -31,7 +31,7 @@ get_template_part('template-parts/header/page-archive');
               if ($c2->count === 0) $class .= ' disable';
               if ($key2 === $key) $class .= ' active';
               echo <<<HTML
-              <a href="#accordion$key2" id="$c2->slug" class="listitem $class">$c2->name</a>
+              <a href="#$c2->slug" id="$c2->slug" class="listitem $class">$c2->name</a>
 HTML;
             }
             ?>
