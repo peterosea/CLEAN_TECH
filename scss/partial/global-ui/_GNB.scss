@@ -2,8 +2,17 @@ body.admin-bar {
   nav.GNB {
     top: 32px;
   }
+  nav.GNB.shrink + .gnbTypeDefault.mobile {
+    top: 0;
+    @media screen and (min-width: 783px) {
+      top: 32px;
+    }
+  }
   .gnbTypeDefault.mobile {
-    top: 32px;
+    top: 46px;
+    @media screen and (min-width: 783px) {
+      top: 32px;
+    }
   }
   .gnbTypeDefault.mobile .dropdown-menu {
     padding-top: 46px;
