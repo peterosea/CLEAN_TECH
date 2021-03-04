@@ -31,7 +31,7 @@ get_template_part('template-parts/header/page-archive');
               <div class="name">$name</div>
             </div>
           </div>
-  HTML;
+HTML;
         }
         ?>
       </div>

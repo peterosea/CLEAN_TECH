@@ -53,7 +53,7 @@ get_template_part('template-parts/header/page-archive');
                 </div>
               </div>
             </div>
-  HTML;
+HTML;
         }
         ?>
       </div>
@@ -134,7 +134,7 @@ HTML;
                     <div class="name">$name</div>
                     <div class="value">$value</div>
                   </li>
-  HTML;
+HTML;
                 }
                 ?>
               </ul>

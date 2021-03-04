@@ -92,7 +92,10 @@ main.pageTemplate.performance {
           margin: 0px;
         }
         img {
-          max-width: 200px;
+          max-width: 150px;
+          @include respondTo("md") {
+            max-width: 200px;
+          }
         }
       }
     }
