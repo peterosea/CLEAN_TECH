@@ -9,28 +9,56 @@ main.pageTemplate.history {
   }
   .historyRootWrap {
     position: relative;
+    margin-left: 25px;
+    @include respondTo("md") {
+      margin-left: 0;
+    }
     &:before {
       content: "";
       @include Text-Style-58;
       display: block;
       position: absolute;
-      left: 300px;
       width: 1px;
+      left: 0;
       height: 100%;
       background-color: $teal;
       top: 50%;
       transform: translate(-50%, -50%);
       margin: 0.5em 0;
+      @include respondTo("md") {
+        left: 300px;
+      }
     }
     .historyWrap {
       display: flex;
-      margin-bottom: 90px;
+      margin-bottom: 30px;
+      flex-direction: column;
+      @include respondTo("md") {
+        flex-direction: row;
+        margin-bottom: 90px;
+      }
       .yearWrap {
         width: 300px;
-        padding-right: 40px;
-        @include Text-Style-58;
         line-height: 1;
         position: relative;
+        font-family: Poppins;
+        font-size: 40px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.9;
+        letter-spacing: -2px;
+        text-align: left;
+        color: $teal;
+        margin-bottom: 20px;
+        padding-left: 50px;
+
+        @include respondTo("md") {
+          @include Text-Style-58;
+          padding-right: 40px;
+          margin-bottom: 0;
+          padding-left: 0;
+        }
         &:after {
           content: "";
           display: block;
@@ -39,15 +67,33 @@ main.pageTemplate.history {
           border-radius: 999px;
           background-color: $teal;
           position: absolute;
-          right: 0;
+          left: 0;
+          right: auto;
           top: 0.5em;
-          transform: translate(50%, -50%);
+          transform: translate(-50%, -50%);
+          @include respondTo("md") {
+            left: auto;
+            right: 0;
+            transform: translate(50%, -50%);
+          }
         }
       }
       .content {
-        padding-left: 40px;
-        @include Text-Style-59;
         color: $battleship-grey;
+        font-family: NotoSansKR;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 2.14;
+        letter-spacing: -0.7px;
+        text-align: left;
+        padding-left: 50px;
+
+        @include respondTo("md") {
+          @include Text-Style-59;
+          padding-left: 40px;
+        }
       }
     }
   }
