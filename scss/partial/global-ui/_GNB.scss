@@ -2,6 +2,9 @@ body.admin-bar {
   nav.GNB {
     top: 32px;
   }
+  .gnbTypeDefault.mobile {
+    top: 32px;
+  }
   .gnbTypeDefault.mobile .dropdown-menu {
     padding-top: 46px;
     @media screen and (min-width: 783px) {
@@ -145,6 +148,13 @@ nav.GNB {
   justify-content: space-between;
   height: 50px;
   padding: 11px 24px;
+  background-color: $white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+  box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+
   button {
     all: unset;
     font-size: 18px;
@@ -213,7 +223,6 @@ nav.GNB {
       margin: -1px 0 0;
       .sub-menu {
         border-top: 1px solid $light-periwinkle-two;
-        border-bottom: 1px solid $light-periwinkle-two;
         margin: -1px 0 0;
         padding-top: 25px;
         padding-bottom: 25px;
@@ -224,6 +233,7 @@ nav.GNB {
         }
         a {
           color: $battleship-grey-four;
+          padding: 12px;
           &:hover {
             color: $teal;
           }
