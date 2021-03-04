@@ -51,11 +51,12 @@ HTML;
             $content = $ss1['content'];
             echo <<<HTML
             <div class="columWrap">
+              <div class="title d-block d-md-none">$title</div>
               <div class="imgWrap">
                 <img src="$img" alt="">
               </div>
               <div class="contentWrap">
-                <div class="title">$title</div>
+                <div class="title d-none d-md-block">$title</div>
                 <div class="content">$content</div>
               </div>
           </div>
