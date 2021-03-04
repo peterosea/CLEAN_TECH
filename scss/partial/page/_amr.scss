@@ -1,28 +1,39 @@
 main.amr {
   .section {
-    padding-top: 130px;
-    padding-bottom: 130px;
+    padding-top: 76px;
+    padding-bottom: 76px;
+    @include respondTo("md") {
+      padding-top: 130px;
+      padding-bottom: 130px;
+    }
   }
   .section1 {
-    .sectionTitle p {
-      color: $dark;
-      @include Text-Style-15;
-    }
     .title2 {
       color: $dark;
-      @include Text-Style-42;
+      word-break: keep-all;
+      @include Text-Style-63;
       margin-bottom: 18px;
+      @include respondTo("md") {
+        @include Text-Style-42;
+      }
     }
     .content {
       color: $battleship-grey;
-      @include Text-Style-16;
+      font-family: NotoSansKR;
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.71;
+      letter-spacing: -0.84px;
+      text-align: center;
+
+      @include respondTo("md") {
+        @include Text-Style-16;
+      }
     }
   }
   .section2 {
-    .sectionTitle p {
-      color: $dark;
-      @include Text-Style-15;
-    }
     background-color: $pale-grey;
     .column {
       .inner {
@@ -35,13 +46,35 @@ main.amr {
         align-items: center;
       }
       .title {
-        @include Text-Style-18;
         color: $teal;
+        font-family: NotoSansKR;
+        font-size: 26px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.35;
+        letter-spacing: -1.3px;
+        text-align: center;
+        margin-bottom: 9px;
+        @include respondTo("md") {
+          @include Text-Style-18;
+        }
       }
       .content {
-        @include Text-Style-27;
-        color: $battleship-grey;
         margin-bottom: 50px;
+        font-family: NotoSansKR;
+        font-size: 15px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.47;
+        letter-spacing: -0.75px;
+        text-align: center;
+        color: $battleship-grey;
+
+        @include respondTo("md") {
+          @include Text-Style-27;
+        }
       }
       .imgWrap {
         img {
@@ -52,7 +85,10 @@ main.amr {
   }
   .section3 {
     .columnRow {
-      margin-bottom: 270px;
+      margin-bottom: 70px;
+      @include respondTo("md") {
+        margin-bottom: 270px;
+      }
     }
     .inner {
       position: relative;
@@ -68,7 +104,20 @@ main.amr {
       padding: 30px;
       .title {
         color: $white;
-        @include Text-Style-38;
+
+        font-family: NotoSansKR;
+        font-size: 29px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.48;
+        letter-spacing: -1.45px;
+        text-align: left;
+        color: $white;
+
+        @include respondTo("md") {
+          @include Text-Style-38;
+        }
       }
       .videoWrap {
         padding-top: 56.6%;
@@ -84,15 +133,12 @@ main.amr {
     }
     .contentCol {
       .title {
-        @include Text-Style-38;
         color: $dark;
         margin-bottom: 20px;
-      }
-    }
-    .imgCol {
-      img {
-        height: auto;
-        width: 100%;
+        @include Text-Style-62;
+        @include respondTo("md") {
+          @include Text-Style-38;
+        }
       }
     }
     .ulList {
@@ -102,20 +148,70 @@ main.amr {
       margin: 0;
       flex-wrap: wrap;
       .name {
-        @include Text-Style-17;
-        color: $dark-two;
+        font-family: NotoSansKR;
+        font-size: 14px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: -0.7px;
+        text-align: left;
+        color: $dark;
+        min-width: 120px;
+        @include respondTo("md") {
+          color: $dark-two;
+          @include Text-Style-17;
+        }
       }
       .value {
-        @include Text-Style-45;
+        font-family: NotoSansKR;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: -0.7px;
+        text-align: left;
         color: $battleship-grey;
+        @include respondTo("md") {
+          @include Text-Style-45;
+        }
       }
       li {
-        min-width: 50%;
-        margin-bottom: 20px;
+        border-top: 1px solid $light-periwinkle-two;
+        border-bottom: 1px solid $light-periwinkle-two;
+        margin: -0.5px 0;
+        width: 100%;
+        padding-top: 22px;
+        padding-bottom: 22px;
+        display: flex;
+        flex-wrap: wrap;
+        @supports (gap: 30px) {
+          column-gap: 30px;
+          row-gap: 6px;
+        }
+        @include respondTo("md") {
+          display: block;
+          padding-top: 0;
+          padding-bottom: 0;
+          border-top: 0;
+          min-width: 50%;
+          margin: 0;
+          width: auto;
+          margin-bottom: 20px;
+          border: 0;
+        }
+      }
+    }
+    .imgCol {
+      img {
+        height: auto;
+        width: 100%;
       }
     }
     .itemRow {
-      margin-bottom: 160px;
+      margin-bottom: 50px;
+      @include respondTo("md") {
+        margin-bottom: 160px;
+      }
     }
     .comparison {
       margin: 0;
@@ -134,21 +230,52 @@ main.amr {
       .re div[class*="col"],
       .th {
         padding: 0;
+        margin-bottom: 50px;
+        @include respondTo("md") {
+          margin-bottom: 0;
+        }
         > div {
           border-bottom: 1px solid $light-periwinkle-two;
           padding: 12px 6px;
-          height: 5em;
           &.thumb {
             height: 250px;
           }
-          @include Text-Style-48;
+
+          font-family: NotoSansKR;
+          font-size: 14px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          letter-spacing: -0.7px;
+          text-align: left;
           color: $battleship-grey;
+          @include respondTo("md") {
+            height: 5em;
+            @include Text-Style-48;
+          }
+          span {
+            width: 80px;
+            font-weight: bold;
+            margin-right: 12px;
+            color: $dark;
+          }
         }
       }
       .thumb {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include respondTo("md") {
+          display: block;
+        }
         .title {
-          @include Text-Style-47;
+          font-family: Poppins;
+          font-size: 14px;
+          text-align: left;
           color: $black-two;
+          @include respondTo("md") {
+            @include Text-Style-47;
+          }
         }
         img {
           width: 150px;
@@ -170,31 +297,68 @@ main.amr {
     }
   }
   .section4 {
-    .imgWrap {
-      margin-bottom: 39px;
-      display: block;
+    padding-top: 0;
+    @include respondTo("md") {
+      padding-top: inherit;
     }
-    .location {
-      color: $black-two;
-      @include Text-Style-21;
-      margin-bottom: 9px;
+    .row {
+      margin: 0;
+      @include respondTo("md") {
+        margin: inherit;
+      }
+      .item:last-child {
+        border-bottom: 0;
+      }
     }
-    .title {
-      color: $black-two;
-      @include Text-Style-27;
-      text-decoration: none;
-      margin-bottom: 9px;
-    }
-    .excerpt {
-      @include Text-Style-35;
-      color: $battleship-grey;
-    }
-    .logoWrap {
-      margin-top: 20px;
-      display: inline-block;
-      svg {
-        width: 50px;
-        fill: $light-periwinkle-two;
+    .item {
+      border-bottom: 1px solid $light-periwinkle-two;
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      padding-left: 0;
+      padding-right: 0;
+      @include respondTo("md") {
+        padding-bottom: 0px;
+        border-bottom: 0;
+        margin-bottom: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      .imgWrap {
+        margin-bottom: 39px;
+        display: block;
+      }
+      .location {
+        color: $black-two;
+        font-family: NotoSansKR;
+        font-size: 22px;
+        font-weight: bold;
+        @include respondTo("md") {
+          @include Text-Style-21;
+        }
+        margin-bottom: 9px;
+      }
+      .title {
+        color: $black-two;
+        text-decoration: none;
+        margin-bottom: 9px;
+        font-size: 16px;
+        display: inline-block;
+        word-break: keep-all;
+        @include respondTo("md") {
+          @include Text-Style-27;
+        }
+      }
+      .excerpt {
+        @include Text-Style-35;
+        color: $battleship-grey;
+      }
+      .logoWrap {
+        margin-top: 20px;
+        display: inline-block;
+        svg {
+          width: 50px;
+          fill: $light-periwinkle-two;
+        }
       }
     }
   }
