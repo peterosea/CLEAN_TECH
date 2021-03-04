@@ -19,7 +19,8 @@ get_template_part('template-parts/header/page-archive');
       <div class="sectionTitle important">
         <?php echo get_field('title') ?>
       </div>
-      <img src="<?php echo get_field('img') ?>" alt="">
+      <img class="d-none d-md-block" src="<?php echo get_field('img') ?>" alt="">
+      <img class="d-block d-md-none" src="<?php echo get_field('m_img') ?>" alt="">
     </div>
   </div>
   <div class="section section2">
@@ -57,10 +58,10 @@ HTML;
         </div>
       </div>
       <div class="row m-0">
-        <div class="col p-0">
+        <div class="col-12 col-md p-0">
           <img src="<?php echo get_field('s3img1') ?>" alt="" />
         </div>
-        <div class="col p-0">
+        <div class="col-12 col-md p-0">
           <img src="<?php echo get_field('s3img2') ?>" alt="" />
         </div>
       </div>
