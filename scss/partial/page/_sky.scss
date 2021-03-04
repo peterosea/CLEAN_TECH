@@ -1,38 +1,111 @@
 main.pageTemplate.sky {
+  .section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @include respondTo("md") {
+      padding-top: 150px;
+      padding-bottom: 150px;
+    }
+    .container_title {
+      margin-bottom: 46px;
+      color: $dark;
+      @include Text-Style-62;
+      @include respondTo("md") {
+        @include Text-Style-38;
+      }
+      p {
+        margin-top: 11px;
+        font-family: NotoSansKR;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.57;
+        letter-spacing: -0.84px;
+        text-align: center;
+        color: $battleship-grey;
+        @include respondTo("md") {
+          @include Text-Style-16;
+          font-weight: 400;
+          margin-top: 28px;
+        }
+      }
+    }
+  }
   .section1 {
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 40px;
+    padding-bottom: 67px;
+    @include respondTo("md") {
+      padding-top: 150px;
+      padding-bottom: 150px;
+    }
     text-align: center;
+    iframe {
+      width: 100%;
+    }
   }
   .section2 {
-    padding-bottom: 250px;
+    padding-bottom: 67px;
+    @include respondTo("md") {
+      padding-bottom: 250px;
+    }
     .colWrap {
       text-align: center;
       .imgWrap {
         border-radius: 999px;
         overflow: hidden;
+        margin: auto;
         margin-bottom: 37px;
+        max-width: 270px;
+        @include respondTo("md") {
+          max-width: none;
+        }
       }
       .title {
-        @include Noto-Sans-KR---24pt;
-        margin-bottom: 14px;
+        font-size: 20px;
+        margin-bottom: 11px;
+        font-weight: bold;
+        font-family: NotoSansKR;
+        @include respondTo("md") {
+          @include Noto-Sans-KR---24pt;
+          margin-bottom: 14px;
+        }
       }
       .content {
-        @include Noto-Sans-KR---18pt;
         color: $battleship-grey;
+        font-size: 16px;
+        font-family: NotoSansKR;
+        @include respondTo("md") {
+          @include Noto-Sans-KR---18pt;
+        }
+      }
+    }
+    .item {
+      margin-bottom: 60px;
+      @include respondTo("md") {
+        margin-bottom: 0;
       }
     }
   }
   .section3 {
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 68px;
+    padding-bottom: 58px;
+    @include respondTo("md") {
+      padding-top: 150px;
+      padding-bottom: 150px;
+    }
     background-color: $pale-grey;
     position: relative;
     .bgCover {
-      width: 40%;
-      position: absolute;
-      left: 50%;
-      transform: translateX(16.666%);
+      width: 100%;
+      margin-bottom: 39px;
+      @include respondTo("md") {
+        width: 40%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(16.666%);
+        margin-bottom: 0;
+      }
       img {
         width: 100%;
       }
@@ -43,6 +116,12 @@ main.pageTemplate.sky {
         display: flex;
         align-items: center;
         flex-direction: column;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        @include respondTo("md") {
+          padding-top: 0px;
+          padding-bottom: 0px;
+        }
       }
       .imgWrap {
         margin-bottom: 30px;
@@ -52,53 +131,105 @@ main.pageTemplate.sky {
       }
       .title {
         text-align: center;
-        @include Noto-Sans-KR---24pt;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: NotoSansKR;
+        @include respondTo("md") {
+          @include Noto-Sans-KR---24pt;
+        }
       }
     }
     .certiList {
-      margin-bottom: 80px;
+      @include respondTo("md") {
+        margin-bottom: 80px;
+      }
       .item {
         display: flex;
         align-items: center;
         flex-direction: column;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        @include respondTo("md") {
+          padding-top: 0px;
+          padding-bottom: 0px;
+        }
       }
       .imgWrap {
-        margin-bottom: 30px;
+        margin-bottom: 17px;
+        @include respondTo("md") {
+          margin-bottom: 30px;
+        }
       }
       .title {
         text-align: center;
-        @include Noto-Sans-KR---18pt;
+        font-size: 14px;
+        font-family: NotoSansKR;
+        color: $battleship-grey;
+        @include respondTo("md") {
+          @include Noto-Sans-KR---18pt;
+        }
       }
     }
   }
   .section4 {
-    margin-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 80px;
+    @include respondTo("md") {
+      margin-top: 150px;
+      padding-bottom: 150px;
+    }
     position: relative;
     .bgCover {
-      padding-top: 200px;
-    }
-    .container_title {
-      @include Text-Style-38;
-      margin-bottom: 46px;
+      padding-top: 13px;
+      margin-bottom: 100px;
+      @include respondTo("md") {
+        padding-top: 200px;
+        margin-bottom: 0;
+      }
     }
     .qRootWrap {
-      position: absolute;
-      top: 0;
+      @include respondTo("md") {
+        position: absolute;
+        top: 0;
+      }
       .qualificationWrap {
         max-width: 560px;
         display: flex;
         flex-wrap: wrap;
         .item {
-          width: 180px;
           margin-bottom: 30px;
+          width: 100%;
+          display: flex;
+          border-top: solid 1px $light-periwinkle-two;
+          border-bottom: solid 1px $light-periwinkle-two;
+          margin: -0.5px 0;
+          padding: 13px 0;
+          @include respondTo("md") {
+            border: 0;
+            width: 180px;
+            display: block;
+            margin: 0;
+          }
           .title {
             color: $dark-two;
-            @include Text-Style-17;
+            font-size: 14px;
+            font-weight: bold;
+            font-family: NotoSansKR;
+            color: $dark;
+            width: 120px;
+            margin-right: 30px;
+            @include respondTo("md") {
+              @include Text-Style-17;
+              width: auto;
+              margin-right: 0px;
+            }
           }
           .content {
             color: $battleship-grey;
-            @include Text-Style-45;
+            font-size: 14px;
+            font-family: NotoSansKR;
+            @include respondTo("md") {
+              @include Text-Style-45;
+            }
           }
         }
       }
@@ -106,55 +237,99 @@ main.pageTemplate.sky {
   }
   .section5 {
     padding-top: 100px;
-    padding-bottom: 150px;
-
-    .container_title {
-      color: $dark;
-      @include Text-Style-15;
-      margin-bottom: 70px;
-      p {
-        margin-top: 28px;
-        color: $battleship-grey;
-        @include Text-Style-16;
-        font-weight: 400;
-      }
+    padding-bottom: 100px;
+    @include respondTo("md") {
+      padding-bottom: 150px;
     }
     .use1 {
-      margin-bottom: 75px;
+      @include respondTo("md") {
+        margin-bottom: 75px;
+      }
+      .item {
+        margin-bottom: 50px;
+        @include respondTo("md") {
+          margin-bottom: 0;
+        }
+      }
       .imgWrap {
-        margin-bottom: 37px;
+        margin-bottom: 11px;
+        @include respondTo("md") {
+          margin-bottom: 37px;
+        }
       }
       .title {
-        color: $dark;
-        @include Text-Style-21;
+        font-family: NotoSansKR;
+        font-size: 22px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.18;
+        letter-spacing: -1.1px;
+        text-align: left;
+        color: $black-two;
+        @include respondTo("md") {
+          color: $dark;
+          @include Text-Style-21;
+        }
       }
     }
     .use {
-      .imgWrap {
-        margin-bottom: 39px;
-        display: block;
+      margin: 0;
+      @include respondTo("md") {
+        margin: 0 -15px;
       }
-      .location {
-        color: $black-two;
-        @include Text-Style-21;
-        margin-bottom: 9px;
-      }
-      .title {
-        color: $black-two;
-        @include Text-Style-27;
-        text-decoration: none;
-        margin-bottom: 9px;
-      }
-      .excerpt {
-        @include Text-Style-35;
-        color: $battleship-grey;
-      }
-      .logoWrap {
-        margin-top: 20px;
-        display: inline-block;
-        svg {
-          width: 50px;
-          fill: $light-periwinkle-two;
+      .item {
+        border-bottom: 1px solid $light-periwinkle-two;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        padding-left: 0;
+        padding-right: 0;
+        @include respondTo("md") {
+          padding-bottom: 0px;
+          border-bottom: 0;
+          margin-bottom: 0;
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+        .imgWrap {
+          display: block;
+          margin-bottom: 30px;
+          @include respondTo("md") {
+            margin-bottom: 39px;
+          }
+        }
+        .location {
+          color: $black-two;
+          font-family: NotoSansKR;
+          font-size: 22px;
+          font-weight: bold;
+          @include respondTo("md") {
+            @include Text-Style-21;
+          }
+          margin-bottom: 9px;
+        }
+        .title {
+          color: $black-two;
+          text-decoration: none;
+          margin-bottom: 9px;
+          font-size: 16px;
+          display: inline-block;
+          word-break: keep-all;
+          @include respondTo("md") {
+            @include Text-Style-27;
+          }
+        }
+        .excerpt {
+          @include Text-Style-35;
+          color: $battleship-grey;
+        }
+        .logoWrap {
+          margin-top: 20px;
+          display: inline-block;
+          svg {
+            width: 50px;
+            fill: $light-periwinkle-two;
+          }
         }
       }
     }
