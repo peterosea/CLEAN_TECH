@@ -193,6 +193,7 @@ header.pageHeader {
       font-style: normal;
       letter-spacing: -1.3px;
       text-align: center;
+      line-height: 1.46;
       color: $teal;
       @include respondTo("md") {
         @include Text-Style-14;
