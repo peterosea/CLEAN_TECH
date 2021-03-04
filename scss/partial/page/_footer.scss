@@ -1,39 +1,98 @@
 div.pageFooter {
-  padding: 130px 0 150px;
   background-color: $pale-grey;
+  padding-top: 50px;
+  padding-bottom: 65px;
+  @include respondTo("md") {
+    padding: 130px 0 150px;
+  }
   .container {
     div.sectionTitle * {
-      @include Text-Style-20;
       color: $dark;
       padding: 0;
       word-break: keep-all;
+
+      @include Text-Style-62;
+      @include respondTo("md") {
+        @include Text-Style-20;
+      }
     }
     .row {
-      padding: 90px 0;
       border-top: 1px solid $dark;
       border-bottom: 1px solid $dark;
+      padding: 0;
+      @include respondTo("md") {
+        padding: 90px 0;
+      }
+      @include respondTo("xs") {
+        margin: 0;
+      }
+      > div {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        &:not(:last-child) {
+          border-bottom: 1px solid rgba($dark, 0.1);
+        }
+        @include respondTo("md") {
+          padding-top: 0;
+          padding-bottom: 0;
+          &:not(:last-child) {
+            border-bottom: none;
+          }
+        }
+      }
     }
     .contentWrap {
       text-decoration: none;
       display: flex;
       width: 100%;
-      justify-content: space-around;
       cursor: pointer;
+      justify-content: space-between;
+      align-items: center;
+      @include respondTo("lg") {
+        justify-content: space-around;
+      }
       &:hover {
         color: $teal;
       }
       .content {
         margin-right: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include respondTo("md") {
+          justify-content: flex-start;
+        }
       }
       .title *,
       a {
-        @include Text-Style-21;
-        color: $dark;
         margin: 0;
+        font-size: 15px;
+        font-weight: bold;
+        letter-spacing: -0.75px;
+        color: $black-two;
+        @include respondTo("md") {
+          color: $dark;
+          @include Text-Style-21;
+        }
       }
       p {
         @include Text-Style-22;
         color: $battleship-grey;
+        margin: 0;
+      }
+      .title + p {
+        display: none;
+        @include respondTo("md") {
+          display: block;
+        }
+      }
+    }
+    .imgWrap {
+      img {
+        height: 33px;
+        @include respondTo("md") {
+          height: auto;
+        }
       }
     }
   }

@@ -1,9 +1,16 @@
 main.pageTemplate {
   .sectionTitle {
-    @include Text-Style-15;
-    margin-bottom: 70px;
-    &.important p {
+    margin-bottom: 50px;
+    @include Text-Style-62;
+    @include respondTo("sm") {
+      margin-bottom: 70px;
       @include Text-Style-15;
+    }
+    &.important p {
+      @include Text-Style-62;
+      @include respondTo("sm") {
+        @include Text-Style-15;
+      }
       color: $dark;
       + p {
         @include Text-Style-16;

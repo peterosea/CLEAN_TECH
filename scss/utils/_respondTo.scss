@@ -1,5 +1,8 @@
 // Responsive Web Design
 $breakpoints: (
+  "xs": (
+    max-width: 576px,
+  ),
   "sm": (
     min-width: 576px,
   ),

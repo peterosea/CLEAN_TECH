@@ -12,7 +12,7 @@ if (!empty($contact) && !empty($title)) :
       <div class="row">
         <?php
         foreach ($contact as $key => $c) : ?>
-          <div class="col-6 px-4">
+          <div class="col-12 col-md-6 px-4">
             <<?php if ($key === 'one') echo 'a href="/rental-total-purchase-consultation/" ';
               else echo 'div' ?> id="<?php if ($key === 'two') echo 'quickContact'; ?>" class="contentWrap">
               <div class="content">
