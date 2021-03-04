@@ -133,7 +133,7 @@ HTML;
           '정격(V)'
         );
         ?>
-        <div class="col-3 col-md-2 p-0 labelCol">
+        <div class="col-4 col-md-2 p-0 labelCol">
           <ul class="label">
             <?php foreach ($list as $l) :
               echo <<<HTML
