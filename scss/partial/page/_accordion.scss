@@ -23,10 +23,12 @@
       justify-content: center;
       border: 1px solid $very-light-pink-seven;
       margin: -0.5px;
-      padding: 6px 20px 0px;
+      padding: 15px 4px 14px;
       cursor: pointer;
       width: 33.33%;
       position: relative;
+      line-height: 1.2;
+      word-break: keep-all;
       @include respondTo("md") {
         width: 100%;
         max-width: 150px;

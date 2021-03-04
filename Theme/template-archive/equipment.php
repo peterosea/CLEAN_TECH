@@ -65,13 +65,14 @@ HTML;
               foreach ($custom_query as $post) {
                 $thumb = get_the_post_thumbnail_url($post, 'full');
                 $dom .= <<<HTML
-                    <div class="item">
+                  <div class="item">
+                    <div class="innerWrap">
                       <div class="imgWrap">
                         <img src="$thumb" alt="">
                       </div>
                       <div class="title">$post->post_title</div>
-                      <p>$post->post_excerpt</p>
                     </div>
+                  </div>
 HTML;
               }
             } else {
@@ -107,13 +108,14 @@ HTML;
                   $thumb = get_the_post_thumbnail_url($post, 'full');
                   $link = get_the_permalink($post);
                   $dom .= <<<HTML
-                    <a href="$link" class="item">
+                  <a href="$link" class="item">
+                    <div class="innerWrap">
                       <div class="imgWrap">
                         <img src="$thumb" alt="">
                       </div>
                       <div class="title">$post->post_title</div>
-                      <p>$post->post_excerpt</p>
-                    </a>
+                    </div>
+                  </a>
 HTML;
                 }
               } else {
