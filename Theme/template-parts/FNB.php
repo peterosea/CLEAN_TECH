@@ -40,10 +40,9 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
         </ul>
         <ul class="info">
           <li>Addr. 경기도 용인시 기흥구 이현로30번길 23</li>
-          <li><a href="tel:1544-3050">T. 1544-3050</a></li>
-          <li><a href="tel:031-624-5219">F. 031-624-5219</a></li>
+          <li><a href="tel:1544-3050">T. 1544-3050</a> <a href="tel:031-624-5219">F. 031-624-5219</a></li>
         </ul>
-        <p class="copyright">COPYRIGHT © CLEANTECH CO. ALL RIGHTS RESERVED.</p>
+        <p class="copyright">COPYRIGHT © CLEANTECH CO.<br class="d-block d-sm-none" /> ALL RIGHTS RESERVED.</p>
       </div>
     </div>
   </div>

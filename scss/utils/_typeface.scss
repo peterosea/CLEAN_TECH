@@ -555,3 +555,11 @@
   letter-spacing: -0.9px;
   text-align: center;
 }
+
+@mixin Text-Style-61 {
+  font-family: NotoSansKR;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.57;
+  text-align: left;
+}
