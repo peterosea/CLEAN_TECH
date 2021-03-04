@@ -8,6 +8,12 @@ main.pageTemplate.news {
     padding-bottom: 130px;
   }
   .section1 {
+    .row {
+      margin: 0;
+      @include respondTo("md") {
+        margin: 0 -15px;
+      }
+    }
     .thumbnail img {
       height: auto;
       width: 100%;
@@ -15,17 +21,38 @@ main.pageTemplate.news {
       margin-bottom: 30px;
     }
     .cardCol {
-      padding-top: 35px;
-      padding-bottom: 35px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      display: flex;
+      border-bottom: 1px solid $light-periwinkle-two;
+      @include respondTo("md") {
+        display: block;
+        padding-top: 35px;
+        padding-bottom: 35px;
+        border: 0;
+      }
+      .rightCol {
+        margin-right: 25px;
+        @include respondTo("md") {
+          margin-right: 0;
+        }
+      }
     }
     @supports (object-fit: cover) {
       .thumbnail {
-        padding-top: 100%;
         max-height: 373px;
         max-width: 373px;
         margin: auto;
         position: relative;
-        margin-bottom: 30px;
+        width: 110px;
+        height: 110px;
+        margin-bottom: 0;
+        @include respondTo("md") {
+          padding-top: 100%;
+          height: auto;
+          width: auto;
+          margin-bottom: 30px;
+        }
         img {
           margin-bottom: 0;
           position: absolute;
@@ -41,9 +68,21 @@ main.pageTemplate.news {
     .title a {
       display: inline-block;
       color: $dark;
-      @include Text-Style-21;
       margin-bottom: 12px;
       text-decoration: none;
+
+      font-family: NotoSansKR;
+      font-size: 20px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.4;
+      letter-spacing: -1px;
+      text-align: left;
+      color: $dark;
+      @include respondTo("md") {
+        @include Text-Style-21;
+      }
       &:hover {
         color: $teal;
       }
@@ -55,7 +94,18 @@ main.pageTemplate.news {
     }
     .date {
       color: $light-grey-blue;
-      @include Text-Style-52;
+
+      font-family: NotoSansKR;
+      font-size: 16px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.63;
+      letter-spacing: -0.8px;
+      text-align: left;
+      @include respondTo("md") {
+        @include Text-Style-52;
+      }
     }
     .row {
       margin-bottom: 35px;
@@ -72,19 +122,34 @@ main.pageTemplate.news {
     }
     .arrow {
       font-size: 0;
-      width: 39px;
-      height: 39px;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='12' viewBox='0 0 10 12'%3E%3Cdefs%3E%3CclipPath id='wb70l5wina'%3E%3Cpath fill='none' d='M246 4a.883.883 0 0 1-.526-.179A1.273 1.273 0 0 1 245 2.8v-9.6a1.271 1.271 0 0 1 .474-1.021.861.861 0 0 1 .973-.053l8 4.8A1.245 1.245 0 0 1 255-2a1.245 1.245 0 0 1-.553 1.074l-8 4.8A.87.87 0 0 1 246 4z' clip-rule='evenodd'/%3E%3C/clipPath%3E%3CclipPath id='e10xjvz8nb'%3E%3Cpath fill='none' d='M-458 412h1536V-716H-458z' transform='translate(458 716)'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23wb70l5wina)' transform='translate(-245 8)'%3E%3Cg clip-path='url(%23e10xjvz8nb)' transform='translate(-809.5 -1070)'%3E%3Cpath fill='%23dde0e4' d='M240-13h25v27h-25z' transform='translate(807 1067.5)'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
       background-position: center;
       background-repeat: no-repeat;
+      width: 12px;
+      height: 12px;
+      @include respondTo("md") {
+        width: 39px;
+        height: 39px;
+      }
     }
     .nav-links {
       display: flex;
       align-items: center;
 
       .page-numbers {
-        @include Text-Style-53;
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.56;
+        letter-spacing: 28.8px;
+        text-align: center;
         color: $light-grey-blue;
+
+        @include respondTo("md") {
+          @include Text-Style-53;
+        }
       }
       .current {
         color: $teal;
