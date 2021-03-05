@@ -1,3 +1,13 @@
+body.ie header.default {
+  overflow: hidden;
+  .coverBg {
+    padding-top: 50px;
+    @include respondTo("lg") {
+      padding-top: 82px;
+    }
+  }
+}
+
 header.default {
   position: relative;
   color: $white;
