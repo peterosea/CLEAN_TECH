@@ -22,7 +22,8 @@
       @include Text-Style-17;
     }
   }
-  .content {
+  .content,
+  .content p {
     color: $battleship-grey;
     font-family: AppleSDGothicNeo;
     font-size: 16px;
