@@ -121,6 +121,7 @@
       &:hover {
         border: 1px solid $teal;
         color: $teal;
+        z-index: 2;
       }
       .imgWrap {
         padding: 0 35px;
@@ -149,9 +150,10 @@
         }
       }
       @include respondTo("lg") {
-        width: 277px;
-        height: 277px;
+        width: 278px;
+        height: 278px;
         padding: 0;
+        margin: -0.5px;
       }
     }
 
