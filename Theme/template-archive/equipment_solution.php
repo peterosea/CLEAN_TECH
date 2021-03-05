@@ -40,7 +40,7 @@ get_template_part('template-parts/header/page-archive');
               <div class="contentWrap">
                 <a href="$link" class="d-block title">$title</a>
                 <div class="excerpt">$excerpt</div>
-              </div>a
+              </div>
             </div>
           </div>
 HTML;
