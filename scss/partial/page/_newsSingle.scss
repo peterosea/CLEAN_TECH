@@ -10,7 +10,7 @@ main.pageTemplate.newsSingle {
       .title {
         color: $dark;
         margin-bottom: 5px;
-        font-family: NotoSansKR;
+        font-family: "Noto Sans KR", sans-serif;
         font-size: 26px;
         font-weight: bold;
         font-stretch: normal;
@@ -26,7 +26,7 @@ main.pageTemplate.newsSingle {
       }
       .date {
         color: $light-grey-blue;
-        font-family: NotoSansKR;
+        font-family: "Noto Sans KR", sans-serif;
         font-size: 16px;
         font-weight: normal;
         font-stretch: normal;
@@ -49,7 +49,7 @@ main.pageTemplate.newsSingle {
     }
     .body {
       margin-bottom: 36px;
-      font-family: NotoSansKR;
+      font-family: "Noto Sans KR", sans-serif;
       font-size: 16px;
       font-weight: normal;
       font-stretch: normal;
@@ -92,7 +92,7 @@ main.pageTemplate.newsSingle {
         }
       }
       span {
-        font-family: NotoSansKR;
+        font-family: "Noto Sans KR", sans-serif;
         font-size: 15px;
         font-weight: bold;
         text-align: center;
@@ -161,7 +161,7 @@ main.pageTemplate.newsSingle {
             a {
               font-size: 0;
               &::after {
-                font-family: NotoSansKR;
+                font-family: "Noto Sans KR", sans-serif;
                 font-size: 15px;
                 font-weight: bold;
                 font-stretch: normal;
@@ -177,7 +177,7 @@ main.pageTemplate.newsSingle {
               }
             }
             &.disable {
-              font-family: NotoSansKR;
+              font-family: "Noto Sans KR", sans-serif;
               font-size: 15px;
               font-weight: bold;
               font-stretch: normal;

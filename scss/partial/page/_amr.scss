@@ -19,7 +19,7 @@ main.amr {
     }
     .content {
       color: $battleship-grey;
-      font-family: NotoSansKR;
+      font-family: "Noto Sans KR", sans-serif;
       font-size: 14px;
       font-weight: normal;
       font-stretch: normal;
@@ -47,7 +47,7 @@ main.amr {
       }
       .title {
         color: $teal;
-        font-family: NotoSansKR;
+        font-family: "Noto Sans KR", sans-serif;
         font-size: 26px;
         font-weight: bold;
         font-stretch: normal;
@@ -62,7 +62,7 @@ main.amr {
       }
       .content {
         margin-bottom: 50px;
-        font-family: NotoSansKR;
+        font-family: "Noto Sans KR", sans-serif;
         font-size: 15px;
         font-weight: normal;
         font-stretch: normal;
@@ -105,7 +105,7 @@ main.amr {
       .title {
         color: $white;
 
-        font-family: NotoSansKR;
+        font-family: "Noto Sans KR", sans-serif;
         font-size: 29px;
         font-weight: bold;
         font-stretch: normal;
@@ -148,7 +148,7 @@ main.amr {
       margin: 0;
       flex-wrap: wrap;
       .name {
-        font-family: NotoSansKR;
+        font-family: "Noto Sans KR", sans-serif;
         font-size: 14px;
         font-weight: bold;
         font-stretch: normal;
@@ -163,7 +163,7 @@ main.amr {
         }
       }
       .value {
-        font-family: NotoSansKR;
+        font-family: "Noto Sans KR", sans-serif;
         font-size: 14px;
         font-weight: normal;
         font-stretch: normal;
@@ -241,7 +241,7 @@ main.amr {
             height: 250px;
           }
 
-          font-family: NotoSansKR;
+          font-family: "Noto Sans KR", sans-serif;
           font-size: 14px;
           font-weight: normal;
           font-stretch: normal;
@@ -329,7 +329,7 @@ main.amr {
       }
       .location {
         color: $black-two;
-        font-family: NotoSansKR;
+        font-family: "Noto Sans KR", sans-serif;
         font-size: 22px;
         font-weight: bold;
         @include respondTo("md") {

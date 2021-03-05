@@ -66,7 +66,7 @@ main.equipmentSingle {
     .contentCol {
       .cat {
         color: $light-grey-blue;
-        font-family: NotoSansKR;
+        font-family: "Noto Sans KR", sans-serif;
         font-size: 14px;
         font-weight: bold;
         font-stretch: normal;
@@ -106,7 +106,7 @@ main.equipmentSingle {
       }
       .description {
         color: $battleship-grey;
-        font-family: NotoSansKR;
+        font-family: "Noto Sans KR", sans-serif;
         font-size: 16px;
         font-weight: normal;
         font-stretch: normal;
@@ -127,7 +127,7 @@ main.equipmentSingle {
           padding: 0;
         }
         th {
-          font-family: NotoSansKR;
+          font-family: "Noto Sans KR", sans-serif;
           font-size: 14px;
           font-weight: bold;
           font-stretch: normal;
@@ -140,7 +140,7 @@ main.equipmentSingle {
           }
         }
         td {
-          font-family: NotoSansKR;
+          font-family: "Noto Sans KR", sans-serif;
           font-size: 14px;
           font-weight: normal;
           font-stretch: normal;
@@ -254,7 +254,7 @@ main.equipmentSingle {
       }
       .content {
         .title {
-          font-family: NotoSansKR;
+          font-family: "Noto Sans KR", sans-serif;
           font-size: 20px;
           font-weight: bold;
           font-stretch: normal;
@@ -271,7 +271,7 @@ main.equipmentSingle {
           }
         }
         .excerpt {
-          font-family: NotoSansKR;
+          font-family: "Noto Sans KR", sans-serif;
           font-size: 16px;
           font-weight: normal;
           font-stretch: normal;
@@ -345,7 +345,7 @@ main.equipmentSingle {
         }
       }
       .title {
-        font-family: NotoSansKR;
+        font-family: "Noto Sans KR", sans-serif;
         font-size: 14px;
         font-weight: bold;
         font-stretch: normal;
@@ -425,7 +425,7 @@ main.equipmentSingle {
         }
         .location {
           color: $black-two;
-          font-family: NotoSansKR;
+          font-family: "Noto Sans KR", sans-serif;
           font-size: 22px;
           font-weight: bold;
           @include respondTo("md") {

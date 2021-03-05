@@ -16,7 +16,7 @@
         text-align: left;
         max-width: none;
         color: $dark;
-        font-family: NotoSansKR;
+        font-family: "Noto Sans KR", sans-serif;
         font-size: 26px;
         font-weight: bold;
         font-stretch: normal;
@@ -45,7 +45,7 @@ main.office {
     }
   }
   .content {
-    font-family: NotoSansKR;
+    font-family: "Noto Sans KR", sans-serif;
     font-size: 17px;
     font-weight: normal;
     font-stretch: normal;
@@ -66,7 +66,7 @@ main.office {
 
     p,
     .content {
-      font-family: NotoSansKR;
+      font-family: "Noto Sans KR", sans-serif;
       font-size: 15px;
       font-weight: normal;
       font-stretch: normal;
@@ -98,7 +98,7 @@ main.office {
     > .subtitle {
       color: $dark;
       margin-bottom: 30px;
-      font-family: NotoSansKR;
+      font-family: "Noto Sans KR", sans-serif;
       font-size: 22px;
       font-weight: bold;
       font-stretch: normal;
@@ -124,7 +124,11 @@ main.office {
         }
         .contentWrap {
           margin-right: 50px;
+          margin-left: 0;
         }
+      }
+      .columRoot .columWrap .contentWrap {
+        margin-left: 50px;
       }
     }
     .columWrap {
