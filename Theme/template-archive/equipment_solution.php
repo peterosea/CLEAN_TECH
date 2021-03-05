@@ -30,7 +30,7 @@ get_template_part('template-parts/header/page-archive');
           $link = get_the_permalink($post);
           $excerpt = get_the_excerpt($post);
           echo <<<HTML
-          <div class="col-12 col-sm-6 col-lg-4">
+          <div class="col-6 col-lg-4">
             <div class="wrap">
               <div class="imgWrapWrap">
                 <a href="$link" class="d-block imgWrap">
@@ -40,7 +40,7 @@ get_template_part('template-parts/header/page-archive');
               <div class="contentWrap">
                 <a href="$link" class="d-block title">$title</a>
                 <div class="excerpt">$excerpt</div>
-              </div>
+              </div>a
             </div>
           </div>
 HTML;

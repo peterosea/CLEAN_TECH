@@ -1,7 +1,26 @@
 main.equipmentSolutionSingle {
+  p {
+    font-family: AppleSDGothicNeo;
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.56;
+    letter-spacing: normal;
+    text-align: left;
+    color: $dark;
+    @include respondTo("md") {
+      @include Noto-Sans-KR---24pt-2;
+    }
+  }
+
   .section {
-    padding-top: 130px;
-    padding-bottom: 130px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    @include respondTo("md") {
+      padding-top: 130px;
+      padding-bottom: 130px;
+    }
   }
   .row {
     justify-content: center;
@@ -34,15 +53,43 @@ main.equipmentSolutionSingle {
     .contentWrap {
       text-align: center;
       .title {
-        @include Noto-Sans-KR---24pt;
         color: $dark;
-        margin-bottom: 10px;
+        display: inline-block;
+        margin-bottom: 12px;
+        text-decoration: none;
+        font-family: NotoSansKR;
+        font-size: 17px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.47;
+        letter-spacing: -0.85px;
+        text-align: center;
+        word-break: keep-all;
+
+        @include respondTo("md") {
+          color: $dark;
+          margin-bottom: 10px;
+          @include Noto-Sans-KR---24pt;
+        }
       }
       .excerpt {
-        @include Noto-Sans-KR---18pt;
         color: $battleship-grey;
         word-break: keep-all;
         max-width: 320px;
+        font-family: NotoSansKR;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.43;
+        letter-spacing: -0.84px;
+        text-align: center;
+        color: $battleship-grey;
+
+        @include respondTo("md") {
+          @include Noto-Sans-KR---18pt;
+        }
       }
     }
   }
