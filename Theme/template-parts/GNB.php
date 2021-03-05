@@ -65,6 +65,23 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
   </div>
 </nav>
 
+<div class="ie11 popup_notice_ie">
+  <div class="container">
+    <div class="btn_close">X</div>
+    <div class="title">
+      <h1>
+        현재 사이트는 인터넷 익스플로러 브라우저를 지원하지 않습니다.<br>
+        크롬, 마이크로소프트 엣지, 네이버 웨일등의 타 브라우저를 이용해주세요.
+      </h1>
+    </div>
+    <div class="list_browser">
+      <a href="https://www.google.com/intl/ko/chrome/" target="_blank" class="icon chrome"></a>
+      <a href="https://www.microsoft.com/ko-kr/edge" target="_blank" class="icon edge"></a>
+      <a href="https://whale.naver.com/ko/" target="_blank" class="icon whale"></a>
+    </div>
+  </div>
+</div>
+
 <script type="text/javascript">
   // 검색창 클릭 오버레이
   const btnSearch = document.querySelector('.GNB .btn_search');
@@ -85,5 +102,12 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
     searchForm.style.opacity = 0;
     searchForm.style.visibility = 'hidden';
     searchForm.style.zIndex = -1;
+  });
+
+  const noticeIE = document.querySelector('.popup_notice_ie');
+  const closePOP = document.querySelector('.popup_notice_ie .btn_close');
+  closePOP.addEventListener('click', function(e) {
+    e.preventDefault;
+    noticeIE.style.display = 'none';
   });
 </script>
