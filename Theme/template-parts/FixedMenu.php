@@ -1,4 +1,4 @@
-<nav class="fixedMenu">
+<nav class="fixedMenu d-none d-lg-block">
   <ul>
     <?php
     $menu = wp_get_nav_menu_object('FixedMenu');

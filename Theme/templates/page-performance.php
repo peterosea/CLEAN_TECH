@@ -23,7 +23,7 @@ get_template_part('template-parts/header/page-archive');
           $img = $certifi['logo_img'];
           $name = $certifi['name'];
           echo <<<HTML
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="col-6 col-md-4 col-lg-3">
             <div class="csCard">
               <div class="imgWrap">
                 <img src="$img" alt="">
@@ -31,7 +31,7 @@ get_template_part('template-parts/header/page-archive');
               <div class="name">$name</div>
             </div>
           </div>
-  HTML;
+HTML;
         }
         ?>
       </div>

@@ -19,7 +19,8 @@ get_template_part('template-parts/header/page-archive');
       <div class="sectionTitle important">
         <?php echo get_field('title') ?>
       </div>
-      <img src="<?php echo get_field('img') ?>" alt="">
+      <img class="d-none d-md-block" src="<?php echo get_field('img') ?>" alt="">
+      <img class="d-block d-md-none" src="<?php echo get_field('m_img') ?>" alt="">
     </div>
   </div>
   <div class="section section2">
@@ -57,10 +58,10 @@ HTML;
         </div>
       </div>
       <div class="row m-0">
-        <div class="col p-0">
+        <div class="col-12 col-md p-0">
           <img src="<?php echo get_field('s3img1') ?>" alt="" />
         </div>
-        <div class="col p-0">
+        <div class="col-12 col-md p-0">
           <img src="<?php echo get_field('s3img2') ?>" alt="" />
         </div>
       </div>
@@ -78,10 +79,11 @@ HTML;
         <ul class="accordionMenu">
           <?php
           $cat = get_terms(array('taxonomy' => 'equipment_cat', 'hide_empty' => false, 'parent' => 0));
+          $list = array('습식', '건식', '건습식', '카펫', '광택');
 
           foreach ($cat as $key => $c) {
             $class = '';
-            if ($c->parent !== 0) continue;
+            if ($c->parent !== 0 || !in_array($c->name, $list)) continue;
             if ($c->count === 0) $class .= ' disable';
             if ($key === 0) $class .= ' active';
             echo <<<HTML
@@ -96,6 +98,7 @@ HTML;
         foreach ($cat as $key => $c) {
           $class = '';
           if ($key === 0) $class .= ' active';
+          if (!in_array($c->name, $list)) continue;
           $subCat = get_terms(array('taxonomy' => 'equipment_cat', 'hide_empty' => false, 'parent' => $c->term_id));
           if (empty($subCat)) {
             $dom = '<div id="' . $c->slug . '" class="itemList listRoot ' . $c->slug . ' ' . $class . '">';
@@ -123,11 +126,12 @@ HTML;
                 $thumb = get_the_post_thumbnail_url($post, 'full');
                 $dom .= <<<HTML
                   <div class="item">
-                    <div class="imgWrap">
-                      <img src="$thumb" alt="">
+                    <div class="innerWrap">
+                      <div class="imgWrap">
+                        <img src="$thumb" alt="">
+                      </div>
+                      <div class="title">$post->post_title</div>
                     </div>
-                    <div class="title">$post->post_title</div>
-                    <p>$post->post_excerpt</p>
                   </div>
 HTML;
               }
@@ -146,7 +150,7 @@ HTML;
                 <div class="description">$sc->description</div>
               </div>
               <div class="itemList style1"> 
-  HTML;
+HTML;
               $custom_query = get_posts(array(
                 'post_type' => 'equipment',
                 'post_status' => 'publish',
@@ -165,18 +169,19 @@ HTML;
                   $link = get_the_permalink($post);
                   $dom .= <<<HTML
                   <a href="$link" class="item">
-                    <div class="imgWrap">
-                      <img src="$thumb" alt="">
+                    <div class="innerWrap">
+                      <div class="imgWrap">
+                        <img src="$thumb" alt="">
+                      </div>
+                      <div class="title">$post->post_title</div>
                     </div>
-                    <div class="title">$post->post_title</div>
-                    <p>$post->post_excerpt</p>
                   </a>
-  HTML;
+HTML;
                 }
               } else {
                 $dom .= <<<HTML
                 <div class="empty">포스트가 없습니다.</div>
-  HTML;
+HTML;
               }
               $dom .= '</div>';
             }

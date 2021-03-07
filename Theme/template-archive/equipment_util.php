@@ -31,7 +31,7 @@ get_template_part('template-parts/header/page-archive');
               if ($c2->count === 0) $class .= ' disable';
               if ($key2 === $key) $class .= ' active';
               echo <<<HTML
-              <a href="#$c2->slug" id="$c2->slug" class="listitem $class">$c2->name</a>
+              <a href="#$c2->slug" class="listitem $class">$c2->name</a>
 HTML;
             }
             ?>
@@ -46,6 +46,7 @@ HTML;
             <div class="listTitle">$c->name</div>
             <div class="description">$c->description</div>
           </div>
+          <div class="itemCWrap">
 HTML;
           $custom_query = get_posts(array(
             'post_type' => 'equipment_util',
@@ -78,7 +79,7 @@ HTML;
             <div class="empty">포스트가 없습니다.</div>
 HTML;
           }
-          $dom .= '</div>';
+          $dom .= "</div></div>";
           echo $dom;
           ?>
         </div>

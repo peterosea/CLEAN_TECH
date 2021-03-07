@@ -3,41 +3,69 @@
   &.battery {
     padding-top: 24px;
     .process {
-      margin-bottom: 38px;
+      margin-bottom: 25px;
+      @include respondTo("md") {
+        margin-bottom: 38px;
+      }
       .header {
         align-items: flex-start;
         color: $black-two;
-        @include Text-Style-39;
         font-weight: normal;
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: left;
+
+        @include respondTo("md") {
+          @include Text-Style-39;
+        }
         span {
           padding-top: 5px;
         }
         .step {
-          @include Text-Style-49;
+          font-size: 13px;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.46;
+          letter-spacing: normal;
+          text-align: center;
+          color: $teal;
+
+          @include respondTo("md") {
+            @include Text-Style-49;
+          }
         }
       }
     }
   }
-  .process {
+  div.process {
     margin-bottom: 70px;
     .header {
-      @include Text-Style-21;
       display: flex;
       align-items: center;
       margin-bottom: 17px;
+      @include Text-Style-21;
       .step {
-        padding: 5px 12px 3px;
+        padding: 5px 9px 3px;
         display: inline-block;
         margin-right: 15px;
         border: 3px solid $teal;
         border-radius: 4px;
         color: $teal;
         line-height: 1;
+        @include respondTo("md") {
+          padding: 5px 12px 3px;
+        }
       }
     }
     .cotent {
-      @include Text-Style-27;
       color: $battleship-grey;
+      @include Text-Style-27;
     }
   }
 }

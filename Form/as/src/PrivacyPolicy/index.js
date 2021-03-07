@@ -1,3 +1,4 @@
+import React from 'react';
 import { Checkbox, FormControlLabel } from '@material-ui/core';
 import { FaStar } from 'react-icons/fa';
 // components

@@ -72,16 +72,20 @@ HTML;
             $_excerpt = get_the_excerpt();
             $renderTable .= <<<HTML
             <div class="col-12 col-lg-6 col-xl-4 cardCol">
-              <div class="thumbnail">
-                $_thumbnail
+              <div class="rightCol">
+                <div class="thumbnail">
+                  $_thumbnail
+                </div>
               </div>
-              <div class="title">
-                <a href="$_permalink">$_title</a>
+              <div class="leftCol">
+                <div class="title">
+                  <a href="$_permalink">$_title</a>
+                </div>
+                <div class="excerpt d-none d-md-block">
+                  $_excerpt
+                </div>
+                <div class="date">$_date</div>
               </div>
-              <div class="excerpt">
-                $_excerpt
-              </div>
-              <div class="date">$_date</div>
             </div>
 HTML;
           endwhile;

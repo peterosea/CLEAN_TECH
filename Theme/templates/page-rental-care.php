@@ -15,68 +15,59 @@ get_template_part('template-parts/header/page-archive');
 ?>
 <main class="pageTemplate rentalCare">
   <div class="section section1">
-    <div class="sectionTitle">
-      “고객의 고민에서부터 <br />
-      <span class="pointColor">크린텍의 렌탈케어</span>는 시작됐습니다.”
+    <div class="sectionTitle important">
+      <?php echo get_field('title1') ?>
     </div>
     <div class="container">
-      <img src="<?php echo $zeplin ?>/sasodko1.png" alt="">
+      <img class="d-none d-md-block" src="<?php echo get_field('img1') ?>" alt="">
+      <img class="d-block d-md-none" src="<?php echo get_field('m_img1') ?>" alt="">
     </div>
   </div>
   <div class="section section2">
-    <div class="sectionTitle">
-      “<span class="pointColor">크린텍 렌탈케어</span>는 다양한 현장 상황에 맞춰<br />
-      꼭 필요한 장비들로 구성됩니다.”
-      <p>습식 보행 및 탑승, 건식 보행 및 탑승, 카펫, 광택 등</p>
+    <div class="sectionTitle important">
+      <?php echo get_field('title2') ?>
+      <p>
+        <?php echo get_field('desc2') ?>
+      </p>
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-7">
-          <img src="<?php echo $zeplin ?>/img-case-a.png" srcset="<?php echo $zeplin ?>/img-case-a@2x.png 2x, <?php echo $zeplin ?>/img-case-a@3x.png 3x">
+        <div class="col-12 col-md-7 order-1 mb-4 mb-md-0">
+          <img src="<?php echo get_field('ex_a_img') ?>">
         </div>
-        <div class="col-5 contentCol">
+        <div class="col-12 col-md-5 order-2 contentCol">
           <div class="title pointColor">사례 A</div>
-          <p>
-            청소장비를 렌탈할 수 있는 곳들을 여러 곳 알아보았는데,
-            100대 넘는 장비를 안정감 있게 관리할 수 있는 인력과
-            재무 건실성을 갖춘 곳은 크린텍이 유일해 보였습니다.
-            <br />
-            <br />
-          </p>
+          <?php echo get_field('ex_a_content') ?>
         </div>
       </div>
       <div class="row">
-        <div class="col-5 contentCol">
+        <div class="col-12 col-md-5 order-4 order-md-3 contentCol">
           <div class="title pointColor">사례 B</div>
-          <p>
-            전국에 물류센터가 점점 늘고 있는데 어떻게 동일한
-            위생상태를 유지할 수 있을지 고민이었습니다.
-            크린텍 렌탈케어를 통해 전국에 있는 물류센터 현장에 꼭 맞는
-            장비들을 도입할 수 있었고, 이후에도 모든 유지관리를
-            크린텍이 진행해 신경 쓸 일이 하나도 없었습니다.
-          </p>
+          <?php echo get_field('ex_b_content') ?>
         </div>
-        <div class="col-7">
-          <img src="<?php echo $zeplin ?>/img-case-b.png" srcset="<?php echo $zeplin ?>/img-case-b@2x.png 2x, <?php echo $zeplin ?>/img-case-b@3x.png 3x">
+        <div class="col-12 col-md-7 order-3 order-md-4  mb-4 mb-md-0">
+          <img src="<?php echo get_field('ex_b_img') ?>">
         </div>
       </div>
     </div>
   </div>
   <div class="section section3">
     <div class="container">
-      <div class="sectionTitle">
-        “<span class="pointColor">크린텍 렌탈케어</span>는 다양한 현장 상황에 맞춰<br />
-        꼭 필요한 장비들로 구성됩니다.”
-        <p>습식 보행 및 탑승, 건식 보행 및 탑승, 카펫, 광택 등</p>
+      <div class="sectionTitle important">
+        <?php echo get_field('title3') ?>
+        <p>
+          <?php echo get_field('desc3') ?>
+        </p>
       </div>
       <div class="menuWrap">
         <ul class="accordionMenu">
           <?php
           $cat = get_terms(array('taxonomy' => 'equipment_cat', 'hide_empty' => false, 'parent' => 0));
+          $list = array('습식', '건식', '건습식', '카펫', '광택');
 
           foreach ($cat as $key => $c) {
             $class = '';
-            if ($c->parent !== 0) continue;
+            if ($c->parent !== 0 || !in_array($c->name, $list)) continue;
             if ($c->count === 0) $class .= ' disable';
             if ($key === 0) $class .= ' active';
             echo <<<HTML
@@ -91,6 +82,7 @@ HTML;
         foreach ($cat as $key => $c) {
           $class = '';
           if ($key === 0) $class .= ' active';
+          if (!in_array($c->name, $list)) continue;
           $subCat = get_terms(array('taxonomy' => 'equipment_cat', 'hide_empty' => false, 'parent' => $c->term_id));
           if (empty($subCat)) {
             $dom = '<div id="' . $c->slug . '" class="itemList listRoot ' . $c->slug . ' ' . $class . '">';
@@ -118,11 +110,12 @@ HTML;
                 $thumb = get_the_post_thumbnail_url($post, 'full');
                 $dom .= <<<HTML
                   <div class="item">
-                    <div class="imgWrap">
-                      <img src="$thumb" alt="">
+                    <div class="innerWrap">
+                      <div class="imgWrap">
+                        <img src="$thumb" alt="">
+                      </div>
+                      <div class="title">$post->post_title</div>
                     </div>
-                    <div class="title">$post->post_title</div>
-                    <p>$post->post_excerpt</p>
                   </div>
 HTML;
               }
@@ -141,7 +134,7 @@ HTML;
                 <div class="description">$sc->description</div>
               </div>
               <div class="itemList style1"> 
-  HTML;
+HTML;
               $custom_query = get_posts(array(
                 'post_type' => 'equipment',
                 'post_status' => 'publish',
@@ -160,18 +153,19 @@ HTML;
                   $link = get_the_permalink($post);
                   $dom .= <<<HTML
                   <a href="$link" class="item">
-                    <div class="imgWrap">
-                      <img src="$thumb" alt="">
+                    <div class="innerWrap">
+                      <div class="imgWrap">
+                        <img src="$thumb" alt="">
+                      </div>
+                      <div class="title">$post->post_title</div>
                     </div>
-                    <div class="title">$post->post_title</div>
-                    <p>$post->post_excerpt</p>
                   </a>
-  HTML;
+HTML;
                 }
               } else {
                 $dom .= <<<HTML
                 <div class="empty">포스트가 없습니다.</div>
-  HTML;
+HTML;
               }
               $dom .= '</div>';
             }

@@ -1,11 +1,15 @@
 main.rentalCare {
   .section {
-    padding: 130px 0 150px;
-  }
-  .section1 {
+    padding: 50px 0 60px;
+    @include respondTo("md") {
+      padding: 130px 0 150px;
+    }
   }
   .section2 {
     background-color: $pale-grey;
+    .sectionTitle p {
+      max-width: none;
+    }
     .title {
       @include Text-Style-18;
     }

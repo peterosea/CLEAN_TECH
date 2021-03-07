@@ -5,18 +5,40 @@
 main.pageTemplate.location {
   padding-bottom: 70px;
   .section {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @include respondTo("md") {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
     h1 {
       color: $dark;
-      @include Text-Style-38;
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 26px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.46;
+      letter-spacing: -1.3px;
+      text-align: left;
+
+      @include respondTo("md") {
+        @include Text-Style-38;
+      }
     }
     h2 {
       color: $dark;
-      @include Text-Style-21;
+      @include Text-Style-17;
+
+      @include respondTo("md") {
+        @include Text-Style-21;
+      }
     }
     .head {
-      margin-bottom: 80px;
+      margin-bottom: 30px;
+      @include respondTo("md") {
+        margin-bottom: 80px;
+      }
     }
   }
   .section1 {
@@ -25,8 +47,19 @@ main.pageTemplate.location {
       list-style: none;
       padding: 0;
       margin: 0;
-      @include Text-Style-57;
+
+      font-family: Poppins;
+      font-size: 18px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.44;
+      letter-spacing: -0.9px;
+      text-align: left;
       color: $battleship-grey;
+      @include respondTo("md") {
+        @include Text-Style-57;
+      }
       li:not(:last-child) {
         margin-right: 16px;
       }
@@ -39,13 +72,31 @@ main.pageTemplate.location {
       .wrap_controllers {
         display: none;
       }
+      .wrap_map {
+        height: 300px !important;
+        @include respondTo("md") {
+          height: 600px !important;
+        }
+      }
     }
   }
   .section2 {
     .head {
       .content {
         color: $battleship-grey;
-        @include Text-Style-27;
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.63;
+        letter-spacing: -0.8px;
+        margin-bottom: 60px;
+
+        @include respondTo("md") {
+          margin-bottom: 30px;
+          @include Text-Style-27;
+        }
       }
     }
   }

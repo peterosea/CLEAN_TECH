@@ -12,7 +12,7 @@
     "react-dom": "^17.0.1",
     "react-hook-form": "^6.11.0",
     "react-icons": "^4.2.0",
-    "react-scripts": "4.0.0",
+    "react-scripts": "^3.2.0",
     "styled-bootstrap-grid": "^3.1.0",
     "styled-components": "^5.2.1",
     "styled-react-modal": "^2.0.1",
@@ -33,12 +33,17 @@
     "production": [
       ">0.2%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "ie 11"
     ],
     "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "ie 11"
     ]
+  },
+  "devDependencies": {
+    "react-app-polyfill": "^2.0.0"
   }
 }

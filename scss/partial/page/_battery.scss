@@ -1,20 +1,27 @@
 main.pageTemplate.battery {
   .section {
-    padding-top: 100px;
-    padding-bottom: 100px;
-
-    .sectionTitle.important p {
-      @include Text-Style-15;
-      text-align: center;
-      & + p {
-        @include Text-Style-39;
-        color: $black-two;
-        font-weight: 400;
-      }
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include respondTo("md") {
+      padding-top: 100px;
+      padding-bottom: 100px;
     }
+
     .sectionTitleAndP p {
-      @include Noto-Sans-KR---24pt-2;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+      font-family: AppleSDGothicNeo;
+      font-size: 18px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.56;
+      letter-spacing: normal;
+      text-align: left;
+      color: $dark;
+      @include respondTo("md") {
+        @include Noto-Sans-KR---24pt-2;
+        margin-bottom: 30px;
+      }
     }
   }
   .containerTitle {
@@ -77,21 +84,48 @@ main.pageTemplate.battery {
   .listWrap {
     justify-content: space-around;
     .listItem {
-      padding: 0 30px;
+      @include respondTo("md") {
+        padding: 0 30px;
+      }
     }
     .imgWrap {
       margin-bottom: 30px;
+      text-align: center;
       img {
-        height: 90px;
+        height: 68px;
+        @include respondTo("md") {
+          height: 90px;
+        }
       }
     }
     .title {
       color: $black-two;
-      @include Text-Style-21;
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.44;
+      letter-spacing: -0.9px;
+      text-align: center;
+
+      @include respondTo("md") {
+        @include Text-Style-21;
+      }
     }
     .content {
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.57;
+      letter-spacing: normal;
+      text-align: center;
       color: $battleship-grey;
-      @include Text-Style-27;
+      @include respondTo("md") {
+        @include Text-Style-27;
+      }
     }
   }
 }

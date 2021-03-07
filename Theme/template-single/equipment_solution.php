@@ -84,21 +84,24 @@ HTML;
           }
           ?>
         </div>
-        <div class="vcontrolSlide">
-          <?php
-          foreach ($vv as $ut) {
-            $cover = $ut['cover'];
-            $name = $ut['name'];
-            echo <<<HTML
-            <div class="slide">
-              <div class="imgWrap">
-                <img src="$cover" alt="">
+        <?php
+        if (count($vv) != 1) : ?>
+          <div class="vcontrolSlide">
+            <?php
+            foreach ($vv as $ut) {
+              $cover = $ut['cover'];
+              $name = $ut['name'];
+              echo <<<HTML
+              <div class="slide">
+                <div class="imgWrap">
+                  <img src="$cover" alt="">
+                </div>
               </div>
-            </div>
-HTML;
-          }
-          ?>
-        </div>
+  HTML;
+            }
+            ?>
+          </div>
+        <?php endif ?>
       </div>
     <?php endif;
 

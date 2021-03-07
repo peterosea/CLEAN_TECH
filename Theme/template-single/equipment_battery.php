@@ -31,7 +31,7 @@ global $post;
         <?php
         $list = array('배터리', '모델명', '용량(Ah) ', '전압(V) ', '크기(W*L*H)');
         ?>
-        <div class="col-2 p-0 labelCol">
+        <div class="col-5 col-md-2 p-0 labelCol">
           <ul class="label">
             <?php foreach ($list as $l) :
               echo <<<HTML
@@ -40,7 +40,7 @@ HTML;
             endforeach ?>
           </ul>
         </div>
-        <div class="col-10 p-0 labelCol contentCol">
+        <div class="col-7 col-md-10 p-0 labelCol contentCol">
           <?php
           foreach (get_posts(array(
             'post_type' => 'equipment',
@@ -81,7 +81,8 @@ HTML;
   </div>
   <div class="section">
     <div class="container">
-      <img src="<? echo get_field('graph', 'option') ?>" alt="">
+      <img class="d-none d-md-block" src="<? echo get_field('graph', 'option') ?>" alt="">
+      <img class="d-block d-md-none" src="<? echo get_field('m_graph', 'option') ?>" alt="">
     </div>
   </div>
   <div class="section">
@@ -95,7 +96,7 @@ HTML;
             $title = $list['title'];
             $content = $list['content'];
             echo <<<HTML
-        <div class="col-12 col-sm-6 col-lg-4 mb-5">
+        <div class="col-6 col-lg-4 mb-5">
           <div class="listItem">
             <div class="imgWrap">
               <img src="$thumbnail" alt="">
@@ -132,7 +133,7 @@ HTML;
           '정격(V)'
         );
         ?>
-        <div class="col-2 p-0 labelCol">
+        <div class="col-4 col-md-2 p-0 labelCol">
           <ul class="label">
             <?php foreach ($list as $l) :
               echo <<<HTML
@@ -141,7 +142,7 @@ HTML;
             endforeach ?>
           </ul>
         </div>
-        <div class="col-10 p-0 labelCol contentCol">
+        <div class="col-8 col-md-10 p-0 labelCol contentCol">
           <?php
           foreach (get_posts(array(
             'post_type' => 'equipment',

@@ -1,5 +1,9 @@
 main.equipmentSingle {
   .thumbnailBox {
+    margin-bottom: 45px;
+    @include respondTo("md") {
+      margin-bottom: 0;
+    }
     .slide {
       outline: none;
     }
@@ -22,7 +26,10 @@ main.equipmentSingle {
       }
     }
     .previewSlide {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+      @include respondTo("md") {
+        margin-bottom: 30px;
+      }
     }
 
     .moreThumbnailSlide {
@@ -42,7 +49,10 @@ main.equipmentSingle {
   }
   .section1 {
     padding-top: 72px;
-    padding-bottom: 113px;
+    padding-bottom: 30px;
+    @include respondTo("md") {
+      padding-bottom: 113px;
+    }
     span.d {
       font-size: 18px;
       line-height: 3.33;
@@ -56,21 +66,60 @@ main.equipmentSingle {
     .contentCol {
       .cat {
         color: $light-grey-blue;
-        @include Text-Style-21;
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.43;
+        letter-spacing: -0.7px;
+        text-align: center;
+
+        @include respondTo("md") {
+          @include Text-Style-21;
+        }
       }
       .title {
-        @include Text-Style-28;
         color: $teal;
+        font-family: Poppins;
+        font-size: 40px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1;
+        letter-spacing: normal;
+        text-align: center;
+
+        @include respondTo("md") {
+          @include Text-Style-28;
+        }
       }
       .h2_description {
         color: $dark;
-        @include Text-Style-18;
-        margin-bottom: 20px;
+        margin-bottom: 13px;
+        @include Text-Style-63;
+
+        @include respondTo("md") {
+          margin-bottom: 20px;
+          @include Text-Style-18;
+        }
       }
       .description {
         color: $battleship-grey;
-        @include Text-Style-29;
-        margin-bottom: 20px;
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.63;
+        letter-spacing: -0.8px;
+        text-align: center;
+        margin-bottom: 59px;
+
+        @include respondTo("md") {
+          margin-bottom: 20px;
+          @include Text-Style-29;
+        }
       }
       .table {
         td,
@@ -78,11 +127,31 @@ main.equipmentSingle {
           padding: 0;
         }
         th {
-          @include Text-Style-30;
+          font-family: "Noto Sans KR", sans-serif;
+          font-size: 14px;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          letter-spacing: -0.7px;
+          text-align: left;
+          color: $dark;
+          @include respondTo("md") {
+            @include Text-Style-30;
+          }
         }
         td {
-          @include Text-Style-31;
+          font-family: "Noto Sans KR", sans-serif;
+          font-size: 14px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          letter-spacing: -0.7px;
+          text-align: left;
           color: $battleship-grey;
+
+          @include respondTo("md") {
+            @include Text-Style-31;
+          }
         }
         tr:first-child {
           th,
@@ -98,16 +167,11 @@ main.equipmentSingle {
         }
       }
     }
-    .rWrapRoot .rWrapItem:first-child .rWrap {
-      border-left: 1px solid $pale-grey;
-    }
-    .rWrapRoot + .rWrapRoot .rWrap {
-      border-top: 0;
+    .rWrapItem {
+      margin: -0.5px;
     }
     .rWrap {
-      border-top: 1px solid $pale-grey;
-      border-bottom: 1px solid $pale-grey;
-      border-right: 1px solid $pale-grey;
+      border: 1px solid $pale-grey;
       padding: 20px 30px;
       display: flex;
       justify-content: space-between;
@@ -149,21 +213,33 @@ main.equipmentSingle {
   .section2 {
     background-color: $pale-grey;
     .container {
-      padding-top: 130px;
-      padding-bottom: 130px;
+      padding-top: 70px;
+      padding-bottom: 70px;
+      @include respondTo("md") {
+        padding-top: 130px;
+        padding-bottom: 130px;
+      }
     }
     .solution {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
+      margin-bottom: 30px;
+      @include respondTo("md") {
+        margin-bottom: 0;
+      }
       .imgWrap {
-        width: 320px;
-        height: 320px;
+        width: 270px;
+        height: 270px;
         position: relative;
         border-radius: 99999px;
         overflow: hidden;
         margin-bottom: 30px;
+        @include respondTo("md") {
+          width: 320px;
+          height: 320px;
+        }
         img {
           position: absolute;
           height: 100%;
@@ -178,19 +254,48 @@ main.equipmentSingle {
       }
       .content {
         .title {
-          @include Noto-Sans-KR---24pt;
-          margin-bottom: 9px;
+          font-family: "Noto Sans KR", sans-serif;
+          font-size: 20px;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.3;
+          letter-spacing: -1px;
+          text-align: center;
+          color: $dark;
+          margin-bottom: 11px;
+
+          @include respondTo("md") {
+            margin-bottom: 9px;
+            @include Noto-Sans-KR---24pt;
+          }
         }
         .excerpt {
-          @include Noto-Sans-KR---18pt;
+          font-family: "Noto Sans KR", sans-serif;
+          font-size: 16px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.5;
+          letter-spacing: -0.8px;
+          text-align: center;
+          color: $battleship-grey;
+
+          @include respondTo("md") {
+            @include Noto-Sans-KR---18pt;
+          }
         }
       }
     }
   }
   .section3 {
     .container {
-      padding-top: 130px;
-      padding-bottom: 130px;
+      padding-top: 70px;
+      padding-bottom: 70px;
+      @include respondTo("md") {
+        padding-top: 130px;
+        padding-bottom: 130px;
+      }
     }
     .slide {
       outline: none;
@@ -240,15 +345,30 @@ main.equipmentSingle {
         }
       }
       .title {
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.86;
+        letter-spacing: -0.7px;
+        text-align: left;
         color: $black-two;
-        @include Text-Style-21;
+
+        @include respondTo("md") {
+          @include Text-Style-21;
+        }
       }
     }
   }
   .section4 {
     .container {
-      padding-top: 130px;
-      padding-bottom: 130px;
+      padding-top: 70px;
+      padding-bottom: 70px;
+      @include respondTo("md") {
+        padding-top: 130px;
+        padding-bottom: 130px;
+      }
     }
     .imgWrap {
       margin-bottom: 39px;
@@ -275,6 +395,67 @@ main.equipmentSingle {
       svg {
         width: 50px;
         fill: $light-periwinkle-two;
+      }
+    }
+
+    .use {
+      margin: 0;
+      @include respondTo("md") {
+        margin: 0 -15px;
+      }
+      .item {
+        border-bottom: 1px solid $light-periwinkle-two;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        padding-left: 0;
+        padding-right: 0;
+        @include respondTo("md") {
+          padding-bottom: 0px;
+          border-bottom: 0;
+          margin-bottom: 0;
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+        .imgWrap {
+          display: block;
+          margin-bottom: 30px;
+          @include respondTo("md") {
+            margin-bottom: 39px;
+          }
+        }
+        .location {
+          color: $black-two;
+          font-family: "Noto Sans KR", sans-serif;
+          font-size: 22px;
+          font-weight: bold;
+          @include respondTo("md") {
+            @include Text-Style-21;
+          }
+          margin-bottom: 9px;
+        }
+        .title {
+          color: $black-two;
+          text-decoration: none;
+          margin-bottom: 9px;
+          font-size: 16px;
+          display: inline-block;
+          word-break: keep-all;
+          @include respondTo("md") {
+            @include Text-Style-27;
+          }
+        }
+        .excerpt {
+          @include Text-Style-35;
+          color: $battleship-grey;
+        }
+        .logoWrap {
+          margin-top: 20px;
+          display: inline-block;
+          svg {
+            width: 50px;
+            fill: $light-periwinkle-two;
+          }
+        }
       }
     }
   }

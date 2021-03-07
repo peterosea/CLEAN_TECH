@@ -1,7 +1,13 @@
 html.fp-enabled.fp-enabled.fp-enabled {
-  overflow: hidden !important;
-  height: 100% !important;
+  @include respondTo("lg") {
+    overflow: hidden !important;
+    height: 100% !important;
+  }
 }
+body.home > footer.FNB {
+  display: none;
+}
+
 main.homepage {
   background-image: linear-gradient(
     to bottom,

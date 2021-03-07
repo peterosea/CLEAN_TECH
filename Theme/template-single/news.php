@@ -59,7 +59,8 @@ HTML;
           <div class="col-2 menu">
             <a href="/news">
               <div class="icon"></div>
-              <span>글목록</span>
+              <span class="d-none d-md-inline">글목록</span>
+              <span class="d-inline d-md-none">목록</span>
             </a>
           </div>
 HTML;

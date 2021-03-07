@@ -4,10 +4,16 @@ body.post-type-archive-equipment_util header.pageHeader {
 main.equipmentUtil {
   .section {
     padding-top: 75px;
-    padding-bottom: 130px;
+    padding-bottom: 70px;
+    @include respondTo("md") {
+      padding-bottom: 130px;
+    }
   }
   .section {
-    scroll-margin: 75px;
+    scroll-margin: 15px;
+    @include respondTo("md") {
+      scroll-margin: 75px;
+    }
   }
   @include Accordion;
 }

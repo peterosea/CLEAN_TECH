@@ -1,7 +1,20 @@
+body.ie header.default {
+  overflow: hidden;
+  .coverBg {
+    padding-top: 50px;
+    @include respondTo("lg") {
+      padding-top: 82px;
+    }
+  }
+}
+
 header.default {
   position: relative;
   color: $white;
-  padding-top: 82px;
+  padding-top: 50px;
+  @include respondTo("lg") {
+    padding-top: 82px;
+  }
   .coverBg {
     position: absolute;
     width: 100%;
@@ -24,16 +37,36 @@ header.default {
     z-index: 200;
     position: relative;
     width: 100%;
-    padding: 130px 0;
+    padding: 40px 0;
     &.video {
-      padding: 360px 0;
+      padding: 180px 0;
+    }
+    @include respondTo("lg") {
+      padding: 130px 0;
+      &.video {
+        padding: 360px 0;
+      }
     }
     .title {
-      @include Text-Style-11;
-      margin-bottom: 15px;
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 34px;
+      font-weight: 900;
+      text-align: center;
+      @include respondTo("md") {
+        @include Text-Style-11;
+        margin-bottom: 30px;
+      }
     }
     .description {
-      @include Text-Style-24;
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      text-align: center;
+      word-break: keep-all;
+
+      @include respondTo("md") {
+        @include Text-Style-24;
+      }
     }
   }
 }
@@ -43,6 +76,10 @@ header.pageHeader {
     border-bottom: 1px solid $light-periwinkle-two;
     color: $battleship-grey;
     line-height: 1;
+    display: none;
+    @include respondTo("md") {
+      display: block;
+    }
     .home {
       display: flex;
       align-items: center;
@@ -132,20 +169,46 @@ header.pageHeader {
   }
   .content {
     background-color: $pale-grey;
-    @include Text-Style-13;
-    padding-top: 48px;
-    padding-bottom: 57px;
+    font-family: AppleSDGothicNeo;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    color: $black-three;
+    word-break: keep-all;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @include respondTo("md") {
+      @include Text-Style-13;
+      padding-top: 48px;
+      padding-bottom: 57px;
+    }
     p {
       max-width: 900px;
       margin: 0 auto;
+      max-width: 300px;
       margin-bottom: 20px;
+
+      @include respondTo("md") {
+        max-width: 900px;
+      }
     }
     .pointUnderLine {
       box-shadow: inset 0px -8px 0px 0px $pale-aqua-three;
     }
     .title {
-      @include Text-Style-14;
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 26px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: -1.3px;
+      text-align: center;
+      line-height: 1.46;
       color: $teal;
+      @include respondTo("md") {
+        @include Text-Style-14;
+      }
     }
   }
 }

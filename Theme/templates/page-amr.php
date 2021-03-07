@@ -16,7 +16,7 @@ get_template_part('template-parts/header/page-archive');
 <main class="pageTemplate amr">
   <div class="section section1">
     <div class="container">
-      <div class="sectionTitle">
+      <div class="sectionTitle important">
         <?php echo get_field('section1')['title'] ?>
       </div>
       <div class="imgWrap">
@@ -32,7 +32,7 @@ get_template_part('template-parts/header/page-archive');
   </div>
   <div class="section section2">
     <div class="container">
-      <div class="sectionTitle">
+      <div class="sectionTitle important">
         <?php echo get_field('section2')['title'] ?>
       </div>
       <div class="row">
@@ -42,7 +42,7 @@ get_template_part('template-parts/header/page-archive');
           $img = $cc['img'];
           $content = $cc['content'];
           echo <<<HTML
-            <div class="col column">
+            <div class="col-12 col-md column mb-4">
               <div class="inner">
                 <div>
                   <div class="title">$title</div>
@@ -53,7 +53,7 @@ get_template_part('template-parts/header/page-archive');
                 </div>
               </div>
             </div>
-  HTML;
+HTML;
         }
         ?>
       </div>
@@ -89,7 +89,7 @@ HTML;
                 }
               }
               echo <<<HTML
-            <div class="col-6">
+            <div class="col-12 col-md-6 mb-4 mb-md-0">
               <div class="inner">
                 <div class="bgImg">
                   <img src="$img" alt="">
@@ -111,7 +111,7 @@ HTML;
         <?php if ($id = get_field('section3')['product'][0]) :
         ?>
           <div class="row itemRow">
-            <div class="col-6 contentCol">
+            <div class="col-12 col-md-6 contentCol">
               <div class="title">
                 <span class="pointColor">
                   <?php echo $id->post_title ?>
@@ -124,7 +124,7 @@ HTML;
               <div class="description">
                 <?php echo get_field('description', $id) ?>
               </div>
-              <ul class="ulList">
+              <ul class="ulList d-none d-md-flex">
                 <?php
                 foreach (get_field('table', $id) as $t) {
                   $name = $t['name'];
@@ -134,19 +134,33 @@ HTML;
                     <div class="name">$name</div>
                     <div class="value">$value</div>
                   </li>
-  HTML;
+HTML;
                 }
                 ?>
               </ul>
             </div>
-            <div class="col-6 imgCol">
+            <div class="col-12 col-md-6 imgCol">
               <?php echo get_the_post_thumbnail($id->ID) ?>
+              <ul class="ulList d-flex d-md-none">
+                <?php
+                foreach (get_field('table', $id) as $t) {
+                  $name = $t['name'];
+                  $value = $t['value'];
+                  echo <<<HTML
+                  <li>
+                    <div class="name">$name</div>
+                    <div class="value">$value</div>
+                  </li>
+HTML;
+                }
+                ?>
+              </ul>
             </div>
           </div>
           <div class="row comparison">
             <?php
             $re = get_field('related-equipment', $id->ID);
-            $colClass = count($re) % 2 === '0' ? 'col-6' : 'col';
+            $colClass = count($re) % 2 === '0' ? 'col-md-6' : 'col-md';
             $list = array('청소 능력', '청소 폭', '최고 하방 압력', '오수 탱크', '장비 보기');
             if (!empty($re)) {
               echo <<<HTML
@@ -155,7 +169,7 @@ HTML;
                   비교장비
                 </div>
               </div>
-              <div class="col-2 th">
+              <div class="col-2 th d-none d-md-block">
                 <div class="thumb"></div>
 HTML;
               foreach ($list as $key => $l) {
@@ -165,13 +179,14 @@ HTML;
               }
               echo <<<HTML
               </div>
-              <div class="col-10 re p-0">
+              <div class="col-12 col-md-10 re p-0">
+                <div class="row w-100 m-0">
 HTML;
               foreach ($re as $key => $r) {
                 $thumbnail = get_the_post_thumbnail($r);
                 $url = get_the_permalink($r);
                 echo <<<HTML
-                <div class="$colClass px-0">
+                <div class="col-12 $colClass px-0">
                   <div class="thumb">
                     $thumbnail
                     <div class="title">
@@ -185,7 +200,7 @@ HTML;
                     $name = $ll['name'];
                     $value = $ll['value'];
                     if ($li === $name) {
-                      $dom = '<div data-value="' . $name . '">' . $value . '</div>';
+                      $dom = "<div data-value=\"{$name}\"><span class=\"d-inline-block d-md-none\">{$name}</span>" . $value . "</div>";
                       break;
                     }
                   }
@@ -193,7 +208,8 @@ HTML;
                   if ($li === '장비 보기') {
                     $url = get_the_permalink($r);
                     $dom = <<<HTML
-                    <div data-value="' . $li . '">
+                    <div data-value="$li">
+                      <span class="d-inline-block d-md-none">{$li}</span>
                       <a href="$url" class="btn">
                         <img src="$zeplin/btn-link-btn.png" srcset="$zeplin/btn-link-btn@2x.png 2x, $zeplin/btn-link-btn@3x.png 3x">
                       </a>
@@ -208,6 +224,7 @@ HTML;
 HTML;
               }
               echo <<<HTML
+                </div>
               </div>
 HTML;
             }
@@ -220,9 +237,9 @@ HTML;
   <div class="section section4">
     <?php if ($useL = get_field('use')) : ?>
       <div class="container">
-        <div class="sectionTitle">
-          사용현장
-          <p>청소장비가 사용되고 있는 다양한 현장들을 확인해보세요. </p>
+        <div class="sectionTitle important">
+          <?php echo get_field('title4') ?>
+          <p><?php echo get_field('content4') ?></p>
         </div>
         <div class="row">
           <?php foreach ($useL as $u) :
@@ -243,7 +260,7 @@ HTML;
             </a>
 HTML;
             echo <<<HTML
-            <div class="col">
+            <div class="col-12 col-md item">
               <a href="$link" class="imgWrap">
                 <img src="$img" alt="">
               </a>

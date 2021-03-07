@@ -21,9 +21,9 @@ get_template_part('template-parts/header/page-archive');
           <?php echo $title ?>
         </div>
       <?php endif ?>
-      <?php if ($img = get_field('img1')) : ?>
-        <img src="<?php echo $img ?>" alt="">
-      <?php endif ?>
+      <?php if ($img = get_field('img1')) {
+        echo $img;
+      } ?>
     </div>
   </div>
   <div class="section section2">
@@ -41,7 +41,7 @@ get_template_part('template-parts/header/page-archive');
               $title = $ex['title'];
               $content = $ex['content'];
               echo <<<HTML
-              <div class='col-12 col-md-6 col-lg-4 px-lg-5'>
+              <div class='col-12 col-md-6 col-lg-4 px-lg-5 item'>
                 <div class="imgWrap">
                   <img src="$img" alt="">
                 </div>
@@ -73,13 +73,13 @@ HTML;
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-8">
+          <div class="col-12 col-md-8">
             <div class="row effectList">
               <?php foreach (get_field('effect') as $e) {
                 $img = $e['img'];
                 $title = $e['title'];
                 echo <<<HTML
-                <div class="col item">
+                <div class="col-6 col-md item">
                   <div class="imgWrap">
                     <img src="$img" alt="">
                   </div>
@@ -95,7 +95,7 @@ HTML;
                 $img = $e['img'];
                 $title = $e['title'];
                 echo <<<HTML
-                <div class="col item">
+                <div class="col-6 col-md item">
                   <div class="imgWrap">
                     <img src="$img" alt="">
                   </div>
@@ -114,11 +114,12 @@ HTML;
   </div>
   <div class="section section4">
     <div class="container">
+      <div class="container_title d-block d-md-none"><span class="pointColor">크린스카이</span> 상세 스펙</div>
       <div class="bgCover">
         <img src="<?php echo get_field('img4') ?>" alt="">
       </div>
       <div class="qRootWrap">
-        <div class="container_title"><span class="pointColor">크린스카이</span> 상세 스펙</div>
+        <div class="container_title d-none d-md-block"><span class="pointColor">크린스카이</span> 상세 스펙</div>
         <div class="qualificationWrap">
           <?php foreach (get_field('qualification') as $qq) {
             $title = $qq['title'];
@@ -146,7 +147,7 @@ HTML;
           $img = $u1['thumbnail'];
           $title = $u1['title'];
           echo <<<HTML
-          <div class='col'>
+          <div class='col-12 col-md item'>
             <div class="imgWrap">
               <img src="$img" alt="">
             </div>
@@ -177,7 +178,7 @@ HTML;
             </a>
 HTML;
             echo <<<HTML
-            <div class="col">
+            <div class="col-12 col-md item">
               <a href="$link" class="imgWrap">
                 <img src="$img" alt="">
               </a>

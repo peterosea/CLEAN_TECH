@@ -5,10 +5,14 @@
   }
   .accordionMenu {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
-    justify-content: center;
+    width: 100%;
+    @include respondTo("md") {
+      justify-content: center;
+    }
     li,
     .listitem {
       @include Text-Style-19;
@@ -17,20 +21,23 @@
       color: $black-two;
       align-items: center;
       justify-content: center;
-      border-top: 1px solid $very-light-pink-seven;
-      border-bottom: 1px solid $very-light-pink-seven;
-      border-right: 1px solid $very-light-pink-seven;
-      min-width: 150px;
-      padding: 6px 20px 0px;
+      border: 1px solid $very-light-pink-seven;
+      margin: -0.5px;
+      padding: 15px 4px 14px;
       cursor: pointer;
-      width: 100%;
-      &:first-child {
-        border-left: 1px solid $very-light-pink-seven;
+      width: 33.33%;
+      position: relative;
+      line-height: 1.2;
+      word-break: keep-all;
+      @include respondTo("md") {
+        width: 100%;
+        max-width: 150px;
       }
       &.active {
         background-color: $teal;
         border-color: $teal;
         color: $white;
+        z-index: 2;
       }
     }
   }
@@ -49,11 +56,6 @@
       flex-wrap: wrap;
       display: none;
       justify-content: center;
-      &.style2 {
-        @supports (gap: 120px) {
-          gap: 60px;
-        }
-      }
       &.style1 {
         border: solid 1px $very-light-pink-eight;
         background-color: $white-two;
@@ -66,14 +68,29 @@
         width: 100%;
         scroll-margin: 75px;
         .listTitle {
-          @include Text-Style-15;
           color: $dark;
-          margin-bottom: 12px;
+          margin-bottom: 9px;
+          @include Text-Style-62;
+          @include respondTo("md") {
+            @include Text-Style-15;
+            margin-bottom: 12px;
+          }
         }
         .description {
-          color: $battleship-grey;
-          @include Text-Style-16;
           margin-bottom: 10px;
+          font-family: "Noto Sans KR", sans-serif;
+          font-size: 14px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.57;
+          letter-spacing: -0.84px;
+          text-align: center;
+          color: $battleship-grey;
+
+          @include respondTo("md") {
+            @include Text-Style-16;
+          }
         }
       }
       .empty {
@@ -83,18 +100,17 @@
         display: flex;
       }
     }
+    .itemList.style1 {
+      position: relative;
+    }
     .itemList.style1 .item {
-      width: 277px;
-      height: 277px;
-      @include Text-Style-19;
-      padding: 20px;
+      width: 50%;
+      padding-top: 50%;
+      position: relative;
       border: solid 1px $very-light-pink-eight;
       background-color: $white;
       color: $black-two;
       transition: border 0.3s, color 0.3s;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
       overflow: hidden;
       cursor: pointer;
       text-decoration: none;
@@ -105,45 +121,119 @@
       &:hover {
         border: 1px solid $teal;
         color: $teal;
+        z-index: 2;
+      }
+      .imgWrap {
+        padding: 0 35px;
+        @include respondTo("lg") {
+          padding: 0;
+        }
       }
       img {
         max-width: 170px;
+        width: 100%;
+      }
+      .innerWrap {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include Text-Style-19;
+        @include respondTo("lg") {
+          padding: 20px;
+          position: relative;
+          justify-content: space-between;
+        }
+      }
+      @include respondTo("lg") {
+        width: 278px;
+        height: 278px;
+        padding: 0;
+        margin: -0.5px;
       }
     }
-    .itemList.style2 .item {
-      width: 320px;
-      text-align: center;
-      .imgWrap {
-        border-radius: 9999px;
-        overflow: hidden;
-        position: relative;
-        padding-top: 100%;
+
+    .itemList.style2 {
+      .listContent {
+        margin-bottom: 40px;
+      }
+      .itemCWrap {
         width: 100%;
-        margin-bottom: 30px;
-        img {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          height: 100%;
-          transform: translate(-50%, -50%);
-          @supports (object-fit: cover) {
-            object-fit: cover;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @supports (gap: 120px) {
+          row-gap: 60px;
+          column-gap: 25px;
+        }
+      }
+      .item {
+        text-align: center;
+        width: 150px;
+        @include respondTo("md") {
+          width: 320px;
+        }
+        .imgWrap {
+          border-radius: 9999px;
+          overflow: hidden;
+          position: relative;
+          padding-top: 100%;
+          width: 100%;
+          margin-bottom: 30px;
+          img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            @supports (object-fit: cover) {
+              object-fit: cover;
+            }
           }
         }
-      }
-      .title {
-        @include Noto-Sans-KR---24pt;
-        color: $dark;
-        display: inline-block;
-        margin-bottom: 9px;
-        text-decoration: none;
-        &:hover {
-          color: $teal;
+        .title {
+          display: inline-block;
+          margin-bottom: 12px;
+          text-decoration: none;
+          font-family: "Noto Sans KR", sans-serif;
+          font-size: 17px;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.47;
+          letter-spacing: -0.85px;
+          text-align: center;
+          color: $black-three;
+          word-break: keep-all;
+
+          @include respondTo("md") {
+            color: $dark;
+            margin-bottom: 9px;
+            @include Noto-Sans-KR---24pt;
+          }
+          &:hover {
+            color: $teal;
+          }
         }
-      }
-      p {
-        @include Noto-Sans-KR---18pt;
-        color: $battleship-grey;
+        p {
+          font-family: "Noto Sans KR", sans-serif;
+          font-size: 14px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.43;
+          letter-spacing: -0.84px;
+          text-align: center;
+          color: $battleship-grey;
+
+          @include respondTo("md") {
+            @include Noto-Sans-KR---18pt;
+          }
+        }
       }
     }
   }

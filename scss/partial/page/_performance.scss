@@ -9,12 +9,25 @@ main.pageTemplate.performance {
 
     h1 {
       color: $dark;
-      @include Text-Style-38;
-      margin-bottom: 50px;
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 26px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.46;
+      letter-spacing: -1.3px;
+      margin-bottom: 20px;
+
+      @include respondTo("md") {
+        @include Text-Style-38;
+        margin-bottom: 50px;
+      }
     }
   }
   .section1 {
-    margin-bottom: 150px;
+    @include respondTo("md") {
+      margin-bottom: 150px;
+    }
   }
   .csWrap {
     display: flex;
@@ -35,8 +48,18 @@ main.pageTemplate.performance {
         margin-bottom: 20px;
       }
       .name {
-        @include Text-Style-60;
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.43;
+        letter-spacing: -0.7px;
+        text-align: center;
         color: $dark;
+        @include respondTo("md") {
+          @include Text-Style-60;
+        }
       }
     }
   }
@@ -45,8 +68,12 @@ main.pageTemplate.performance {
       margin-bottom: 90px;
       .rowTitle {
         color: $dark;
-        @include Text-Style-21;
-        margin-bottom: 30px;
+        margin-bottom: 22px;
+        @include Text-Style-17;
+        @include respondTo("md") {
+          margin-bottom: 30px;
+          @include Text-Style-21;
+        }
       }
       .listRootWrap {
         border-top: 1px solid $dark;
@@ -65,7 +92,10 @@ main.pageTemplate.performance {
           margin: 0px;
         }
         img {
-          max-width: 200px;
+          max-width: 150px;
+          @include respondTo("md") {
+            max-width: 200px;
+          }
         }
       }
     }
