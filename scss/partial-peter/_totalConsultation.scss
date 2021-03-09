@@ -1,0 +1,80 @@
+main.pageTemplate.contact {
+    @include respondTo('xl') {
+        div.pageFooter {
+            padding: 70px 0 90px;
+            .sectionTitle {
+                margin-bottom: 50px;
+                p {
+                    font-size: 42px;
+                }
+            }
+            .container .row {
+                padding: 40px 0;
+            }
+        }
+        .sectionWrap {
+            padding-top: 50px;
+            padding-bottom: 80px;
+        }
+    }
+    @include respondTo('md') {
+        div.pageFooter {
+            padding-top: 40px;
+            padding-bottom: 50px;
+            .sectionTitle {
+                margin-bottom: 30px;
+                p {
+                    font-size: 26px;
+                }
+            }
+            .container .row {
+                padding: 0;
+            }
+            .content .title {
+                font-size: 18px;
+            }
+        }
+        .sectionWrap {
+            padding-top: 30px;
+            padding-bottom: 60px;
+        }
+        .section1 {
+            padding-bottom: 10px;
+            .sectionTitle.important p {
+                font-size: 27px;
+            }
+            .sectionTitle.important p + p {
+                font-size: 18px;
+            }
+        }
+        .section2 {
+            padding-top: 0;
+        }
+        .policyForm {
+            .gTLZXx {
+                padding-top: 0px;
+            }
+            .dXWCyY {
+                display:none;
+            }
+            .MuiFormControlLabel-root {
+                margin-bottom: 0;
+            }
+        }
+    }
+    @include respondTo('sm') {
+        .policyForm {
+            .MuiButton-contained {
+                width: 100%;
+                margin-top: 10px;
+            }
+            .hSaKRS {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .hSaKRS .sc-fubCfw {
+                font-size: 20px;
+            }
+        }
+    }
+}
