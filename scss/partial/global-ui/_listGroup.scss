@@ -62,10 +62,11 @@
         }
         img {
           width: auto;
-          max-height: 80px;
+          max-height: 100px;
         }
       }
       .contentWrap {
+        width: calc(100% - 100px);
         @include titleNcontent;
       }
     }

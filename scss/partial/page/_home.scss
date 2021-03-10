@@ -29,11 +29,33 @@ main.homepage {
   .section1 {
     position: relative;
     @include SlideNav;
+    @include respondTo('lg') {
+      padding-top:50px !important;
+    }
+    .container {
+        padding-top: 0;
+        padding-bottom: 0;
+        height: auto;
+    }
+    .tp-bullet-title {
+        display:none;
+    }
+    rs-bullets.tp-bullets {
+        @media screen and (max-width: 1024px) {
+            transform: translate(55px, -255px) !important;
+        }
+        @media screen and (max-width: 778px) {
+            transform: translate(30px, -160px) !important;
+        }
+        @media screen and (max-width: 480px) {
+            transform: translate(20px, -255px) !important;
+        }
+    }
     .slide1 {
-      background: url(#{$zeplin}/main-graphic.svg);
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: right bottom;
+      // background: url(#{$zeplin}/main-graphic.svg);
+      // background-size: contain;
+      // background-repeat: no-repeat;
+      // background-position: right bottom;
     }
     .label {
       display: inline-block;
@@ -61,18 +83,37 @@ main.homepage {
     background-position: 110% -80px, center;
     .container {
       height: 100%;
+      .row > .col {
+        transition: all 0.3s;
+      }
+    }
+    @keyframes text_alpha {
+      0% {
+        opacity:0;
+      }
+      20% {
+        opacity:0;
+      }
+      100% {
+        opacity:1;
+      }
     }
     .card {
-      padding: 50px 40px;
+      padding: 50px 34px;
       height: 100%;
       overflow: hidden;
       border: none;
       border-radius: 0;
       position: relative;
-
+      transition:all 0.3s ease;
       &.active {
         padding: 50px;
         box-shadow: 20px 30px 20px 0px rgba(0, 0, 0, 0.3);
+        .body {
+          animation-name: text_alpha;
+          animation-duration: 1s;
+          animation-timing-function: ease;
+        }
         .footer {
           margin-left: -54px;
           margin-right: -54px;
@@ -189,6 +230,10 @@ main.homepage {
       background-color: $white;
       padding: 48px 40px;
       height: 100%;
+      transition: all 0.3s;
+      &:hover {
+        box-shadow: 20px 30px 20px 0px rgba(0,0,0,0.3);
+      }
       .innerWrap {
         display: flex;
         align-items: center;

@@ -1,6 +1,5 @@
 <?php
-$zeplin = get_home_url() . '/wp-content/uploads/zeplin';
-?>
+$zeplin = get_home_url() . '/wp-content/uploads/zeplin'; ?>
 <div class="search_wrap">
   <div class="click_bg"></div>
   <div class="container">
@@ -10,11 +9,11 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
 <nav class="GNB d-none d-lg-flex">
   <div class="left logoWrap">
     <a href="/">
-      <img draggable="false" src="<?php echo $zeplin ?>/logo.png" srcset="<?php echo $zeplin ?>/logo@2x.png 2x, <?php echo $zeplin ?>/logo@3x.png 3x">
+      <img draggable="false" src="<?php echo $zeplin; ?>/logo-cleantech.png" srcset="<?php echo $zeplin; ?>/logo-cleantech@2x.png 2x, <?php echo $zeplin; ?>/logo-cleantech@3x.png 3x">
     </a>
   </div>
   <div class="container">
-    <?php wp_nav_menu(array('menu' => 'GNB')) ?>
+    <?php wp_nav_menu(['menu' => 'GNB']); ?>
   </div>
   <div class="right iconWrap">
     <svg class="search icon btn_search">
@@ -27,7 +26,7 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
 
 <nav class="gnbTypeDefault mobile d-flex d-lg-none">
   <a href="/" class="logo">
-    <img draggable="false" src="<?php echo $zeplin ?>/logo.png" srcset="<?php echo $zeplin ?>/logo@2x.png 2x, <?php echo $zeplin ?>/logo@3x.png 3x">
+    <img draggable="false" src="<?php echo $zeplin; ?>/logo.png" srcset="<?php echo $zeplin; ?>/logo@2x.png 2x, <?php echo $zeplin; ?>/logo@3x.png 3x">
   </a>
   <div class="rightWrap">
     <button type="button" id="dropdownMenuButtonMobile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -41,9 +40,13 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
             <i class="fas fa-times"></i>
           </button>
           <div class="searchList">
-            <form role="search" method="get" id="searchform" class="searchform" action="<?php echo home_url('/') ?>">
-              <input type="text" value="<?php echo get_search_query() ?>" name="s" id="s" placeholder="검색어를 입력하세요" />
-              <input type="submit" id="searchsubmit" value="<?php echo esc_attr__('Search') ?>" hidden />
+            <form role="search" method="get" id="searchform" class="searchform" action="<?php echo home_url(
+              '/'
+            ); ?>">
+              <input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="검색어를 입력하세요" />
+              <input type="submit" id="searchsubmit" value="<?php echo esc_attr__(
+                'Search'
+              ); ?>" hidden />
               <button class="submit" type="submit">
                 <svg class="search icon btn_search">
                   <use xlink:href="#top-search"></use>
@@ -52,14 +55,12 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
             </form>
           </div>
         </li>
-        <?php
-        wp_nav_menu(array(
+        <?php wp_nav_menu([
           'menu' => 'GNB',
           'container' => '',
           'items_wrap' => '%3$s',
           'add_li_class' => 'dropdownItem',
-        ));
-        ?>
+        ]); ?>
       </ul>
     </div>
   </div>

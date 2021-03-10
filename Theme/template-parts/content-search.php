@@ -23,7 +23,7 @@
     <div class="col_3_4">
         <a href="<?php echo esc_url( get_permalink() ) ?>" class="_title">
             <h3>
-                <?php echo the_title(); ?>
+                <?php the_title(); ?>
                 <span class="posttype">
                 <?php
                     $postType = get_post_type_object(get_post_type());

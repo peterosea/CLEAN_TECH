@@ -46,33 +46,6 @@ main.homepage {
             font-size: 38px;
         }
     }
-    .section1 {
-        @include respondTo('lg') {
-            padding-top:50px !important;
-        }
-        .container {
-            padding-top: 0;
-            padding-bottom: 0;
-            height: auto;
-        }
-        .slide1 {
-            background-image: none;
-        }
-        .tp-bullet-title {
-            display:none;
-        }
-        rs-bullets.tp-bullets {
-            @media screen and (max-width: 1024px) {
-                transform: translate(55px, 280px) !important;
-            }
-            @media screen and (max-width: 778px) {
-                transform: translate(28px, 280px) !important;
-            }
-            @media screen and (max-width: 480px) {
-                transform: translate(20px, 240px) !important;
-            }
-        }
-    }
     .section2 .container {
         display: flex;
         justify-content: center;
@@ -105,22 +78,17 @@ main.homepage {
             }
         }
         .card {
-            transition: all 0.5s;
             @include respondTo('hg') {
                 padding: 30px;
             }
             @include respondTo('xl') {
                 padding: 25px;
             }
-            * {
-                transition: all 0.2s;
-            }
             .head {
                 @include respondTo('hg') {
                     margin-bottom: 20px;
                 }
                 .title {
-                    font-size: 33px;
                     @include respondTo('hg') {
                         font-size: 27px;
                     }
