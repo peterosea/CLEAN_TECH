@@ -63,6 +63,7 @@ get_template_part('template-parts/header/page-archive');
       <img src="<?php echo get_field('map-img') ?>" alt="">
     </div>
   </div>
+  <?php get_template_part('template-parts/footer/page'); ?>
 </main>
 <?php
 get_footer();

@@ -5,7 +5,8 @@ div.pageFooter {
   @include respondTo("md") {
     padding: 130px 0 150px;
   }
-  .container {
+  > .container {
+    padding-bottom: 0;
     div.sectionTitle * {
       color: $dark;
       padding: 0;
@@ -88,8 +89,10 @@ div.pageFooter {
       }
     }
     .imgWrap {
+      margin-bottom: auto;
       img {
         height: 33px;
+        margin-bottom: auto;
         @include respondTo("md") {
           height: auto;
         }
