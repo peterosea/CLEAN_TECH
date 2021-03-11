@@ -14,7 +14,6 @@ get_header();
 get_template_part('template-parts/header/page-archive');
 ?>
 <main class="pageTemplate contact">
-  <?php get_template_part('template-parts/footer/page'); ?>
   <div class="sectionWrap">
     <div class="section section1">
       <div class="container">
