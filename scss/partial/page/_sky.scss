@@ -191,6 +191,9 @@ main.pageTemplate.sky {
         position: absolute;
         top: 0;
       }
+      .container_title {
+        text-align:left;
+      }
       .qualificationWrap {
         max-width: 560px;
         display: flex;
@@ -275,6 +278,7 @@ main.pageTemplate.sky {
     }
     .use {
       margin: 0;
+      display:none; //당분간 노출 안함
       @include respondTo("md") {
         margin: 0 -15px;
       }

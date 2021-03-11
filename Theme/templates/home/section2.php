@@ -32,8 +32,10 @@
           </div>
           <div class="footer">
             <div class="imgWrap">
-              <img src="<?php echo $zeplin ?>/main-2-nd-1-st-img.jpg" srcset="<?php echo $zeplin ?>/main-2-nd-1-st-img@2x.jpg 2x, <?php echo $zeplin ?>/main-2-nd-1-st-img@3x.jpg 3x" class="_active">
-              <img src="<?php echo $zeplin ?>/ic_rental.svg" class="_deactive">
+              <a href="/rental-care">
+                <img src="<?php echo $zeplin ?>/main-2-nd-1-st-img.jpg" srcset="<?php echo $zeplin ?>/main-2-nd-1-st-img@2x.jpg 2x, <?php echo $zeplin ?>/main-2-nd-1-st-img@3x.jpg 3x" class="_active">
+                <img src="<?php echo $zeplin ?>/ic_rental.svg" class="_deactive">
+              </a>
             </div>
           </div>
         </div>
@@ -55,8 +57,10 @@
           </div>
           <div class="footer">
             <div class="imgWrap">
-              <img src="<?php echo $zeplin ?>/totalcare.jpg" class="_active">
-              <img src="<?php echo $zeplin ?>/4505.svg" class="_deactive">
+              <a href="/total-care">
+                <img src="<?php echo $zeplin ?>/totalcare.jpg" class="_active">
+                <img src="<?php echo $zeplin ?>/4505.svg" class="_deactive">
+              </a>
             </div>
           </div>
         </div>
@@ -64,8 +68,10 @@
       <div class="col">
         <div class="card">
           <div class="head">
-            <div class="title">자율주행
-              AMR</div>
+            <div class="title">
+              자율주행
+              AMR
+            </div>
             <a href="/amr" class="btn">
               <img src="<?php echo $zeplin ?>/2611.svg" alt="">
             </a>
@@ -78,8 +84,10 @@
           </div>
           <div class="footer">
             <div class="imgWrap">
-              <img src="<?php echo $zeplin ?>/AMR.jpg" class="_active">
-              <img src="<?php echo $zeplin ?>/4506.svg" class="_deactive">
+              <a href="/amr">
+                <img src="<?php echo $zeplin ?>/t7amr.jpg" class="_active">
+                <img src="<?php echo $zeplin ?>/4506.svg" class="_deactive">
+              </a>
             </div>
           </div>
         </div>
@@ -101,8 +109,10 @@
           </div>
           <div class="footer">
             <div class="imgWrap">
-              <img src="<?php echo $zeplin ?>/CleanSky.jpg" class="_active">
-              <img src="<?php echo $zeplin ?>/5933.svg" class="_deactive">
+              <a href="/cleansky">
+                <img src="<?php echo $zeplin ?>/CleanSky.jpg" class="_active">
+                <img src="<?php echo $zeplin ?>/5933.svg" class="_deactive">
+              </a>
             </div>
           </div>
         </div>

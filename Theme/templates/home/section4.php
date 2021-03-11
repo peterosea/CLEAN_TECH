@@ -1,11 +1,11 @@
 <div class="section section4">
   <div class="container">
-    <h1 class="sectionTitle">위생 솔루션 트렌드</h1>
+    <h1 class="sectionTitle">위생 솔루션의 시작</h1>
     <div class="row contentRow">
       <div class="col-4">
         <a href="/rental-care/" class="wrap">
           <div class="imgWrap">
-            <img src="<?php echo $zeplin ?>/main-4-th-1-st-img.jpg" srcset="<?php echo $zeplin ?>/main-4-th-1-st-img@2x.jpg 2x, <?php echo $zeplin ?>/main-4-th-1-st-img@3x.jpg 3x">
+            <img src="<?php echo $zeplin ?>/main-4-th-1-st-img-2.jpg" srcset="<?php echo $zeplin ?>/main-4-th-1-st-img-2@2x.jpg 2x, <?php echo $zeplin ?>/main-4-th-1-st-img-2@3x.jpg 3x">
           </div>
           <div class="title">
             렌탈케어 알아보기
@@ -47,40 +47,44 @@
     </div>
     <div class="row contactRow">
       <div class="col-12 col-lg-6">
-        <div class="contactWrap">
-          <div class="innerWrap">
-            <div class="imgWrap">
-              <img src="<?php echo $zeplin ?>/icon-counsel.png" srcset="<?php echo $zeplin ?>/icon-counsel@2x.png 2x, <?php echo $zeplin ?>/icon-counsel@3x.png 3x">
+        <a href="/rental-total-purchase-consultation/">
+          <div class="contactWrap">
+            <div class="innerWrap">
+              <div class="imgWrap">
+                <img src="<?php echo $zeplin ?>/icon-counsel.png" srcset="<?php echo $zeplin ?>/icon-counsel@2x.png 2x, <?php echo $zeplin ?>/icon-counsel@3x.png 3x">
+              </div>
+              <div class="content">
+                <div class="title">렌탈케어, 토탈케어 장비문의</div>
+                <p>문의 접수 후 1시간 이내 응답하고 있습니다</p>
+              </div>
             </div>
-            <div class="content">
-              <div class="title">렌탈케어, 토탈케어 상담문의</div>
-              <p>문의 접수 후 1시간 이내 응답하고 있습니다</p>
+            <div class="btnWrap">
+              <span class="btn">
+                <img src="<?php echo $zeplin ?>/2611.svg" alt="">
+              </span>
             </div>
           </div>
-          <div class="btnWrap">
-            <a href="/rental-total-purchase-consultation/" class="btn">
-              <img src="<?php echo $zeplin ?>/2611.svg" alt="">
-            </a>
-          </div>
-        </div>
+        </a>
       </div>
       <div class="col-12 col-lg-6">
-        <div class="contactWrap">
-          <div class="innerWrap">
-            <div class="imgWrap">
-              <img src="<?php echo $zeplin ?>/icon-as.png" srcset="<?php echo $zeplin ?>/icon-as@2x.png 2x, <?php echo $zeplin ?>/icon-as@3x.png 3x">
+        <a href="/as-application/">
+          <div class="contactWrap">
+            <div class="innerWrap">
+              <div class="imgWrap">
+                <img src="<?php echo $zeplin ?>/icon-as.png" srcset="<?php echo $zeplin ?>/icon-as@2x.png 2x, <?php echo $zeplin ?>/icon-as@3x.png 3x">
+              </div>
+              <div class="content">
+                <div class="title">A/S 접수, 부품 구매</div>
+                <p>접수 후 48시간 이내 수리 완료되도록 노력하고 있습니다</p>
+              </div>
             </div>
-            <div class="content">
-              <div class="title">A/S 접수, 부품 구매</div>
-              <p>접수 후 48시간 이내 수리 완료되도록 노력하고 있습니다</p>
+            <div class="btnWrap">
+              <span class="btn">
+                <img src="<?php echo $zeplin ?>/2611.svg" alt="">
+              </span>
             </div>
           </div>
-          <div class="btnWrap">
-            <a href="/as-application/" class="btn">
-              <img src="<?php echo $zeplin ?>/2611.svg" alt="">
-            </a>
-          </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>

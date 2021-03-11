@@ -22,27 +22,7 @@ global $post;
   <div class="section section1">
     <div class="container">
       <div class="row itemRow">
-
-        <div class="col-12 contentCol d-block d-md-none">
-          <div class="cat">
-            <?php
-            $taxo = get_the_terms($post, 'equipment_cat');
-            foreach ($taxo as $tax) {
-              echo "<span title=\"{$tax->name}\">" . $tax->name . "</span>";
-            }
-            ?>
-          </div>
-          <div class="title">
-            <?php echo get_the_title() ?>
-          </div>
-          <div class="h2_description">
-            <?php echo get_field('h2_desc') ?>
-          </div>
-          <div class="description">
-            <?php echo get_field('description') ?>
-          </div>
-        </div>
-        <div class="col-12 col-md-6">
+        <div class="col-6">
           <div class="thumbnailBox">
             <div class="previewSlide">
               <?php if (empty(get_field('more_img'))) : ?>
@@ -74,7 +54,7 @@ HTML;
             </div>
           </div>
         </div>
-        <div class="col-6 d-none d-md-block contentCol">
+        <div class="col-6 contentCol">
           <div class="cat">
             <?php
             $taxo = get_the_terms($post, 'equipment_cat');
@@ -92,30 +72,6 @@ HTML;
           <div class="description">
             <?php echo get_field('description') ?>
           </div>
-          <table class="table">
-            <tbody>
-              <?php
-              foreach (get_field('table') as $t) {
-                $name = $t['name'];
-                $value = $t['value'];
-                echo <<<HTML
-                <tr>
-                  <th>$name</th>
-                  <td>$value</td>
-                </tr>
-HTML;
-              }
-              ?>
-            </tbody>
-          </table>
-          <?php if (!empty($rm = get_field('reference-model'))) {
-            echo <<<HTML
-              <span class="d">* $rm 기준</span>
-HTML;
-          }
-          ?>
-        </div>
-        <div class="col-12  contentCol d-block d-md-none">
           <table class="table">
             <tbody>
               <?php
@@ -345,7 +301,7 @@ HTML;
           사용현장
           <p>청소장비가 사용되고 있는 다양한 현장들을 확인해보세요. </p>
         </div>
-        <div class="row use">
+        <div class="row">
           <?php foreach ($useL as $u) :
             $img = $u['thumbnail'];
             $lo = $u['location'];
@@ -364,7 +320,7 @@ HTML;
             </a>
 HTML;
             echo <<<HTML
-            <div class="col-12 col-md item">
+            <div class="col">
               <a href="$link" target="_blank" class="imgWrap" style="background-image: url('$img')">
                 <!-- <img src="$img" alt=""> -->
               </a>

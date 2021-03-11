@@ -3,20 +3,21 @@
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: false,
-    arrows: false,
+    arrows: true,
     draggable: false,
     asNavFor: ".moreThumbnailSlide",
+    infinite: false,
   });
   $(".moreThumbnailSlide").slick({
     slidesToShow: 5,
     slidesToScroll: 1,
     dots: false,
-    arrows: true,
-    infinite: true,
+    arrows: false,
+    infinite: false,
     asNavFor: ".previewSlide",
     draggable: false,
     focusOnSelect: true,
-    centerMode: true,
+    centerMode: false,
     centerPadding: "0px",
   });
 
@@ -38,7 +39,7 @@
     asNavFor: ".utilPreviewSlide",
     draggable: false,
     focusOnSelect: true,
-    centerMode: true,
+    centerMode: false,
     centerPadding: "0px",
   });
 

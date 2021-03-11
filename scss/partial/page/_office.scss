@@ -45,6 +45,7 @@ main.office {
     }
   }
   .content {
+    word-break: keep-all;
     font-family: "Noto Sans KR", sans-serif;
     font-size: 17px;
     font-weight: normal;
@@ -175,12 +176,12 @@ main.office {
     @include respondTo("md") {
       flex-direction: row;
     }
-    .imgWrap {
-      margin-bottom: 10px;
-      @include respondTo("md") {
-        margin-bottom: inherit;
-      }
-    }
+    // .imgWrap {
+    //   margin-bottom: 10px;
+    //   @include respondTo("md") {
+    //     margin-bottom: inherit;
+    //   }
+    // }
     .imgWrap:not(:last-child) {
       @include respondTo("md") {
         margin-right: 15px;
@@ -189,7 +190,7 @@ main.office {
   }
   .section2 {
     .imgColum {
-      margin-bottom: 50px;
+      // margin-bottom: 50px;
     }
   }
   .section5 {

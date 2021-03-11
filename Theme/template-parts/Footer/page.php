@@ -4,7 +4,7 @@ $contact = get_field('contact', 'option');
 $title = get_field('cTitle', 'option');
 if (!empty($contact) && !empty($title)) :
 ?>
-  <div class="pageFooter">
+  <!-- <div class="pageFooter">
     <div class="container">
       <div class="sectionTitle">
         <?php echo $title ?>
@@ -37,7 +37,7 @@ HTML;
         <?php endforeach ?>
       </div>
     </div>
-  </div>
+  </div> -->
   <?php
   if (!wp_is_mobile()) : ?>
     <script>
