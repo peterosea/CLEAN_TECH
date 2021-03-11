@@ -57,6 +57,7 @@ function App() {
     result['oid'] = '00D90000000kgNF';
     result['00N9000000DnxuT'] = 1;
     result['submit'] = '제출';
+    result['last_name'] = '';
 
     if (process.env.NODE_ENV !== 'production') {
       result['debug'] = 1;
@@ -90,8 +91,9 @@ function App() {
       });
       document.body.appendChild(cForm);
       cForm.submit();
-
-      setSuccess(true);
+      window.alert(
+        '등록이 완료되었습니다.\n 최대 1시간 이내에 응답하겠습니다.\n 감사합니다.',
+      );
     } catch (e) {
       setFail(e.message);
     }
@@ -142,17 +144,13 @@ function App() {
                       <span className="required">
                         <FaStar />
                       </span>
-                      <span>휴대폰</span>
+                      <span>연락처</span>
                     </div>
                   </div>
                   <Input
                     name="mobile"
                     ref={register({
                       required: true,
-                      pattern: {
-                        value: /^\d{3}\d{3,4}\d{4}$/,
-                        message: '잘못된 형식의 휴대폰 번호',
-                      },
                     })}
                     placeholder="010-1234-5678"
                     className={errors['mobile'] && 'validateFailed'}
