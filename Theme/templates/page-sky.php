@@ -21,9 +21,9 @@ get_template_part('template-parts/header/page-archive');
           <?php echo $title ?>
         </div>
       <?php endif ?>
-      <?php if ($img = get_field('img1')) {
-        echo $img;
-      } ?>
+      <div class="videoWrapper">
+        <iframe width="768" height="640" src="<?php if ($img = get_field('img1')) { echo $img; } ?>" frameborder="0" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
   <div class="section section2">

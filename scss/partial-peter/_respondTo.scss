@@ -1,0 +1,43 @@
+// Responsive Web Design
+$breakpoints: (
+  'sm': (
+    max-width: 576px,
+    ),
+  'md': (
+    max-width: 768px,
+  ),
+  'lg': (
+    max-width: 992px,
+  ),
+  'xl': (
+    max-width: 1200px,
+  ),
+  'hg': (
+    max-width: 1440px,
+  ),
+  'gg': (
+    max-width: 1900px,
+  ),
+);
+/// Responsive breakpoint manager
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+@mixin respondTo($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+			+ 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}

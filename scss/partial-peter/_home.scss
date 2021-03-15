@@ -1,0 +1,326 @@
+main.homepage {
+    .container {
+        @include respondTo('hg') {
+            max-width: 80%;
+        }
+        @include respondTo('xl') {
+            max-width: 90%;
+            padding-left: 120px;
+        }
+        @include respondTo('sm') {
+            padding-left: 15px;
+        }
+    }
+    .listStyle {
+        top: calc(50% + 50px);
+        @include respondTo('md') {
+            left: 20px;
+        }
+        @include respondTo('sm') {
+            display:none;
+        }
+    }
+    .section {
+        @include respondTo('md') {
+            padding-top: 60px !important;
+            padding-bottom: 80px;
+            &.section1, &.section3 {
+                padding-top: 0 !important;
+                padding-bottom: 0;
+            }
+        }
+        @include respondTo('sm') {
+            &.section4 {
+                padding-top: 20px !important;
+                padding-bottom: 40px;
+            }
+        }
+    }
+    .sectionTitle {
+        line-height: 1;
+        margin-bottom: 60px;
+        @include respondTo('hg') {
+            font-size: 48px;
+        }
+        @include respondTo('xl') {
+            font-size: 38px;
+        }
+    }
+    .section2 .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        .col {
+            @include respondTo('hg') {
+                padding: 0 5px;
+            }
+            @include respondTo('xl') {
+                flex: auto;
+                width: 50%;
+                max-width: none;
+                margin-bottom: 10px;
+            }
+            @include respondTo('md') {
+                width: 100%;
+            }
+        }
+        .col-5 {
+            @include respondTo('hg') {
+                max-width: 32%;
+            }
+            @include respondTo('xl') {
+                flex: auto;
+                width: 50%;
+                max-width: none;
+            }
+            @include respondTo('md') {
+                width: 100%;
+            }
+        }
+        .card {
+            @include respondTo('hg') {
+                padding: 30px;
+            }
+            @include respondTo('xl') {
+                padding: 25px;
+            }
+            .head {
+                @include respondTo('hg') {
+                    margin-bottom: 20px;
+                }
+                .title {
+                    @include respondTo('hg') {
+                        font-size: 27px;
+                    }
+                }
+            }
+            .body {
+                p {
+                    word-break: keep-all;
+                }
+                @include respondTo('hg') {
+                    margin-bottom: 10px;
+                    p {
+                        line-height: 1.4em;
+                    }
+                }
+                @include respondTo('xl') {
+                    ul img {
+                        height:auto;
+                    }
+                }
+            }
+            ._active {
+                opacity: 0;
+                visibility: hidden;
+                z-index: -99;
+                position: absolute;
+            }
+            ._deactive {
+                opacity: 1;
+                visibility: visible;
+                z-index: 2;
+                position: relative;
+            }
+            &:hover {
+                cursor: pointer;
+                box-shadow: 20px 30px 20px 0px rgba(0, 0, 0, 0.3);
+            }
+            &.active {
+                @include respondTo('hg') {
+                    padding: 30px;
+                }
+                @include respondTo('xl') {
+                    .footer {
+                        .imgWrap {
+                            all: unset;
+                        }
+                    }
+                }
+                ._active {
+                    opacity: 1;
+                    visibility: visible;
+                    z-index: 2;
+                    position: relative;
+                }
+                ._deactive {
+                    opacity: 0;
+                    visibility: hidden;
+                    z-index: -99;
+                    position: absolute;
+                }
+            }
+            .btn {
+                @include respondTo('hg') {
+                    padding: 0;
+                    img {
+                        width: 28px;
+                    }
+                }
+            }
+            @include respondTo('xl') {
+                .footer {
+                    img._deactive {
+                        width: 44px;
+                        height: 44px;
+                    }
+                    .imgWrap {
+                        height: 100px;
+                        width: 100px;
+                    }
+                }
+            }
+        }
+    }
+    .section3 .slickCarouselVideo .slickSlideSmall {
+        max-width: 740px;
+        width: 90%;
+        bottom: 80px;
+        @include respondTo('md') {
+            bottom: 40px;
+        }
+        .thumbnail {
+            margin: 0 auto;
+            overflow: visible;
+            width: auto;
+            height: auto;
+        }
+    }
+    .section4 {
+        .contentRow > .col-4 {
+            border-right: 1px solid #dde2eb;
+            @include respondTo('md') {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            &:last-child {
+                border-right: none;
+            }
+        }
+        @include respondTo('hg') {
+            .contentRow {
+                margin-bottom: 20px;
+            }
+            .contactWrap {
+                padding: 30px 25px;
+                .title {
+                    font-size: 26px;
+                    line-height: 1.2;
+                    margin-bottom: 10px;
+                    word-break: keep-all;
+                }
+                .imgWrap {
+                    margin-right: 20px;
+                }
+                p {
+                    line-height: 1.2;
+                    word-break: keep-all;
+                }
+                .btnWrap {
+                    .btn {
+                        padding: 0;
+                    }
+                    img {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+        @include respondTo('xl') {
+            .contactWrap {
+                .title {
+                    font-size: 20px;
+                }
+            }
+        }
+        @include respondTo('lg') {
+            .contactRow {
+                .col-12:first-child {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .wrap {
+            display: block;
+            text-decoration: none;
+            @include respondTo('hg') {
+                .title {
+                    font-size: 30px;
+                }
+                p {
+                    line-height: 1.4;
+                }
+            }
+            @include respondTo('xl') {
+                .title {
+                    font-size: 25px;
+                    word-break: keep-all;
+                }
+                p {
+                    word-break: keep-all;
+                }
+            }
+        }
+    } 
+    footer.FNB {
+        background-color: #f2f2f2;
+        padding-bottom: 40px;
+        padding-top: 40px !important;
+        @include respondTo('lg') {
+            .iconCol {
+                padding-top: 0;
+                padding-bottom: 10px;
+            }
+            ul.info {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+body.ie main.homepage {
+    rs-module-wrap {
+        display: none;
+    }
+    .listStyle {
+        display: none;
+    }
+    .ie11.main_visual {
+        display:block;
+        background: url(/wp-content/uploads/zeplin/main-graphic.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        .container {
+            padding-top:160px;
+            padding-bottom:500px;
+        }
+        .label {
+            display: inline-block;
+            background-color: #009b94;
+            color: #333333;
+            font-family: GmarketSans;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1;
+            letter-spacing: -1.2px;
+            margin-bottom: 31px;
+            padding-top: 2px;
+            padding-right: 2px;
+            line-height: 0.9;
+        }
+        .title {
+            color: #333333;
+            font-family: GmarketSans;
+            font-size: 62px;
+            font-weight: bold;
+            line-height: 1.27;
+            letter-spacing: -3.1px;
+        }
+        .pointColor {
+            color: #009b94;
+        }
+    }
+    .section2, .section4 {
+        padding:100px 0;
+    }
+}

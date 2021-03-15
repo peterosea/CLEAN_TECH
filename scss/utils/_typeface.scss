@@ -109,7 +109,7 @@
 
 @mixin Text-Style-6 {
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 35px;
+  font-size: 32px;
   font-weight: bold;
   line-height: 1.14;
   letter-spacing: -1.75px;
@@ -201,7 +201,7 @@
 
 @mixin Text-Style-18 {
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 36px;
+  font-size: 34px;
   font-weight: bold;
   letter-spacing: -1.8px;
 }
@@ -282,7 +282,7 @@
 }
 
 @mixin Text-Style-28 {
-  font-family: Poppins;
+  font-family: 'Arimo', 'Noto Sans KR', sans-serif;
   font-size: 72px;
   font-weight: bold;
   line-height: 1;
@@ -304,14 +304,14 @@
 }
 
 @mixin Text-Style-31 {
-  font-family: Poppins;
+  font-family: 'Arimo', 'Noto Sans KR', sans-serif;
   font-size: 18px;
   line-height: 3.33;
-  letter-spacing: -1.08px;
+  letter-spacing: -0.05em;
 }
 
 @mixin Text-Style-32 {
-  font-family: Poppins;
+  font-family: 'Arimo', 'Noto Sans KR', sans-serif;
   font-size: 30px;
   font-weight: bold;
   line-height: 2.47;
@@ -326,10 +326,10 @@
 }
 
 @mixin Text-Style-34 {
-  font-family: Poppins;
+  font-family: 'Arimo', 'Noto Sans KR', sans-serif;
   font-size: 18px;
   line-height: 1.2;
-  letter-spacing: -1.08px;
+  letter-spacing: -0.05em;
   font-weight: 300;
 }
 
@@ -391,11 +391,11 @@
 }
 
 @mixin Text-Style-43 {
-  font-family: Poppins;
+  font-family: 'Arimo', 'Noto Sans KR', sans-serif;
   font-size: 48px;
   font-weight: bold;
   line-height: 0.75;
-  letter-spacing: -2.4px;
+  letter-spacing: -0.05em;
 }
 
 @mixin Text-Style-44 {
@@ -406,7 +406,7 @@
 }
 
 @mixin Text-Style-45 {
-  font-family: Poppins;
+  font-family: 'Arimo', 'Noto Sans KR', sans-serif;
   font-size: 18px;
 }
 
@@ -423,12 +423,12 @@
 }
 
 @mixin Text-Style-47 {
-  font-family: Poppins;
+  font-family: 'Arimo', 'Noto Sans KR', sans-serif;
   font-size: 18px;
 }
 
 @mixin Text-Style-49 {
-  font-family: Poppins;
+  font-family: 'Arimo', 'Noto Sans KR', sans-serif;
   font-size: 18px;
   font-weight: bold;
   line-height: 1.44;
@@ -449,28 +449,28 @@
 }
 
 @mixin Text-Style-52 {
-  font-family: Poppins;
+  font-family: 'Arimo', 'Noto Sans KR', sans-serif;
   font-size: 16px;
 }
 
 @mixin Text-Style-53 {
-  font-family: Poppins;
+  font-family: 'Arimo', 'Noto Sans KR', sans-serif;
   font-size: 16px;
   text-align: center;
 }
 
 @mixin Text-Style-54 {
-  font-family: Poppins;
+  font-family: 'Arimo', 'Noto Sans KR', sans-serif;
   font-size: 18px;
   line-height: 1.5;
 }
 
 @mixin Text-Style-55 {
-  font-family: Poppins;
+  font-family: 'Arimo', 'Noto Sans KR', sans-serif;
   font-size: 24px;
   font-weight: bold;
   line-height: 1.33;
-  letter-spacing: -1.2px;
+  letter-spacing: -0.05em;
   text-align: right;
 }
 
@@ -483,18 +483,18 @@
 }
 
 @mixin Text-Style-57 {
-  font-family: Poppins;
+  font-family: 'Arimo', 'Noto Sans KR', sans-serif;
   font-size: 24px;
   line-height: 1.08;
-  letter-spacing: -1.2px;
+  letter-spacing: -0.05em;
 }
 
 @mixin Text-Style-58 {
-  font-family: Poppins;
+  font-family: 'Arimo', 'Noto Sans KR', sans-serif;
   font-size: 48px;
   font-weight: bold;
   line-height: 0.75;
-  letter-spacing: -2.4px;
+  letter-spacing: -0.05em;
   text-align: right;
 }
 

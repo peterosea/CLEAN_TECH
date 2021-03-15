@@ -1,0 +1,30 @@
+main.equipmentUtil {
+    .accordionMenu a {
+        padding: 15px 20px 18px;
+        line-height: 1.4;
+    }
+    .accordionContent .itemList.style1 {
+        margin-top: 20px;
+    }
+}
+main.equipmentUtilSingle {
+    > .container {
+        .wp-block-gallery {
+            margin-bottom: 0;
+            &.columns-2 {
+                margin-bottom: 50px;
+            }
+        }
+        .wp-block-column .wp-block-image {
+            margin-bottom: 0;
+        }
+    }
+    .wp-block-column:not(:first-child) {
+        margin-left: 10px;
+    }
+    .chartListWrap {
+        .col-12 .chartList .list {
+            max-width: none;
+        }
+    }
+}

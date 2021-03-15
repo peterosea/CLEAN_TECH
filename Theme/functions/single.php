@@ -20,7 +20,9 @@ function get_new_single_template($single_template)
         $single_template =  get_stylesheet_directory() . '/template-single/equipment_battery.php';
       }
     }
-    if (get_post_meta($post->ID, '_wp_page_template', true) !== '') $single_template = get_stylesheet_directory() . '/' . get_post_meta($post->ID, '_wp_page_template', true);
+    // if (get_post_meta($post->ID, '_wp_page_template', true) !== '') {
+    //   $single_template = get_stylesheet_directory() . '/' . get_post_meta($post->ID, '_wp_page_template', true);
+    // }
   }
   if ('equipment-solution' === $post->post_type) {
     $single_template =  get_stylesheet_directory() . '/template-single/equipment_solution.php';
