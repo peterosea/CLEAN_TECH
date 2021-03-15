@@ -20,7 +20,7 @@ services:
       - ./Theme:/var/www/html/wp-content/themes/base
       - ./backup:/var/www/html/wp-content/ai1wm-backups
     external_links:
-      - DB__wordpress:mariadb
+      - DB__workwp:mariadb
   
 networks:
   default:
