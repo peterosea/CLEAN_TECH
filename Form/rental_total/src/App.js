@@ -57,7 +57,7 @@ function App() {
     result['oid'] = '00D90000000kgNF';
     result['00N9000000DnxuT'] = 1;
     result['submit'] = '제출';
-    result['last_name'] = '';
+    result['first_name'] = '';
 
     if (process.env.NODE_ENV !== 'production') {
       result['debug'] = 1;
@@ -128,10 +128,10 @@ function App() {
                     </div>
                   </div>
                   <Input
-                    name="first_name"
+                    name="last_name"
                     ref={register()}
                     placeholder="이름을 입력하세요"
-                    className={errors['first_name'] && 'validateFailed'}
+                    className={errors['last_name'] && 'validateFailed'}
                   />
                 </Label>
               </Col>
