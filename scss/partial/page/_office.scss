@@ -194,7 +194,100 @@ main.office {
     }
   }
   .section5 {
-    color: $dark;
-    @include Text-Style-18;
+    p {
+      color: $dark;
+      @include Text-Style-18;
+
+    }
+  }
+  .section6, .section7 {
+    h1 {
+      color: $dark;
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 26px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.46;
+      letter-spacing: -1.3px;
+      text-align: left;
+
+      @include respondTo("md") {
+        @include Text-Style-38;
+      }
+    }
+    h2 {
+      color: $dark;
+      @include Text-Style-17;
+
+      @include respondTo("md") {
+        @include Text-Style-21;
+      }
+    }
+    .head {
+      margin-bottom: 30px;
+      @include respondTo("md") {
+        margin-bottom: 80px;
+      }
+    }
+  }
+  .section6 {
+    ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      font-family: Poppins;
+      font-size: 18px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.44;
+      letter-spacing: -0.9px;
+      text-align: left;
+      color: $battleship-grey;
+      @include respondTo("md") {
+        @include Text-Style-57;
+      }
+      li:not(:last-child) {
+        margin-right: 16px;
+      }
+      .unit {
+        font-weight: bold;
+      }
+    }
+    .root_daum_roughmap {
+      width: 100%;
+      .wrap_controllers {
+        display: none;
+      }
+      .wrap_map {
+        height: 300px !important;
+        @include respondTo("md") {
+          height: 600px !important;
+        }
+      }
+    }
+  }
+  .section7 {
+    .head {
+      .content {
+        color: $battleship-grey;
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.63;
+        letter-spacing: -0.8px;
+        margin-bottom: 60px;
+
+        @include respondTo("md") {
+          margin-bottom: 30px;
+          @include Text-Style-27;
+        }
+      }
+    }
   }
 }

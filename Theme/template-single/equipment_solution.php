@@ -128,33 +128,6 @@ HTML;
       echo '</div>';
     }
 
-    if (!empty($listGroup = get_field('list'))) {
-      echo '<div class="row listWrap">';
-      foreach ($listGroup as $list) {
-        $thumbnail = $list['thumbnail'];
-        $title = $list['title'];
-        $content = $list['content'];
-        echo <<<HTML
-        <div class="col-12 col-sm-6 col-lg-4 mb-5">
-          <div class="listItem">
-            <div class="imgWrap">
-              <img src="$thumbnail" alt="">
-            </div>
-            <div class="contentWrap">
-              <div class="title">
-                $title
-              </div>
-              <div class="content">
-                $content
-              </div>
-            </div>
-          </div>
-        </div>
-HTML;
-      }
-      echo '</div>';
-    }
-
     if (!empty($listGroup = get_field('icon_list'))) {
       echo '<div class="row iconListWrap">';
       foreach ($listGroup as $list) {
@@ -181,7 +154,33 @@ HTML;
       }
       echo '</div>';
     }
-
+    
+    if (!empty($listGroup = get_field('list'))) {
+      echo '<div class="row listWrap">';
+      foreach ($listGroup as $list) {
+        $thumbnail = $list['thumbnail'];
+        $title = $list['title'];
+        $content = $list['content'];
+        echo <<<HTML
+        <div class="col-12 col-sm-6 col-lg-4 mb-5">
+          <div class="listItem">
+            <div class="imgWrap">
+              <img src="$thumbnail" alt="">
+            </div>
+            <div class="contentWrap">
+              <div class="title">
+                $title
+              </div>
+              <div class="content">
+                $content
+              </div>
+            </div>
+          </div>
+        </div>
+HTML;
+      }
+      echo '</div>';
+    }
 
     if (!empty($pt = get_field('program_table'))) {
       echo '<h2 class="programTableH2">프로그램 안내</h2>';

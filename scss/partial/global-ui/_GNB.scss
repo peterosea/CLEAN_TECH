@@ -104,6 +104,10 @@ nav.GNB {
       a {
         transition:all 0.3s;
       }
+      &.introduce > a {
+        min-width: 150px;
+        text-align: center;
+      }
       &.current-menu-item > a,
       &.current-menu-ancestor > a,
       a:hover {

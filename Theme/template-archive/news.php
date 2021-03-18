@@ -74,7 +74,9 @@ HTML;
             <div class="col-12 col-lg-6 col-xl-4 cardCol">
               <div class="rightCol">
                 <div class="thumbnail">
-                  $_thumbnail
+                  <a href="$_permalink">
+                    $_thumbnail
+                  </a>
                 </div>
               </div>
               <div class="leftCol">

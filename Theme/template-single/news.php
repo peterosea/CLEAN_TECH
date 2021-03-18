@@ -24,9 +24,9 @@ global $post;
       <div class="header">
         <div class="title"><?php the_title() ?></div>
         <div class="date"><?php the_date('Y.m.d Ah:i') ?></div>
-        <div class="thumbnail">
+        <!-- <div class="thumbnail">
           <img src="<?php echo get_the_post_thumbnail_url() ?>" alt="" />
-        </div>
+        </div> -->
       </div>
       <div class="body">
         <?php the_content() ?>

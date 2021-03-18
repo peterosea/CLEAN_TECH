@@ -24,11 +24,11 @@ main.pageTemplate.performance {
       }
     }
   }
-  .section1 {
-    @include respondTo("md") {
-      margin-bottom: 150px;
-    }
-  }
+  // .section1 {
+  //   @include respondTo("md") {
+  //     margin-bottom: 150px;
+  //   }
+  // }
   .csWrap {
     display: flex;
     flex-wrap: wrap;
