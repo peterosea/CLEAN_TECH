@@ -70,7 +70,7 @@ main.pageTemplate.news {
       color: $dark;
       margin-bottom: 12px;
       text-decoration: none;
-
+      word-break: keep-all;
       font-family: "Noto Sans KR", sans-serif;
       font-size: 20px;
       font-weight: bold;
@@ -91,6 +91,7 @@ main.pageTemplate.news {
       color: $battleship-grey-three;
       @include Text-Style-51;
       margin-bottom: 20px;
+      word-break: keep-all;
     }
     .date {
       color: $light-grey-blue;
