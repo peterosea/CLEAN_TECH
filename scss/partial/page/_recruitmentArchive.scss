@@ -2,7 +2,7 @@
   background-color: $white;
 }
 
-main.pageTemplate.news {
+main.pageTemplate.recruitment {
   .section {
     padding-top: 76px;
     padding-bottom: 130px;
@@ -17,17 +17,15 @@ main.pageTemplate.news {
     .thumbnail img {
       height: auto;
       width: 100%;
-      // max-height: 373px;
+      max-height: 373px;
       margin-bottom: 30px;
-      @include respondTo("lg") {
-        max-height: 373px;
-      }
     }
     .cardCol {
       padding-top: 30px;
       padding-bottom: 30px;
       display: flex;
       border-bottom: 1px solid $light-periwinkle-two;
+      flex-direction: column;
       @include respondTo("md") {
         display: block;
         padding-top: 35px;
@@ -35,43 +33,50 @@ main.pageTemplate.news {
         border: 0;
       }
       .rightCol {
-        margin-right: 25px;
+        // margin-right: 25px;
         @include respondTo("md") {
           margin-right: 0;
         }
       }
     }
-    @supports (object-fit: cover) {
-      .thumbnail {
-        // max-height: 373px;
-        // max-width: 373px;
-        margin: auto;
-        position: relative;
-        width: 110px;
-        height: 110px;
-        margin-bottom: 0;
-        @include respondTo("md") {
-          padding-top: 100%;
-          height: auto;
-          width: auto;
-          margin-bottom: 30px;
-        }
-        a {
-          display: block;
-        }
-        img {
-          margin-bottom: 0;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 100%;
-          height: 100%;
-          transform: translate(-50%, -50%);
-          object-fit: cover;
-        }
-      }
+    .thumbnail {
+      padding-top: 100%;
+      height: auto;
+      width: 100%;
+      margin-bottom: 30px;
+      display: inline-block;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
-    .title a {
+    // @supports (object-fit: cover) {
+    //   .thumbnail {
+    //     max-height: 373px;
+    //     max-width: 373px;
+    //     margin: auto;
+    //     position: relative;
+    //     width: 110px;
+    //     height: 110px;
+    //     margin-bottom: 0;
+    //     @include respondTo("md") {
+    //       padding-top: 100%;
+    //       height: auto;
+    //       width: auto;
+    //       margin-bottom: 30px;
+    //     }
+    //     img {
+    //       margin-bottom: 0;
+    //       position: absolute;
+    //       top: 50%;
+    //       left: 50%;
+    //       width: 100%;
+    //       height: 100%;
+    //       transform: translate(-50%, -50%);
+    //       object-fit: cover;
+    //     }
+    //   }
+    // }
+    .title a, .title {
       display: inline-block;
       color: $dark;
       margin-bottom: 12px;
@@ -86,9 +91,12 @@ main.pageTemplate.news {
       letter-spacing: -1px;
       text-align: left;
       color: $dark;
+      transition: all 0.3s;
       @include respondTo("md") {
         @include Text-Style-21;
       }
+    }
+    .title a {
       &:hover {
         color: $teal;
       }
