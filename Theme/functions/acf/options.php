@@ -38,4 +38,9 @@ if (function_exists('acf_add_options_sub_page')) {
     'menu_title'   => 'history',
     'parent_slug'  => 'edit.php?post_type=history',
   ));
+  acf_add_options_sub_page(array(
+    'page_title'   => 'recruitment',
+    'menu_title'   => 'recruitment',
+    'parent_slug'  => 'edit.php?post_type=recruitment',
+  ));
 }
