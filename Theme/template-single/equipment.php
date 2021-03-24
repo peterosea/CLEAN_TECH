@@ -99,6 +99,9 @@ HTML;
       <?php
       $re = get_field('related-equipment');
       $colClass = count($re) % 2 === '0' ? 'col-6' : 'col';
+      if (count($re) === 1)
+        $colClass = 'col-6';
+
       if (!empty($re)) {
         echo <<<HTML
           <div class="row m-0">
@@ -162,7 +165,7 @@ HTML;
             if (count($re) === 4) {
               if ($key < 2) continue;
             } else {
-              if ($key < 2) continue;
+              if ($key < 3) continue;
             }
             echo <<<HTML
             <div class="$colClass rWrapItem px-0">
