@@ -160,7 +160,7 @@ HTML;
           foreach ($re as $key => $r) {
             if ($key > 5) break;
             if (count($re) === 4) {
-              if ($key < 1) continue;
+              if ($key < 2) continue;
             } else {
               if ($key < 2) continue;
             }
