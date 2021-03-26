@@ -25,7 +25,7 @@ $found_posts = $wp_query->found_posts;
       <?php endif ?>
     <?php endif ?>
   </div>
-  <div class="container <?php if (get_field_object('header_img')['key'] === 'field_603d1fa91879d') echo 'video' ?>">
+  <div class="container <?php if (get_field_object('header_img')['key'] === 'field_603d1fa91879d' && !is_search()) echo 'video' ?>">
     <div class="title">
       <?php
       if (!empty(post_type_archive_title('', false))) {
