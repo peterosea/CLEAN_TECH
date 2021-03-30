@@ -275,16 +275,12 @@ function App() {
                 <Label>
                   <div className="nameWrap">
                     <div className="name">
-                      <span className="required">
-                        <FaStar />
-                      </span>
                       <span>이메일</span>
                     </div>
                   </div>
                   <Input
                     name="email"
                     ref={register({
-                      required: true,
                       pattern: {
                         value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                         message: '잘못된 형식의 이메일 주소',
