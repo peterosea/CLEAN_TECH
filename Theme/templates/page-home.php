@@ -32,15 +32,15 @@ get_template_part('template-parts/FixedMenu');
     </li>
     <li data-menuanchor="secondPage">
       <div class="label"></div>
-      <a href="#secondPage">제품소개</a>
+      <a href="#secondPage">상품소개</a>
     </li>
     <li data-menuanchor="thirdPage">
       <div class="label"></div>
-      <a href="#thirdPage">멀티미디어</a>
+      <a href="#thirdPage">동영상</a>
     </li>
     <li data-menuanchor="fourthPage">
       <div class="label"></div>
-      <a href="#fourthPage">정보</a>
+      <a href="#fourthPage">검색</a>
     </li>
   </ul>
 </main>

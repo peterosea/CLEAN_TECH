@@ -55,11 +55,11 @@ main.greeting {
     margin-bottom: 100px;
   }
   p {
-    font-family: AppleSDGothicNeo;
     font-size: 18px;
     line-height: 1.44;
     text-align: left;
     color: $battleship-grey;
+    text-align: justify;
     @include respondTo("md") {
       @include Text-Style-39;
       color: $battleship-grey;
@@ -70,7 +70,6 @@ main.greeting {
       font-weight: bold;
       line-height: 1.44;
       text-align: left;
-      margin-bottom: 10px;
       display: inline-block;
       @include respondTo("md") {
         @include Text-Style-21;
@@ -80,14 +79,16 @@ main.greeting {
   .company {
     .comp {
       @include Text-Style-40;
+      font-size: 21px;
       color: $black-two;
-      margin-right: 28px;
+      margin-right: 20px;
       margin-bottom: 28px;
       display: inline-block;
     }
     .name {
       @include Text-Style-41;
       color: $black-two;
+      font-size: 21px;
     }
   }
 }
