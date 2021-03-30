@@ -140,7 +140,7 @@ HTML;
     <div class="container">
       <div class="container_title">
         국내 사용현장
-        <p>자율주행 청소장비 T7AMR이 사용되고 있는 다양한 현장들을 확인해보세요. </p>
+        <p>국내 최초 살수 겸용 소형 노면청소자가 사용되고 있는 다양한 현장들을 확인해 보세요.</p>
       </div>
       <div class="row use1">
         <?php foreach (get_field('use_1') as $u1) {

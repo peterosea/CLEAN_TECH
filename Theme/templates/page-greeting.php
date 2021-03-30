@@ -19,7 +19,6 @@ get_template_part('template-parts/header/page-archive');
       <?php the_field('content_body') ?>
       <br />
       <br />
-      <br />
       <div class="company">
         <?php
         foreach (get_field('representative') as $key => $c) :
