@@ -1,4 +1,24 @@
-<script src="http://www.youtube.com/player_api"></script>
+<script>
+  function loadScript() {
+    if (typeof(YT) == 'undefined' || typeof(YT.Player) == 'undefined') {
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    }
+  }
+
+  function loadPlayer() {
+    window.onYouTubePlayerAPIReady = function() {
+      onYouTubePlayer();
+    };
+  }
+
+
+  $(function() {
+    loadScript();
+  })
+</script>
 <script>
   $("#slickSlideBg iframe").each(function(idx) {
     $(this).addClass("data-idx-" + idx).data("idx", idx);
