@@ -131,24 +131,14 @@ function App() {
                       <RadioGroup defaultValue="지원실 자체접수">
                         <div className="deliveryList">
                           <FormControlLabel
-                            value="지원실 자체접수"
-                            control={<Radio />}
-                            label="지원실 자체접수"
-                          />
-                          <FormControlLabel
                             value="창고출고"
                             control={<Radio />}
-                            label="창고출고"
+                            label="택배주문"
                           />
                           <FormControlLabel
-                            value="반품처리"
+                            value="AS처리"
                             control={<Radio />}
-                            label="반품처리"
-                          />
-                          <FormControlLabel
-                            value="AM 활동"
-                            control={<Radio />}
-                            label="AM 활동"
+                            label="AS 접수"
                           />
                         </div>
                       </RadioGroup>
