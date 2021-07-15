@@ -150,10 +150,21 @@
         }
       }
       @include respondTo("lg") {
+        width: 309px;
+        height: 309px;
+        padding-top: 0;
+        &:nth-child(3n) {
+          width: 310px;
+        }
+      }
+      @include respondTo("xl") {
         width: 278px;
         height: 278px;
         padding: 0;
         margin: -0.5px;
+        &:nth-child(3n) {
+          width: 278px;
+        }
       }
     }
 
