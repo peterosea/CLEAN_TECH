@@ -239,6 +239,47 @@ main.equipmentSingle {
         }
       }
     }
+    // 테넌트 배너
+    .banner_wrap {
+      background-color: #edf0f5;
+      margin-bottom: 70px;
+      @include respondTo("md") {
+        margin: 0 0 70px 0;
+      }
+    }
+    .banner_container {
+      padding: 40px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include respondTo("md") {
+        padding: 40px 40px;
+      }
+      > .col {
+        display: flex;
+        align-items: center;
+      }
+      ._text {
+        font-size: 18px;
+        font-weight: bold;
+        color: #00a4cf;
+        padding-left: 18px;
+        @include respondTo("md") {
+          font-size: 15px;
+        }
+      }
+      ._arrow {
+        width: 50%;
+        max-width: 55px;
+        height: 18px;
+        margin-left: 20px;
+        display: flex;
+        background-image: url(#{$zeplin}/ic-arrow-blue.png);
+        background-position: center;
+        background-size: auto;
+        background-repeat: no-repeat;
+      }
+    }
   }
   .section2 {
     background-color: $pale-grey;
@@ -320,10 +361,10 @@ main.equipmentSingle {
   }
   .section3 {
     .container {
-      padding-top: 70px;
+      // padding-top: 70px;
       padding-bottom: 70px;
       @include respondTo("md") {
-        padding-top: 130px;
+        // padding-top: 130px;
         padding-bottom: 130px;
       }
     }
