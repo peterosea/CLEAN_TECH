@@ -21,6 +21,7 @@ global $post;
 <main class="pageTemplate equipmentSingle">
   <div class="section section1">
     <div class="container">
+      <!-- 장비스펙 -->
       <div class="row itemRow">
         <div class="col-6">
           <div class="thumbnailBox">
@@ -96,6 +97,23 @@ HTML;
           ?>
         </div>
       </div>
+      <!-- /.장비스펙 -->
+      <?php if(current_user_can('administrator')){ ?>
+      <!-- 테넌트 배너 -->
+      <div class="row banner_wrap">
+        <div class="col-12 p-0">
+          <a href="https://www.tennantco.com/en_us/1/machines/scrubbers/product.t300---t300e.walk-behind-floor-scrubbers.M-T300.html" target="_blank" class="banner_container">
+            <div class="col p-0">
+              <div class="_logo"><img src="<?php echo $zeplin; ?>/logo-tennant.png" alt="TENNANT Logo"></div>
+              <div class="_text">더 자세한 사양이나, 미국 활용 사례 등은 Tennant 홈페이지에서도 확인하실 수 있습니다.</div>
+            </div>
+            <div class="_arrow col p-0"></div>
+          </a>
+        </div>
+      </div>
+      <!-- /.테넌트 배너 -->
+      <?php } ?>
+      <!-- 관련장비 -->
       <?php
       $re = get_field('related-equipment');
       $colClass = count($re) % 2 === '0' ? 'col-6' : 'col';
@@ -212,38 +230,8 @@ HTML;
       ?>
     </div>
   </div>
-  <div class="section section2">
-    <?php if ($ss = get_field('solutions')) : ?>
-      <div class="container">
-        <div class="sectionTitle">
-          솔루션
-          <p>청소장비를 활용할 수 있는 다양한 사용 환경들을 확인해보세요.</p>
-        </div>
-        <div class="row">
-          <?php foreach ($ss as $s) {
-            $thumbnail = get_the_post_thumbnail_url($s, 'full');
-            $title = get_the_title($s);
-            $ec = get_the_excerpt($s);
-            $es = get_the_permalink($s);
-            echo <<<HTML
-            <div class="col">
-              <a href="$es" class="solution">
-                <div class="imgWrap">
-                  <img src="$thumbnail" alt="">
-                </div>
-                <div class="content">
-                  <div class="title">$title</div>
-                  <div class="excerpt">$ec</div>
-                </div>
-              </a>
-            </div>
-HTML;
-          }
-          ?>
-        </div>
-      </div>
-    <?php endif ?>
-  </div>
+  <!-- /.관련장비 -->
+  <!-- 활용방법 -->
   <div class="section section3">
     <?php if ($vv = get_field('util')) : ?>
       <div class="container">
@@ -297,6 +285,42 @@ HTML;
       </div>
     <?php endif ?>
   </div>
+  <!-- /.활용방법 -->
+  <!-- 솔루션 -->
+  <div class="section section2">
+    <?php if ($ss = get_field('solutions')) : ?>
+      <div class="container">
+        <div class="sectionTitle">
+          솔루션
+          <p>청소장비를 활용할 수 있는 다양한 사용 환경들을 확인해보세요.</p>
+        </div>
+        <div class="row">
+          <?php foreach ($ss as $s) {
+            $thumbnail = get_the_post_thumbnail_url($s, 'full');
+            $title = get_the_title($s);
+            $ec = get_the_excerpt($s);
+            $es = get_the_permalink($s);
+            echo <<<HTML
+            <div class="col">
+              <a href="$es" class="solution">
+                <div class="imgWrap">
+                  <img src="$thumbnail" alt="">
+                </div>
+                <div class="content">
+                  <div class="title">$title</div>
+                  <div class="excerpt">$ec</div>
+                </div>
+              </a>
+            </div>
+HTML;
+          }
+          ?>
+        </div>
+      </div>
+    <?php endif ?>
+  </div>
+  <!-- /.솔루션 -->
+  <!-- 사용현장 -->
   <div class="section section4">
     <?php if ($useL = get_field('use')) : ?>
       <div class="container">
@@ -338,6 +362,7 @@ HTML;
       </div>
     <?php endif ?>
   </div>
+  <!-- /.사용현장 -->
   <?php get_template_part('template-parts/footer/page'); ?>
 </main>
 <?php
