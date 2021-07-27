@@ -98,7 +98,6 @@ HTML;
         </div>
       </div>
       <!-- /.장비스펙 -->
-      <?php if(current_user_can('administrator')){ ?>
       <!-- 테넌트 배너 -->
       <div class="row banner_wrap">
         <div class="col-12 p-0">
@@ -112,7 +111,6 @@ HTML;
         </div>
       </div>
       <!-- /.테넌트 배너 -->
-      <?php } ?>
       <!-- 관련장비 -->
       <?php
       $re = get_field('related-equipment');
