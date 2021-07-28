@@ -22,7 +22,7 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
               <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 85 85" style="enable-background:new 0 0 85 85;" xml:space="preserve">
                 <style type="text/css">
                   .st0{fill:#5ECA6A;}
-                  .st1{fill:#ECEEF4;}
+                  .st1{fill:#ffffff;}
                 </style>
                 <g>
                   <path id="패스_1106" class="st0" d="M839.3,383.5c0,10.6-8.6,19.2-19.2,19.2h-47c-10.6,0-19.1-8.6-19.2-19.2v-47
