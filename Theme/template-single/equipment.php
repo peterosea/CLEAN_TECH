@@ -98,11 +98,14 @@ HTML;
         </div>
       </div>
       <!-- /.장비스펙 -->
-      <?php if(current_user_can('administrator')){ ?>
+      <?php
+      $link_t = get_field('link_tennant');
+      if ($link_t) {
+      ?>
       <!-- 테넌트 배너 -->
       <div class="row banner_wrap">
         <div class="col-12 p-0">
-          <a href="https://www.tennantco.com/en_us/1/machines/scrubbers/product.t300---t300e.walk-behind-floor-scrubbers.M-T300.html" target="_blank" class="banner_container">
+          <a href="<?php echo $link_t; ?>" target="_blank" class="banner_container">
             <div class="col p-0">
               <div class="_logo"><img src="<?php echo $zeplin; ?>/logo-tennant.png" alt="TENNANT Logo"></div>
               <div class="_text">더 자세한 사양이나, 미국 활용 사례 등은 Tennant 홈페이지에서도 확인하실 수 있습니다.</div>
@@ -112,7 +115,9 @@ HTML;
         </div>
       </div>
       <!-- /.테넌트 배너 -->
-      <?php } ?>
+      <?php
+      }
+      ?>
       <!-- 관련장비 -->
       <?php
       $re = get_field('related-equipment');
