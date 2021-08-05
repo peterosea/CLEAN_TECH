@@ -1,23 +1,24 @@
 nav.GNB {
-    .menu {
-        .sub-menu {
-            padding-bottom: 30px;
-            a {
-                padding: 0 34px;
-            }
-        }
-        > .menu-item > a {
-            @include respondTo('hg') {
-                padding-right: 22px;
-                padding-left: 22px;
-            }
-        }
+  .menu {
+    .sub-menu {
+      padding-bottom: 30px;
+      a {
+        padding: 0 34px;
+      }
     }
-    .right {
-        top: 41px;
+    > .menu-item > a {
+      @include respondTo("hg") {
+        padding-right: 12px;
+        padding-left: 12px;
+        font-size: 18px;
+      }
     }
-    // 검색창
-    .btn_search {
-        cursor: pointer;
-    }
+  }
+  .right {
+    top: 41px;
+  }
+  // 검색창
+  .btn_search {
+    cursor: pointer;
+  }
 }
