@@ -60,7 +60,10 @@ nav.GNB {
     left: 40px;
     transform: translateY(-50%);
     &.logoWrap {
-      max-width: 200px;
+      max-width: 140px;
+      @include respondTo("hg") {
+        max-width: 200px;
+      }
     }
     svg {
       width: 100%;
@@ -102,7 +105,7 @@ nav.GNB {
     > .menu-item {
       position: relative;
       a {
-        transition:all 0.3s;
+        transition: all 0.3s;
       }
       &.introduce > a {
         min-width: 150px;
@@ -115,7 +118,7 @@ nav.GNB {
       }
       &:hover .sub-menu {
         opacity: 1;
-        visibility:visible;
+        visibility: visible;
         z-index: 9;
         a {
           opacity: 1;
@@ -135,7 +138,7 @@ nav.GNB {
     .sub-menu {
       // display: none;
       opacity: 0;
-      visibility:hidden;
+      visibility: hidden;
       z-index: -1;
       position: absolute;
       list-style: none;
@@ -143,7 +146,7 @@ nav.GNB {
       margin: 0;
       width: 100%;
       background-color: #fff;
-      box-shadow: 1px 3px 2px rgba(0,0,0,0.2);
+      box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.2);
       transition: all 0.3s;
       // padding-top: 82px;
       // margin-top: -82px;
