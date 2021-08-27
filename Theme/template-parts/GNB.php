@@ -13,7 +13,7 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin'; ?>
     </a>
   </div>
   <div class="container">
-    <?php wp_nav_menu(['menu' => 'GNB']); ?>
+    <?php wp_nav_menu(['menu' => '2']); ?>
   </div>
   <div class="right iconWrap">
     <svg class="search icon btn_search">
