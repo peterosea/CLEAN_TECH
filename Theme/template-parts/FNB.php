@@ -1,5 +1,10 @@
 <?php
 $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
+$foot_address = get_field('foot_address', 2339);
+$foot_phone = get_field('foot_phone', 2339);
+$foot_fax = get_field('foot_fax', 2339);
+$foot_copyright = get_field('foot_copyright', 2339);
+$foot_additional = get_field('foot_additional', 2339);
 ?>
 <footer class="section FNB fp-auto-height">
   <div class="container-fluid">
@@ -80,10 +85,15 @@ $zeplin = get_home_url() . '/wp-content/uploads/zeplin';
           </li>
         </ul>
         <ul class="info">
-          <li>Addr. 경기도 용인시 기흥구 이현로30번길 23</li>
-          <li><a href="tel:1544-3050">T. 1544-3050</a> <a href="tel:031-624-5219">F. 031-624-5219</a></li>
+          <?php if($foot_address){ ?>
+          <li>Addr. <?php echo $foot_address; ?></li>
+          <?php } ?>
+          <li><?php if($foot_phone){ ?><a href="tel:1544-3050">T. <?php echo $foot_phone; ?></a><?php } ?><?php if($foot_fax){ ?> <a href="tel:031-624-5219">F. <?php echo $foot_fax; ?></a><?php } ?></li>
+          <?php if($foot_additional){ ?>
+          <li><?php echo $foot_additional; ?></li>
+          <?php } ?>
         </ul>
-        <p class="copyright">COPYRIGHT © CLEANTECH CO.<br class="d-block d-sm-none" /> ALL RIGHTS RESERVED.</p>
+        <p class="copyright">COPYRIGHT © <?php echo $foot_copyright; ?><br class="d-block d-sm-none" /> ALL RIGHTS RESERVED.</p>
       </div>
     </div>
   </div>

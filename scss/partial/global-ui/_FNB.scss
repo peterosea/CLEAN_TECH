@@ -45,7 +45,12 @@ footer.FNB {
   ul.info {
     flex-wrap: wrap;
     flex-direction: column;
+    justify-content: flex-end;
     margin-bottom: 20px;
+    margin-top: 10px;
+    li:first-child {
+      margin-right: 0;
+    }
     @include respondTo("sm") {
       align-items: center;
     }
@@ -54,13 +59,14 @@ footer.FNB {
     }
     @include respondTo("md") {
       flex-direction: unset;
-      li:not(:last-child) {
+      li:first-child {
         margin-right: 14px;
       }
     }
     li {
       margin-right: 0;
       margin-bottom: 4px;
+      line-height: 1.6em;
       &:not(:last-child) {
         margin-bottom: 0px;
       }
@@ -68,12 +74,14 @@ footer.FNB {
     a {
       color: $light-grey-blue;
       @include Text-Style-61;
+      line-height: 1.6em;
       text-decoration: none;
       &:not(:last-child) {
-        margin-right: 30px;
+        margin-right: 14px;
       }
       @include respondTo("lg") {
         @include Text-Style-2;
+        line-height: 1.6em;
       }
     }
     strong {
@@ -94,6 +102,7 @@ footer.FNB {
   .copyright {
     margin-bottom: 0;
     line-height: 1.2;
+    margin-top: 10px;
     @include respondTo("sm") {
       text-align: right;
     }
